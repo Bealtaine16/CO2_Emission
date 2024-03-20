@@ -1,0 +1,6 @@
+# Visual Studio
+.DS_Store
+.vscode
+
+# Jupyter notebook
+.ipynb_checkpoints

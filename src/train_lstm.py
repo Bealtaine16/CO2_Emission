@@ -1,6 +1,6 @@
 from config import params
 from src.data_handler import DataLoader, DataPreprocessor, DataSplitter, DataReshaper
-from models.lstm_model import LSTMModelBuilder
+from model.lstm_model import LSTMModelBuilder
 from tensorflow.keras.callbacks import Callback
 from sklearn.metrics import mean_squared_error
 from math import sqrt

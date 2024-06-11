@@ -1,6 +1,8 @@
 # Visual Studio
 .DS_Store
 .vscode
+.neptune
+__pycache__
 
 # Jupyter notebook
 .ipynb_checkpoints

@@ -39,13 +39,13 @@ class Config:
         self.filename = config.get("GeneralConfig", "filename")
         self.target_column = config.get("GeneralConfig", "target_column")
         self.year_index = config.get("GeneralConfig", "year_index")
+        self.year_range = config.get("GeneralConfig", "year_range")
         self.additional_index = config.get("GeneralConfig", "additional_index")
         self.train_split = config.getfloat("GeneralConfig", "train_split")
-        self.valid_split = config.getfloat("GeneralConfig", "valid_split")
 
         # DataHandler
-        self.n_in = config.getint("DataHandler", "n_in")
-        self.n_out = config.getint("DataHandler", "n_out")
+        self.window_size = config.getint("DataHandler", "window_size")
+        self.pred_horizon = config.getint("DataHandler", "pred_horizon")
 
         # LSTM
         self.epochs = config.getint("LSTM", "epochs")

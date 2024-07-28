@@ -5,21 +5,54 @@ from config import Config
 
 
 class DataLoader:
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self):
+        config = Config()
+        self.filename = config.filename
 
     def load_data(self):
         df = pd.read_csv(self.filename)
         return df
+    
+
+class DataPreparer:
+    def __init__(self):
+        config = Config()
+        self.window_size = config.window_size
+        self.pred_horizon = config.pred_horizon
+
+    # Function to convert series to supervised learning format
+    def create_supervised_data(self, data, year_range, additional_index):
+        features = data.columns
+        target = data.columns[-1]
+        supervised_rows = []
+
+        for country in data.index.get_level_values(additional_index).unique():
+            group = data.xs(country, level=additional_index, drop_level=False)
+
+            for i in range(len(group) - self.window_size - self.pred_horizon + 1):
+                row = {}
+                for t in range(self.window_size):
+                    for feature in features:
+                        if feature != 'country':
+                            row[f'{feature}_t-{self.window_size - t}'] = group[feature].iloc[i + t]
+                        else:
+                            row['country'] = group[feature].iloc[i + t]
+                row.update({f'{target}_t+{t+1}': group[target].iloc[i + self.window_size + t] 
+                            for t in range(self.pred_horizon)})
+                row[additional_index] = country
+                row[year_range] = f"{group.index[i + self.window_size][0]}-{group.index[i + self.window_size + self.pred_horizon - 1][0]}"
+                supervised_rows.append(row)
+
+        return pd.DataFrame(supervised_rows).set_index([year_range, additional_index])
 
 
 class DataSplitter:
-    def __init__(self, train_split=0.7, valid_split = 0.1):
-        self.train_split = train_split
-        self.valid_split = valid_split
+    def __init__(self):
+        config = Config()
+        self.train_split = config.train_split
 
     def split_data(self, df, year_index, additional_index):
-        train, valid, test = [], [], []
+        train, test = [], []
 
         # Ensure data is sorted by indexes
         df = df.sort_index(level=[additional_index, year_index])
@@ -32,36 +65,28 @@ class DataSplitter:
 
             # Calculate the split index
             train_size = int(len(additional_split_data) * self.train_split)
-            valid_size = int(len(additional_split_data) * self.valid_split)
 
             # Append the training and test sets for each country
             train.append(additional_split_data.iloc[:train_size])
-            valid.append(additional_split_data.iloc[train_size:train_size + valid_size])
-            test.append(additional_split_data.iloc[train_size + valid_size:])
+            test.append(additional_split_data.iloc[train_size:])
 
         # Concatenate lists into single DataFrames
         train = pd.concat(train)
-        valid = pd.concat(valid)
         test = pd.concat(test)
 
-        return train, valid, test
+        return train, test
 
 
 class DataPreprocessor:
     def __init__(self, numerical_encoder=None):
         self.numerical_encoder = numerical_encoder or MinMaxScaler()
 
-    def preprocess_categorical_data(self, train_cat, valid_cat, test_cat, encoder=None):
+    def preprocess_categorical_data(self, train_cat, test_cat, encoder=None):
         encoder = encoder or LabelEncoder()
         train_encoded = pd.DataFrame(
             encoder.fit_transform(train_cat.values.ravel()),
             index=train_cat.index,
             columns=train_cat.columns,
-        )
-        valid_encoded = pd.DataFrame(
-            encoder.fit_transform(valid_cat.values.ravel()),
-            index=valid_cat.index,
-            columns=valid_cat.columns,
         )
         test_encoded = pd.DataFrame(
             encoder.transform(test_cat.values.ravel()),
@@ -69,9 +94,9 @@ class DataPreprocessor:
             columns=test_cat.columns,
         )
 
-        return train_encoded, valid_encoded, test_encoded
+        return train_encoded, test_encoded
 
-    def preprocess_numerical_data(self, train_num, valid_num, test_num):
+    def preprocess_numerical_data(self, train_num, test_num):
         self.numerical_encoder.fit(train_num)
 
         train_scaled = pd.DataFrame(
@@ -79,115 +104,75 @@ class DataPreprocessor:
             columns=train_num.columns,
             index=train_num.index,
         )
-        valid_scaled = pd.DataFrame(
-            self.numerical_encoder.transform(valid_num),
-            columns=valid_num.columns,
-            index=valid_num.index,
-        )
         test_scaled = pd.DataFrame(
             self.numerical_encoder.transform(test_num),
             columns=test_num.columns,
             index=test_num.index,
         )
 
-        return train_scaled, valid_scaled, test_scaled
+        return train_scaled, test_scaled
 
-    def concatenate_data(self, train_cat, valid_cat, test_cat, train_num, valid_num, test_num):
+    def concatenate_data(self, train_cat, test_cat, train_num, test_num):
         train_combined = pd.concat([train_cat, train_num], axis=1)
-        valid_combined = pd.concat([valid_cat, valid_num], axis=1)
         test_combined = pd.concat([test_cat, test_num], axis=1)
 
-        return train_combined, valid_combined, test_combined
+        return train_combined, test_combined
+    
+    def preprocess_data(self, train_df, test_df):
+        train_cat = train_df[['country']]
+        test_cat = test_df[['country']]
+        train_num = train_df.drop(columns=['country'])
+        test_num = test_df.drop(columns=['country'])
+
+        # Preprocess categorical data using LabelEncoder
+        train_cat_encoded, test_cat_encoded = self.preprocess_categorical_data(train_cat, test_cat)
+    
+        # Preprocess numerical data
+        train_num_scaled, test_num_scaled = self.preprocess_numerical_data(train_num, test_num)
+    
+        # Concatenate categorical and numerical data
+        train_preprocessed, test_preprocessed = self.concatenate_data(train_cat_encoded, test_cat_encoded, train_num_scaled, test_num_scaled)
+    
+        return train_preprocessed, test_preprocessed
 
     def inverse_transform_data(self, output, m, n):
     
         scaled_output = np.zeros((m, n))
-        scaled_output[:, -1] = output.flatten()
+        scaled_output[:, -output.shape[1]:] = output
         inverted_output = self.numerical_encoder.inverse_transform(scaled_output)
 
         return inverted_output
 
 
-
 class DataReshaperLSTM:
     def __init__(self):
         config = Config()
-        self.n_in = config.n_in
-        self.n_out = config.n_out
+        self.time_steps = config.window_size
+        self.no_of_targets = config.pred_horizon
 
-    # Function to convert series to supervised learning format
-    def series_to_supervised(self, data, dropnan=True):
-        n_vars = 1 if type(data) is list else data.shape[1]
-        df = pd.DataFrame(data)
-        cols, names = [], []
-
-        # Input sequence (t-n, ... t-1)
-        for i in range(self.n_in, 0, -1):
-            cols.append(df.shift(i))
-            names += [("var%d(t-%d)" % (j + 1, i)) for j in range(n_vars)]
-
-        # Forecast sequence (t, t+1, ... t+n)
-        for i in range(0, self.n_out):
-            cols.append(df.shift(-i))
-            if i == 0:
-                names += [("var%d(t)" % (j + 1)) for j in range(n_vars)]
-            else:
-                names += [("var%d(t+%d)" % (j + 1, i)) for j in range(n_vars)]
-
-        # Aggregate the data
-        agg = pd.concat(cols, axis=1)
-        agg.columns = names
-
-        # Drop rows with NaN values
-        if dropnan:
-            agg.dropna(inplace=True)
-
-        return agg
-
-    # Function to reshape data for LSTM training
-    def reshape_data(self, train, val, test):
-        train_reshaped = []
-        valid_reshaped = []
-        test_reshaped = []
-
-        # Process each country separately
-        for country in train.index.get_level_values("country_index").unique():
-            country_train = train.xs(country, level="country_index", drop_level=False)
-            country_valid = val.xs(country, level="country_index", drop_level=False)
-            country_test = test.xs(country, level="country_index", drop_level=False)
-
-            # Frame as supervised learning
-            reframed_train = self.series_to_supervised(country_train)
-            reframed_valid = self.series_to_supervised(country_valid)
-            reframed_test = self.series_to_supervised(country_test)
-
-            train_reshaped.append(reframed_train)
-            valid_reshaped.append(reframed_valid)
-            test_reshaped.append(reframed_test)
-
-        # Concatenate the results for all countries
-        reframed_train = pd.concat(train_reshaped)
-        reframed_valid = pd.concat(valid_reshaped)
-        reframed_test = pd.concat(test_reshaped)
-        reframed_train.to_csv("output/3_supervised_learning_reframed_train.csv")
-        reframed_valid.to_csv("output/3_supervised_learning_reframed_valid.csv")
-        reframed_test.to_csv("output/3_supervised_learning_reframed_test.csv")
-
-        # Indexes
-        train_idx = reframed_train.index
-        valid_idx = reframed_valid.index
-        test_idx = reframed_test.index
-
+    # Reshape input to be 3D [samples, timesteps, features]
+    def reshape_data(self, train_df, test_df):
+        
         # Split into input and outputs
-        train_X, train_y = reframed_train.values[:, :-11], reframed_train.values[:, -1]
-        val_X, val_y = reframed_valid.values[:, :-11], reframed_valid.values[:, -1]
-        test_X, test_y = reframed_test.values[:, :-11], reframed_test.values[:, -1]
+        X_train, y_train = train_df.values[:, : -self.no_of_targets], train_df.values[:, -self.no_of_targets:]
+        X_test, y_test = test_df.values[:, : -self.no_of_targets], test_df.values[:, -self.no_of_targets:]
 
-        # Reshape input to be 3D [samples, timesteps, features]
-        x_train = train_X.reshape((train_X.shape[0], self.n_in, train_X.shape[1]//self.n_in))
-        print(train_X.shape)
-        print(x_train.shape)
-        x_val = val_X.reshape((val_X.shape[0], self.n_in, val_X.shape[1]//self.n_in))
-        x_test = test_X.reshape((test_X.shape[0], self.n_in, test_X.shape[1]//self.n_in))
+        # Calculate the number of features
+        n_features = X_train.shape[1]
 
-        return x_train, x_val, x_test, train_y, val_y, test_y, train_idx, valid_idx, test_idx
+        # If the total number of features isn't divisible by the time steps, pad the features
+        if n_features % self.time_steps != 0:
+            # Calculate the number of padding features needed
+            padding = self.time_steps - (n_features % self.time_steps)
+            # Add padding features (columns of zeros)
+            X_train = np.hstack((X_train, np.zeros((X_train.shape[0], padding))))
+            X_test = np.hstack((X_test, np.zeros((X_test.shape[0], padding))))
+            n_features = X_train.shape[1]
+        
+        # Ensure the total number of features is divisible by the time steps
+        assert n_features % self.time_steps == 0, "Number of features is not divisible by the number of time steps"
+
+        x_train = X_train.reshape((X_train.shape[0], self.time_steps, X_train.shape[1]//self.time_steps))
+        x_test = X_test.reshape((X_test.shape[0], self.time_steps, X_test.shape[1]//self.time_steps))
+
+        return x_train, x_test, y_train, y_test

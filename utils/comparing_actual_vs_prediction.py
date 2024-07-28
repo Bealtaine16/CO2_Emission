@@ -1,0 +1,46 @@
+import pandas as pd
+import numpy as np
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+class PredictionEvaluator:
+    def __init__(self, pred_horizon):
+        self.pred_horizon = pred_horizon
+
+    def evaluate_predictions(self, inverted_data_actual_y, inverted_data_predicted_y, index):
+        # Create a DataFrame for each step of the multi-step predictions
+        multi_step_predictions = {
+            f'actual_{i+1}': inverted_data_actual_y[:, -self.pred_horizon + i] for i in range(self.pred_horizon)
+        }
+        multi_step_predictions.update({
+            f'predicted_{i+1}': inverted_data_predicted_y[:, -self.pred_horizon + i] for i in range(self.pred_horizon)
+        })
+        predictions_df = pd.DataFrame(multi_step_predictions, index=index)
+
+        # Calculate differences between actual and predicted values for each step
+        for i in range(1, self.pred_horizon + 1):
+            predictions_df[f'difference_%_{i}'] = (predictions_df[f'actual_{i}'] - predictions_df[f'predicted_{i}']) / 100
+
+        # Calculate MAE, MSE, RMSE for each step and add to DataFrame
+        metrics = {
+            'MAE': mean_absolute_error,
+            'MSE': mean_squared_error,
+            'RMSE': lambda y_true, y_pred: np.sqrt(mean_squared_error(y_true, y_pred)),
+            'R2': r2_score
+        }
+
+        for metric_name, metric_func in metrics.items():
+            for i in range(1, self.pred_horizon + 1):
+                actual_values = predictions_df[f'actual_{i}']
+                predicted_values = predictions_df[f'predicted_{i}']
+                metric_value = metric_func(actual_values, predicted_values)
+                predictions_df[f'{metric_name}_{i}'] = metric_value
+
+        # Summarize overall metrics across all steps
+        summary_metrics = {metric: {} for metric in metrics.keys()}
+        for metric_name, metric_func in metrics.items():
+            overall_actuals = predictions_df[[f'actual_{i}' for i in range(1, self.pred_horizon + 1)]].values.flatten()
+            overall_predictions = predictions_df[[f'predicted_{i}' for i in range(1, self.pred_horizon + 1)]].values.flatten()
+            summary_metrics[metric_name]['Overall'] = metric_func(overall_actuals, overall_predictions)
+            summary_metrics[metric_name]['Per Step'] = [predictions_df[f'{metric_name}_{i}'].mean() for i in range(1, self.pred_horizon + 1)]
+
+        return predictions_df, summary_metrics

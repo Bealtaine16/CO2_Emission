@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
-from src.config import Config
+from config import Config
 
 
 class DataLoader:
@@ -185,6 +185,8 @@ class DataReshaperLSTM:
 
         # Reshape input to be 3D [samples, timesteps, features]
         x_train = train_X.reshape((train_X.shape[0], self.n_in, train_X.shape[1]//self.n_in))
+        print(train_X.shape)
+        print(x_train.shape)
         x_val = val_X.reshape((val_X.shape[0], self.n_in, val_X.shape[1]//self.n_in))
         x_test = test_X.reshape((test_X.shape[0], self.n_in, test_X.shape[1]//self.n_in))
 

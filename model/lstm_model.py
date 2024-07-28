@@ -8,9 +8,9 @@ class LSTMModelBuilder:
 
     def build_model(self):
         model = Sequential([
-            LSTM(64, activation='relu', input_shape=self.input_shape, return_sequences=True),
+            LSTM(64, input_shape=self.input_shape, return_sequences=True),
             Dropout(0.2),
-            LSTM(8, activation='relu'),
+            LSTM(32),
             Dropout(0.2),
             Dense(self.output_units, activation='relu')
         ])

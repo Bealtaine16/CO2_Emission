@@ -3,23 +3,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-from src.config import Config
+from config import Config
 from data_handler import DataLoader, DataPreprocessor, DataSplitter, DataReshaperLSTM
 from model.lstm_model import LSTMModelBuilder
-
-from tensorflow.keras.callbacks import Callback
-from sklearn.metrics import mean_squared_error
-from math import sqrt
-
-
-class MetricsLogger(Callback):
-    def __init__(self, run):
-        super().__init__()
-        self.run = run
-
-    def on_epoch_end(self, epoch, logs=None):
-        log_metric("loss", logs["loss"])
-
 
 def main():
     # Configure the logger
@@ -32,7 +18,7 @@ def main():
 
     # Load data
     logging.info("Loading data...")
-    data_loader = DataLoader("output/2b_cleaned_data_first_model.csv")
+    data_loader = DataLoader(config.filename)
     df = data_loader.load_data()
     logging.info("Data loaded successfully.")
 

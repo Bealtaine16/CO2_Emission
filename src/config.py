@@ -1,6 +1,8 @@
 import os
 import configparser
+import sys
 from dotenv import load_dotenv
+
 
 class Config:
     _instance = None
@@ -19,18 +21,44 @@ class Config:
         self._initialized = True
 
     def load_config(self):
+        os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppresses INFO and WARNING messages
+
         config = configparser.ConfigParser()
         config.read(self.file_path)
         load_dotenv()
-        
+
+        project_root = os.getenv("PYTHONPATH")
+        if project_root not in sys.path:
+            sys.path.append(project_root)
+
         # NeptuneConfig
         self.project_name = config.get("NeptuneConfig", "project_name")
         self.api_token = os.getenv("NEPTUNE_API_TOKEN")
-        
+
+        # GeneralConfig
+        self.filename = config.get("GeneralConfig", "filename")
+        self.target_column = config.get("GeneralConfig", "target_column")
+        self.year_index = config.get("GeneralConfig", "year_index")
+        self.additional_index = config.get("GeneralConfig", "additional_index")
+        self.train_split = config.getfloat("GeneralConfig", "train_split")
+        self.valid_split = config.getfloat("GeneralConfig", "valid_split")
+
         # DataHandler
         self.n_in = config.getint("DataHandler", "n_in")
         self.n_out = config.getint("DataHandler", "n_out")
 
-        # train_LSTM_model
-        self.epochs = config.getint("train_LSTM_model", "epochs")
-        self.batch_size = config.getint("train_LSTM_model", "batch_size")
+        # LSTM
+        self.epochs = config.getint("LSTM", "epochs")
+        self.batch_size = config.getint("LSTM", "batch_size")
+
+        # ARIMA
+        self.p = config.getint("ARIMA", "p")
+        self.d = config.getint("ARIMA", "d")
+        self.q = config.getint("ARIMA", "q")
+
+        # LightGBM
+        self.learning_rate = config.getfloat("LightGBM", "learning_rate")
+        self.n_estimators = config.getint("LightGBM", "n_estimators")
+        self.max_depth = config.getint("LightGBM", "max_depth")
+
+config = Config()

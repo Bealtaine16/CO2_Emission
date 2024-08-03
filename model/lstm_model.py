@@ -14,5 +14,5 @@ class LSTMModelBuilder:
             #Dropout(0.2),
             Dense(self.output_units, activation='relu')
         ])
-        model.compile(optimizer="adam", loss="mean_squared_error", metrics=['accuracy'])
+        model.compile(optimizer="adam", loss="mean_squared_error")
         return model

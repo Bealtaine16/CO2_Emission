@@ -2,8 +2,6 @@ import logging
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.utils.class_weight import compute_class_weight
-from tensorflow.keras.callbacks import Callback, EarlyStopping
 
 from config import Config
 from data_handler import DataLoader, DataPreparer, DataPreprocessor, DataSplitter, DataReshaperLSTM
@@ -73,8 +71,8 @@ def main():
     logging.info("Model saved to 'output/lstm_model.h5'.")
 
     # Evaluate the model on the test set
-    loss, accuracy = model.evaluate(x_test, y_test)
-    logging.info(f"Model evaluated. Test Loss: {loss:.4f}, Test Accuracy: {accuracy:.4f}")
+    loss = model.evaluate(x_test, y_test, verbose = 0)
+    logging.info(f"Model evaluated. Test Loss: {loss:.4f}")
 
     # Make predictions
     train_predictions = model.predict(x_train)

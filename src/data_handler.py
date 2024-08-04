@@ -7,7 +7,7 @@ from config import Config
 class DataLoader:
     def __init__(self):
         config = Config()
-        self.filename = config.filename
+        self.filename = config.file_name
 
     def load_data(self):
         df = pd.read_csv(self.filename)
@@ -33,10 +33,7 @@ class DataPreparer:
                 row = {}
                 for t in range(self.window_size):
                     for feature in features:
-                        if feature != 'country':
-                            row[f'{feature}_t-{self.window_size - t}'] = group[feature].iloc[i + t]
-                        else:
-                            row['country'] = group[feature].iloc[i + t]
+                        row[f'{feature}_t-{self.window_size - t}'] = group[feature].iloc[i + t]
                 row.update({f'{target}_t+{t+1}': group[target].iloc[i + self.window_size + t] 
                             for t in range(self.pred_horizon)})
                 row[additional_index] = country
@@ -80,20 +77,18 @@ class DataSplitter:
 class DataPreprocessor:
     def __init__(self, numerical_encoder=None):
         self.numerical_encoder = numerical_encoder or MinMaxScaler()
+        self.label_encoders = {}
 
     def preprocess_categorical_data(self, train_cat, test_cat, encoder=None):
-        encoder = encoder or LabelEncoder()
-        train_encoded = pd.DataFrame(
-            encoder.fit_transform(train_cat.values.ravel()),
-            index=train_cat.index,
-            columns=train_cat.columns,
-        )
-        test_encoded = pd.DataFrame(
-            encoder.transform(test_cat.values.ravel()),
-            index=test_cat.index,
-            columns=test_cat.columns,
-        )
-
+        train_encoded = pd.DataFrame(index=train_cat.index)
+        test_encoded = pd.DataFrame(index=test_cat.index)
+        
+        for column in train_cat.columns:
+            encoder = encoder or LabelEncoder()
+            self.label_encoders[column] = encoder
+            train_encoded[column] = encoder.fit_transform(train_cat[column])
+            test_encoded[column] = encoder.transform(test_cat[column])
+        
         return train_encoded, test_encoded
 
     def preprocess_numerical_data(self, train_num, test_num):
@@ -112,17 +107,21 @@ class DataPreprocessor:
 
         return train_scaled, test_scaled
 
-    def concatenate_data(self, train_cat, test_cat, train_num, test_num):
+    def concatenate_data(self, train_cat, test_cat, train_num, test_num, original_columns):
         train_combined = pd.concat([train_cat, train_num], axis=1)
         test_combined = pd.concat([test_cat, test_num], axis=1)
+
+        train_combined = train_combined[original_columns]
+        test_combined = test_combined[original_columns]
 
         return train_combined, test_combined
     
     def preprocess_data(self, train_df, test_df):
-        train_cat = train_df[['country']]
-        test_cat = test_df[['country']]
-        train_num = train_df.drop(columns=['country'])
-        test_num = test_df.drop(columns=['country'])
+        categorical_columns = [col for col in train_df.columns if 'country' in col]
+        train_cat = train_df[categorical_columns]
+        test_cat = test_df[categorical_columns]
+        train_num = train_df.drop(columns=categorical_columns)
+        test_num = test_df.drop(columns=categorical_columns)
 
         # Preprocess categorical data using LabelEncoder
         train_cat_encoded, test_cat_encoded = self.preprocess_categorical_data(train_cat, test_cat)
@@ -131,7 +130,9 @@ class DataPreprocessor:
         train_num_scaled, test_num_scaled = self.preprocess_numerical_data(train_num, test_num)
     
         # Concatenate categorical and numerical data
-        train_preprocessed, test_preprocessed = self.concatenate_data(train_cat_encoded, test_cat_encoded, train_num_scaled, test_num_scaled)
+        original_columns = train_df.columns
+        train_preprocessed, test_preprocessed = self.concatenate_data(train_cat_encoded, test_cat_encoded, train_num_scaled, test_num_scaled, original_columns)
+    
     
         return train_preprocessed, test_preprocessed
 

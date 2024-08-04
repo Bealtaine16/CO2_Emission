@@ -36,7 +36,7 @@ class Config:
         self.api_token = os.getenv("NEPTUNE_API_TOKEN")
 
         # GeneralConfig
-        self.filename = config.get("GeneralConfig", "filename")
+        self.file_name = config.get("GeneralConfig", "file_name")
         self.target_column = config.get("GeneralConfig", "target_column")
         self.year_index = config.get("GeneralConfig", "year_index")
         self.year_range = config.get("GeneralConfig", "year_range")
@@ -48,6 +48,7 @@ class Config:
         self.pred_horizon = config.getint("DataHandler", "pred_horizon")
 
         # LSTM
+        self.output_lstm = config.get("LSTM", "output_lstm")
         self.epochs = config.getint("LSTM", "epochs")
         self.batch_size = config.getint("LSTM", "batch_size")
 

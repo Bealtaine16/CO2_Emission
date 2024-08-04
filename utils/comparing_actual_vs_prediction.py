@@ -20,7 +20,7 @@ class PredictionEvaluator:
         for i in range(1, self.pred_horizon + 1):
             predictions_df[f'difference_%_{i}'] = (predictions_df[f'actual_{i}'] - predictions_df[f'predicted_{i}']) / 100
 
-        # Calculate MAE, MSE, RMSE for each step and add to DataFrame
+        # Define metrics
         metrics = {
             'MAE': mean_absolute_error,
             'MSE': mean_squared_error,
@@ -28,19 +28,40 @@ class PredictionEvaluator:
             'R2': r2_score
         }
 
-        for metric_name, metric_func in metrics.items():
-            for i in range(1, self.pred_horizon + 1):
-                actual_values = predictions_df[f'actual_{i}']
-                predicted_values = predictions_df[f'predicted_{i}']
-                metric_value = metric_func(actual_values, predicted_values)
-                predictions_df[f'{metric_name}_{i}'] = metric_value
+        # Initialize a DataFrame to store combined results
+        combined_results = pd.DataFrame()
 
-        # Summarize overall metrics across all steps
+        # Iterate over each country
+        for country in predictions_df.index.get_level_values(index.names[1]).unique():
+            group = predictions_df.xs(country, level=index.names[1], drop_level=False)
+            country_metrics = {index.names[1]: country}
+
+            for metric_name, metric_func in metrics.items():
+                for i in range(1, self.pred_horizon + 1):
+                    actual_values = group[f'actual_{i}']
+                    predicted_values = group[f'predicted_{i}']
+                    if len(actual_values) > 1:  # Ensure there are at least two samples
+                        metric_value = metric_func(actual_values, predicted_values)
+                        country_metrics[f'{metric_name}_{i}'] = metric_value
+                    else:
+                        country_metrics[f'{metric_name}_{i}'] = np.nan  # Assign NaN if not enough samples
+
+            country_metrics_df = pd.DataFrame([country_metrics])
+
+            # Merge the metrics with the predictions
+            group_reset = group.reset_index()
+            combined_country_df = group_reset.merge(country_metrics_df, on=index.names[1], how='left')
+
+            # Append the results for this country to the combined results
+            combined_results = pd.concat([combined_results, combined_country_df], ignore_index=True)
+
+        # Calculate summary metrics across all steps
         summary_metrics = {metric: {} for metric in metrics.keys()}
         for metric_name, metric_func in metrics.items():
             overall_actuals = predictions_df[[f'actual_{i}' for i in range(1, self.pred_horizon + 1)]].values.flatten()
             overall_predictions = predictions_df[[f'predicted_{i}' for i in range(1, self.pred_horizon + 1)]].values.flatten()
             summary_metrics[metric_name]['Overall'] = metric_func(overall_actuals, overall_predictions)
-            summary_metrics[metric_name]['Per Step'] = [predictions_df[f'{metric_name}_{i}'].mean() for i in range(1, self.pred_horizon + 1)]
 
-        return predictions_df, summary_metrics
+        summary_metrics_df = pd.DataFrame(summary_metrics).T.reset_index().rename(columns={'index': 'Metric'})
+
+        return combined_results, summary_metrics_df

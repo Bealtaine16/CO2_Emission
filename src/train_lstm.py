@@ -31,14 +31,14 @@ def main():
     # Convert to supervised data
     data_preparer = DataPreparer()
     df_supervised = data_preparer.create_supervised_data(df, config.year_range, config.additional_index)
-    df_supervised.to_csv('output/3_convert_to_the_supervised_data.csv')
+    df_supervised.to_csv(f'{config.output_lstm}/1_convert_to_the_supervised_data.csv')
     logging.info("Data converted to supervised learning format.")
 
     # Split data into train and test sets
     data_splitter = DataSplitter()
     train_df, test_df = data_splitter.split_data(df_supervised, config.year_range, config.additional_index)
-    train_df.to_csv('output/4_split_data_train_df.csv')
-    test_df.to_csv('output/4_split_data_test_df.csv')
+    train_df.to_csv(f'{config.output_lstm}/2_split_data_train_df.csv')
+    test_df.to_csv(f'{config.output_lstm}/2_split_data_test_df.csv')
     logging.info("Data splitted into training, validation and testing sets.")
 
     # Preprocess data
@@ -67,7 +67,7 @@ def main():
     logging.info("Model training completed.")
 
     # Save the model
-    model.save('output/lstm_model.h5')
+    model.save(f'{config.output_lstm}/lstm_model.h5')
     logging.info("Model saved to 'output/lstm_model.h5'.")
 
     # Evaluate the model on the test set
@@ -79,11 +79,11 @@ def main():
     test_predictions = model.predict(x_test)
     logging.info("Predictions made.")
 
-    inverted_data_predicted_train_y = data_preprocessor.inverse_transform_data(train_predictions, train_predictions.shape[0], train_preprocessed.shape[1]-1)
-    inverted_data_train_y = data_preprocessor.inverse_transform_data(y_train, train_predictions.shape[0], train_preprocessed.shape[1]-1)
+    inverted_data_predicted_train_y = data_preprocessor.inverse_transform_data(train_predictions, train_predictions.shape[0], train_predictions.shape[1])
+    inverted_data_train_y = data_preprocessor.inverse_transform_data(y_train, train_predictions.shape[0], train_predictions.shape[1])
 
-    inverted_data_predicted_test_y = data_preprocessor.inverse_transform_data(test_predictions, test_predictions.shape[0], test_preprocessed.shape[1]-1)
-    inverted_data_test_y = data_preprocessor.inverse_transform_data(y_test, test_predictions.shape[0], test_preprocessed.shape[1]-1)
+    inverted_data_predicted_test_y = data_preprocessor.inverse_transform_data(test_predictions, test_predictions.shape[0], test_predictions.shape[1])
+    inverted_data_test_y = data_preprocessor.inverse_transform_data(y_test, test_predictions.shape[0], test_predictions.shape[1])
 
     # Initialize the evaluator
     evaluator = PredictionEvaluator(config.pred_horizon)
@@ -92,14 +92,16 @@ def main():
     train_predictions_df, train_summary_metrics = evaluator.evaluate_predictions(
         inverted_data_train_y, inverted_data_predicted_train_y, train_df.index
     )
+    print(train_summary_metrics)
 
-    # Evaluate the predictions for train data
+    # Evaluate the predictions for test data
     test_predictions_df, test_summary_metrics = evaluator.evaluate_predictions(
         inverted_data_test_y, inverted_data_predicted_test_y, test_df.index
     )
+    print(test_summary_metrics)
 
-    train_predictions_df.to_csv('output/5_train_predictions.csv')
-    test_predictions_df.to_csv('output/5_test_predictions.csv')
+    train_predictions_df.to_csv(f'{config.output_lstm}/3_train_predictions.csv')
+    test_predictions_df.to_csv(f'{config.output_lstm}/3_test_predictions.csv')
 
     #train_predictions = pd.DataFrame(data = {'actual': inverted_data_train_y[:, config.pred_horizon], 'predicted': inverted_data_predicted_train_y[:, config.pred_horizon]}, index = train_df.index)
     #test_predictions = pd.DataFrame(data = {'actual': inverted_data_test_y[:, config.pred_horizon], 'predicted': inverted_data_predicted_test_y[:, config.pred_horizon]}, index = test_df.index)

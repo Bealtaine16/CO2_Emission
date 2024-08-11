@@ -8,10 +8,10 @@ class LSTMModelBuilder:
 
     def build_model(self):
         model = Sequential([
-            LSTM(25, input_shape=self.input_shape),#, return_sequences=True),
+            LSTM(50, input_shape=self.input_shape, return_sequences = True),
             Dropout(0.2),
-            #LSTM(64),
-            #Dropout(0.2),
+            LSTM(50),
+            Dropout(0.2),
             Dense(self.output_units, activation='relu')
         ])
         model.compile(optimizer="adam", loss="mean_squared_error")

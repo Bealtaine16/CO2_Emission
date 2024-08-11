@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from config import Config
 from data_handler import DataLoader, DataPreparer, DataPreprocessor, DataSplitter, DataReshaperLSTM
 from utils.comparing_actual_vs_prediction import PredictionEvaluator
+from utils.model_charts import ModelCharts
 from model.lstm_model import LSTMModelBuilder
 
 def main():
@@ -39,7 +40,7 @@ def main():
     train_df, test_df = data_splitter.split_data(df_supervised, config.year_range, config.additional_index)
     train_df.to_csv(f'{config.output_lstm}/2_split_data_train_df.csv')
     test_df.to_csv(f'{config.output_lstm}/2_split_data_test_df.csv')
-    logging.info("Data splitted into training, validation and testing sets.")
+    logging.info("Data splitted into training and test sets.")
 
     # Preprocess data
     data_preprocessor = DataPreprocessor()
@@ -68,7 +69,7 @@ def main():
 
     # Save the model
     model.save(f'{config.output_lstm}/lstm_model.h5')
-    logging.info("Model saved to 'output/lstm_model.h5'.")
+    logging.info("Model saved to 'lstm_model.h5'.")
 
     # Evaluate the model on the test set
     loss = model.evaluate(x_test, y_test, verbose = 0)
@@ -79,11 +80,13 @@ def main():
     test_predictions = model.predict(x_test)
     logging.info("Predictions made.")
 
-    inverted_data_predicted_train_y = data_preprocessor.inverse_transform_data(train_predictions, train_predictions.shape[0], train_predictions.shape[1])
-    inverted_data_train_y = data_preprocessor.inverse_transform_data(y_train, train_predictions.shape[0], train_predictions.shape[1])
+    inverted_data_predicted_train_y = data_preprocessor.inverse_transform_data(train_predictions, train_predictions.shape[0], train_preprocessed.shape[1]-config.window_size)
+    inverted_data_train_y = data_preprocessor.inverse_transform_data(y_train, train_predictions.shape[0], train_preprocessed.shape[1]-config.window_size)
+    logging.info("Inverted transformations for train data.")
 
-    inverted_data_predicted_test_y = data_preprocessor.inverse_transform_data(test_predictions, test_predictions.shape[0], test_predictions.shape[1])
-    inverted_data_test_y = data_preprocessor.inverse_transform_data(y_test, test_predictions.shape[0], test_predictions.shape[1])
+    inverted_data_predicted_test_y = data_preprocessor.inverse_transform_data(test_predictions, test_predictions.shape[0], test_preprocessed.shape[1]-config.window_size)
+    inverted_data_test_y = data_preprocessor.inverse_transform_data(y_test, test_predictions.shape[0], test_preprocessed.shape[1]-config.window_size)
+    logging.info("Inverted transformations for test data.")
 
     # Initialize the evaluator
     evaluator = PredictionEvaluator(config.pred_horizon)
@@ -92,65 +95,24 @@ def main():
     train_predictions_df, train_summary_metrics = evaluator.evaluate_predictions(
         inverted_data_train_y, inverted_data_predicted_train_y, train_df.index
     )
+    logging.info("Train data metrics evaluated.")
     print(train_summary_metrics)
 
     # Evaluate the predictions for test data
     test_predictions_df, test_summary_metrics = evaluator.evaluate_predictions(
         inverted_data_test_y, inverted_data_predicted_test_y, test_df.index
     )
+    logging.info("Test data metrics evaluated.")
     print(test_summary_metrics)
 
     train_predictions_df.to_csv(f'{config.output_lstm}/3_train_predictions.csv')
     test_predictions_df.to_csv(f'{config.output_lstm}/3_test_predictions.csv')
+    logging.info("Train and test predictions saved to CSV files.")
 
-    #train_predictions = pd.DataFrame(data = {'actual': inverted_data_train_y[:, config.pred_horizon], 'predicted': inverted_data_predicted_train_y[:, config.pred_horizon]}, index = train_df.index)
-    #test_predictions = pd.DataFrame(data = {'actual': inverted_data_test_y[:, config.pred_horizon], 'predicted': inverted_data_predicted_test_y[:, config.pred_horizon]}, index = test_df.index)
-
-    # Plot actual vs predictions for each country in both training and test data
-    # logging.info("Creating plots.")
-    # countries = df.index.get_level_values('country_index').unique()
-    # num_countries = len(countries)
-    # fig, axes = plt.subplots(nrows=num_countries, ncols=3, figsize=(15, num_countries * 5))
-
-    # for i, country in enumerate(countries):
-    #     print(f"Processing country: {country}, subplot index: {i}")
-        
-    #     # Plot training data
-    #     ax = axes[i][0]
-    #     if country in train_predictions.index.get_level_values('country_index'):
-    #         train_data = train_predictions.loc[country]
-    #         if isinstance(train_data, pd.DataFrame) and not train_data.empty:
-    #             ax.plot(train_data.index.get_level_values('year_range'), train_data['actual'], label='Train Actual', color='blue', marker='o')
-    #             ax.plot(train_data.index.get_level_values('year_range'), train_data['predicted'], label='Train Predicted', linestyle='--', color='blue', marker='o')
-    #             ax.set_title(f'{country} - Train')
-    #             ax.legend()
-    #             ax.grid(True)
-    #             ax.set_xticks(train_data.index.get_level_values('year_range'))  # Set x-ticks to years
-    #             ax.set_xticklabels(train_data.index.get_level_values('year_range').astype(int), rotation=45)  # Format x-ticks as integers
-
-    #     # Plot test data
-    #     ax = axes[i][2]
-    #     if country in test_predictions.index.get_level_values('country_index'):
-    #         test_data = test_predictions.loc[country]
-    #         if isinstance(test_data, pd.DataFrame) and not test_data.empty:
-    #             ax.plot(test_data.index.get_level_values('year_range'), test_data['actual'], label='Test Actual', color='green', marker='o')
-    #             ax.plot(test_data.index.get_level_values('year_range'), test_data['predicted'], label='Test Predicted', linestyle='--', color='green', marker='o')
-    #             ax.set_title(f'{country} - Test')
-    #             ax.legend()
-    #             ax.grid(True)
-    #             ax.set_xticks(test_data.index.get_level_values('year_range'))  # Set x-ticks to years
-    #             ax.set_xticklabels(test_data.index.get_level_values('year_range').astype(int), rotation=45)  # Format x-ticks as integers
-
-
-    # plt.tight_layout()
-    # plt.savefig('output/combined_actual_vs_predicted.png')
-    # #plt.show()
-    # logging.info("Combined training and test data plots created and saved to 'output/combined_actual_vs_predicted.png'.")
-
-    # # Evaluate the model
-    # mse = mean_squared_error(y_test, y_test_pred)
-    # rmse = sqrt(mse)
-    # log_metric("rmse", rmse)
+    charts = ModelCharts(train_predictions_df, test_predictions_df, config.pred_horizon)
+    processed_data = charts.load_and_process_data(config.year_index, config.year_range, config.additional_index)
+    charts.generate_line_and_scatter_plots(processed_data, config.year_index, config.additional_index, config.output_lstm)
+    logging.info("Charts generated and saved as PNG files.")
 
     # # Save and log the model
     # model.save("model.h5")
@@ -158,7 +120,6 @@ def main():
 
     # # Stop the Neptune run
     # run.stop()
-
 
 if __name__ == "__main__":
     main()

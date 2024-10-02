@@ -53,6 +53,7 @@ class Config:
         self.batch_size = config.getint("LSTM", "batch_size")
 
         # ARIMA
+        self.output_arima = config.get("ARIMA", "output_arima")
         self.p = config.getint("ARIMA", "p")
         self.d = config.getint("ARIMA", "d")
         self.q = config.getint("ARIMA", "q")

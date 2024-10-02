@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
+from statsmodels.tsa.stattools import adfuller
 from config import Config
 
 
@@ -177,3 +178,28 @@ class DataReshaperLSTM:
         x_test = X_test.reshape((X_test.shape[0], self.time_steps, X_test.shape[1]//self.time_steps))
 
         return x_train, x_test, y_train, y_test
+
+
+class DataPreparerARIMA:
+    def __init__(self):
+        pass
+
+    def check_stationarity(self, series):
+        result = adfuller(series)
+        return result[1] <= 0.05  # Stationary if p-value <= 0.05
+
+    def difference_series(self, series):
+        return series.diff().dropna()
+
+    def prepare_data(self, df):
+        # Apply differencing to each numeric series to ensure stationarity
+        df_diff = df.copy()
+        
+        # Identify numeric columns
+        numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns
+
+        for col in numeric_cols:
+            if not self.check_stationarity(df[col]):
+                df_diff[col] = self.difference_series(df[col])
+        
+        return df_diff.dropna()

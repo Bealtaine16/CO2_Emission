@@ -13,7 +13,7 @@ class Config:
             cls._instance._initialized = False
         return cls._instance
 
-    def __init__(self, file_path="config.conf"):
+    def __init__(self, file_path="../../config.conf"):
         if self._initialized:
             return
         self.file_path = file_path
@@ -21,7 +21,7 @@ class Config:
         self._initialized = True
 
     def load_config(self):
-        os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppresses INFO and WARNING messages
+        os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"  # Suppresses INFO and WARNING messages
 
         config = configparser.ConfigParser()
         config.read(self.file_path)
@@ -62,5 +62,6 @@ class Config:
         self.learning_rate = config.getfloat("LightGBM", "learning_rate")
         self.n_estimators = config.getint("LightGBM", "n_estimators")
         self.max_depth = config.getint("LightGBM", "max_depth")
+
 
 config = Config()

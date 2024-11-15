@@ -171,7 +171,7 @@ class DataPreparer:
             config.pred_horizon
         )  # Number of time steps to predict into the future
 
-    def create_arimax_data(self, data, additional_index):
+    def create_arimax_lightgbm_data(self, data, additional_index, num_lags=1):
         data = data.sort_values(by=[additional_index, "year"])
         exog_columns = [
             "cement_co2",
@@ -185,16 +185,21 @@ class DataPreparer:
         target = ["co2_including_luc"]
 
         for col in exog_columns:
-            data[f"{col}_lag_1"] = data.groupby(additional_index)[col].shift(1)
+            for lag in range(1, num_lags + 1):
+                data[f"{col}_lag_{lag}"] = data.groupby(additional_index)[col].shift(
+                    lag
+                )
         data = data.dropna()
 
-        lagged_columns = [f"{col}_lag_1" for col in exog_columns]
+        lagged_columns = [
+            f"{col}_lag_{lag}" for col in exog_columns for lag in range(1, num_lags + 1)
+        ]
         df = data[other_exog_columns + lagged_columns + target]
 
         return df
 
     # Function to convert time series to supervised learning format for LightGBM
-    def create_lightgbm_and_lstm_data(self, data, year_range, additional_index):
+    def create_lstm_data(self, data, year_range, additional_index):
         features = data.columns[:-1]
         target = data.columns[-1]
         supervised_rows = []
@@ -254,6 +259,38 @@ class DataSplitter:
             # Append the training and test sets for each country
             train.append(additional_split_data.iloc[:train_size])
             test.append(additional_split_data.iloc[train_size:])
+
+        # Concatenate lists into single DataFrames
+        train = pd.concat(train)
+        test = pd.concat(test)
+
+        return train, test
+
+    def split_data_2014_2022(self, df, year_index, additional_index):
+        train, test = [], []
+
+        # Ensure data is sorted by indexes
+        df = df.sort_index(level=[additional_index, year_index])
+
+        # Iterate over each unique entity (e.g., country) in the index
+        for additional_split in df.index.get_level_values(additional_index).unique():
+            # Filter the data for the current entity
+            additional_split_data = df.xs(
+                additional_split, level=additional_index, drop_level=False
+            ).copy()
+
+            # Split based on the year column
+            train_data = additional_split_data[
+                additional_split_data.index.get_level_values(year_index) < 2014
+            ]
+            test_data = additional_split_data[
+                (additional_split_data.index.get_level_values(year_index) >= 2014)
+                & (additional_split_data.index.get_level_values(year_index) <= 2022)
+            ]
+
+            # Append the training and test sets for each entity
+            train.append(train_data)
+            test.append(test_data)
 
         # Concatenate lists into single DataFrames
         train = pd.concat(train)

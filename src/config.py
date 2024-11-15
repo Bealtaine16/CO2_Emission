@@ -13,7 +13,7 @@ class Config:
             cls._instance._initialized = False
         return cls._instance
 
-    def __init__(self, file_path="../../config.conf"):
+    def __init__(self, file_path="../config.conf"):
         if self._initialized:
             return
         self.file_path = file_path

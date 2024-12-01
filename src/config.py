@@ -13,7 +13,7 @@ class Config:
             cls._instance._initialized = False
         return cls._instance
 
-    def __init__(self, file_path="../config.conf"):
+    def __init__(self, file_path=os.path.join(os.getenv("PYTHONPATH", "/default/path"), "config.conf")):
         if self._initialized:
             return
         self.file_path = file_path
@@ -36,21 +36,12 @@ class Config:
         self.api_token = os.getenv("NEPTUNE_API_TOKEN")
 
         # GeneralConfig
-        self.file_name = config.get("GeneralConfig", "file_name")
+        self.default_path = os.getenv("PYTHONPATH", "/default/path")
+        self.file_name = os.path.join(self.default_path, config.get("GeneralConfig", "file_name"))
         self.target_column = config.get("GeneralConfig", "target_column")
         self.year_index = config.get("GeneralConfig", "year_index")
-        self.year_range = config.get("GeneralConfig", "year_range")
         self.additional_index = config.get("GeneralConfig", "additional_index")
         self.train_split = config.getfloat("GeneralConfig", "train_split")
-
-        # DataHandler
-        self.window_size = config.getint("DataHandler", "window_size")
-        self.pred_horizon = config.getint("DataHandler", "pred_horizon")
-
-        # LSTM
-        self.output_lstm = config.get("LSTM", "output_lstm")
-        self.epochs = config.getint("LSTM", "epochs")
-        self.batch_size = config.getint("LSTM", "batch_size")
 
         # ARIMA
         self.output_arima = config.get("ARIMA", "output_arima")
@@ -63,5 +54,11 @@ class Config:
         self.n_estimators = config.getint("LightGBM", "n_estimators")
         self.max_depth = config.getint("LightGBM", "max_depth")
 
+        # LSTM
+        self.window_size = config.getint("LSTM", "window_size")
+        self.pred_horizon = config.getint("LSTM", "pred_horizon")
+        self.output_lstm = config.get("LSTM", "output_lstm")
+        self.epochs = config.getint("LSTM", "epochs")
+        self.batch_size = config.getint("LSTM", "batch_size")
 
 config = Config()

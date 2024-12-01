@@ -1,0 +1,807 @@
+year,country_index,co2_including_luc
+2004,Argentina,450.881
+2005,Argentina,487.442
+2006,Argentina,505.851
+2007,Argentina,353.365
+2008,Argentina,293.438
+2009,Argentina,545.054
+2010,Argentina,468.133
+2011,Argentina,453.068
+2012,Argentina,369.778
+2013,Argentina,310.405
+2014,Argentina,286.602
+2015,Argentina,285.343
+2016,Argentina,268.806
+2017,Argentina,253.213
+2018,Argentina,234.33
+2019,Argentina,224.38
+2020,Argentina,205.745
+2021,Argentina,220.73
+2022,Argentina,218.89
+2004,Australia,568.784
+2005,Australia,459.382
+2006,Australia,418.867
+2007,Australia,478.73
+2008,Australia,669.525
+2009,Australia,513.325
+2010,Australia,930.031
+2011,Australia,672.947
+2012,Australia,565.165
+2013,Australia,556.81
+2014,Australia,475.239
+2015,Australia,437.515
+2016,Australia,500.961
+2017,Australia,458.144
+2018,Australia,438.926
+2019,Australia,425.544
+2020,Australia,400.012
+2021,Australia,380.45
+2022,Australia,376.878
+2014,Belarus,66.431
+2015,Belarus,62.222
+2016,Belarus,62.151
+2017,Belarus,63.058
+2018,Belarus,65.39
+2019,Belarus,65.186
+2020,Belarus,62.399
+2021,Belarus,64.024
+2022,Belarus,61.928
+2004,Belgium,132.802
+2005,Belgium,128.0
+2006,Belgium,125.882
+2007,Belgium,122.507
+2008,Belgium,121.679
+2009,Belgium,109.363
+2010,Belgium,115.77
+2011,Belgium,105.85
+2012,Belgium,104.472
+2013,Belgium,104.45
+2014,Belgium,99.581
+2015,Belgium,104.728
+2016,Belgium,101.86
+2017,Belgium,102.367
+2018,Belgium,103.058
+2019,Belgium,102.636
+2020,Belgium,94.161
+2021,Belgium,98.885
+2022,Belgium,92.952
+2004,Brazil,2613.293
+2005,Brazil,2323.059
+2006,Brazil,2037.965
+2007,Brazil,1900.441
+2008,Brazil,1728.722
+2009,Brazil,1546.42
+2010,Brazil,1445.519
+2011,Brazil,1429.526
+2012,Brazil,1586.254
+2013,Brazil,1744.127
+2014,Brazil,1811.109
+2015,Brazil,1855.354
+2016,Brazil,1745.648
+2017,Brazil,1586.351
+2018,Brazil,1378.641
+2019,Brazil,1712.449
+2020,Brazil,1472.334
+2021,Brazil,1655.765
+2022,Brazil,1596.469
+2004,Canada,798.177
+2005,Canada,807.101
+2006,Canada,753.974
+2007,Canada,760.951
+2008,Canada,715.28
+2009,Canada,655.273
+2010,Canada,651.909
+2011,Canada,681.809
+2012,Canada,681.564
+2013,Canada,691.786
+2014,Canada,698.927
+2015,Canada,718.218
+2016,Canada,674.55
+2017,Canada,721.88
+2018,Canada,713.817
+2019,Canada,708.518
+2020,Canada,645.677
+2021,Canada,655.622
+2022,Canada,665.826
+2004,Chile,83.147
+2005,Chile,87.926
+2006,Chile,89.556
+2007,Chile,103.835
+2008,Chile,104.828
+2009,Chile,99.468
+2010,Chile,108.999
+2011,Chile,112.93
+2012,Chile,117.084
+2013,Chile,117.391
+2014,Chile,114.641
+2015,Chile,119.114
+2016,Chile,121.585
+2017,Chile,121.54
+2018,Chile,119.451
+2019,Chile,125.063
+2020,Chile,110.558
+2021,Chile,116.752
+2022,Chile,109.531
+2008,China,7854.141
+2009,China,8248.937
+2010,China,8631.894
+2011,China,9593.182
+2012,China,9837.238
+2013,China,10002.81
+2014,China,10441.911
+2015,China,10242.954
+2016,China,9978.354
+2017,China,10472.555
+2018,China,11050.448
+2019,China,11471.032
+2020,China,11743.429
+2021,China,12240.529
+2022,China,12378.281
+2003,Colombia,210.854
+2004,Colombia,95.998
+2005,Colombia,61.067
+2006,Colombia,105.097
+2007,Colombia,95.381
+2008,Colombia,82.914
+2009,Colombia,84.339
+2010,Colombia,77.323
+2011,Colombia,202.161
+2012,Colombia,445.793
+2013,Colombia,219.304
+2014,Colombia,188.385
+2015,Colombia,174.431
+2016,Colombia,165.036
+2017,Colombia,149.328
+2018,Colombia,134.284
+2019,Colombia,132.576
+2020,Colombia,125.905
+2021,Colombia,133.49
+2022,Colombia,136.969
+2008,Cote d'Ivoire,40.705
+2009,Cote d'Ivoire,33.273
+2010,Cote d'Ivoire,27.931
+2011,Cote d'Ivoire,31.373
+2012,Cote d'Ivoire,74.764
+2013,Cote d'Ivoire,54.067
+2014,Cote d'Ivoire,38.713
+2015,Cote d'Ivoire,34.483
+2016,Cote d'Ivoire,36.01
+2017,Cote d'Ivoire,42.276
+2018,Cote d'Ivoire,28.532
+2019,Cote d'Ivoire,27.506
+2020,Cote d'Ivoire,27.913
+2021,Cote d'Ivoire,27.588
+2022,Cote d'Ivoire,27.293
+2012,Czechia,96.316
+2013,Czechia,93.488
+2014,Czechia,90.986
+2015,Czechia,92.444
+2016,Czechia,94.715
+2017,Czechia,96.267
+2018,Czechia,94.987
+2019,Czechia,90.068
+2020,Czechia,81.143
+2021,Czechia,86.54
+2022,Czechia,88.262
+2008,Democratic Republic of Congo,456.185
+2009,Democratic Republic of Congo,735.157
+2010,Democratic Republic of Congo,873.727
+2011,Democratic Republic of Congo,1014.276
+2012,Democratic Republic of Congo,945.796
+2013,Democratic Republic of Congo,974.974
+2014,Democratic Republic of Congo,791.865
+2015,Democratic Republic of Congo,624.432
+2016,Democratic Republic of Congo,656.762
+2017,Democratic Republic of Congo,665.085
+2018,Democratic Republic of Congo,540.022
+2019,Democratic Republic of Congo,382.0
+2020,Democratic Republic of Congo,498.8
+2021,Democratic Republic of Congo,560.522
+2022,Democratic Republic of Congo,516.019
+2008,Egypt,201.756
+2009,Egypt,209.166
+2010,Egypt,204.579
+2011,Egypt,218.747
+2012,Egypt,215.766
+2013,Egypt,212.353
+2014,Egypt,228.788
+2015,Egypt,224.994
+2016,Egypt,239.505
+2017,Egypt,260.343
+2018,Egypt,244.204
+2019,Egypt,256.484
+2020,Egypt,228.05
+2021,Egypt,247.329
+2022,Egypt,259.402
+2004,France,388.765
+2005,France,391.523
+2006,France,382.907
+2007,France,369.889
+2008,France,361.012
+2009,France,342.7
+2010,France,347.831
+2011,France,326.676
+2012,France,332.439
+2013,France,337.233
+2014,France,306.289
+2015,France,317.056
+2016,France,315.409
+2017,France,322.054
+2018,France,302.721
+2019,France,297.02
+2020,France,263.456
+2021,France,290.016
+2022,France,281.911
+2004,Germany,871.898
+2005,Germany,849.308
+2006,Germany,863.19
+2007,Germany,837.065
+2008,Germany,839.342
+2009,Germany,771.523
+2010,Germany,818.476
+2011,Germany,793.163
+2012,Germany,803.035
+2013,Germany,825.475
+2014,Germany,788.546
+2015,Germany,790.941
+2016,Germany,796.912
+2017,Germany,781.653
+2018,Germany,745.749
+2019,Germany,698.699
+2020,Germany,638.599
+2021,Germany,670.441
+2022,Germany,657.516
+2004,India,1196.999
+2005,India,1228.745
+2006,India,1331.424
+2007,India,1486.842
+2008,India,1637.771
+2009,India,1695.097
+2010,India,1795.778
+2011,India,1862.452
+2012,India,2086.577
+2013,India,2212.392
+2014,India,2247.754
+2015,India,2386.868
+2016,India,2519.178
+2017,India,2547.878
+2018,India,2718.08
+2019,India,2708.915
+2020,India,2494.395
+2021,India,2725.703
+2022,India,2864.052
+1996,Indonesia,983.158
+1997,Indonesia,2754.782
+1998,Indonesia,1391.162
+1999,Indonesia,1451.972
+2000,Indonesia,1117.817
+2001,Indonesia,1144.792
+2002,Indonesia,1384.725
+2003,Indonesia,1075.352
+2004,Indonesia,1178.733
+2005,Indonesia,1126.777
+2006,Indonesia,1611.766
+2007,Indonesia,922.997
+2008,Indonesia,962.75
+2009,Indonesia,1275.495
+2010,Indonesia,944.802
+2011,Indonesia,1233.501
+2012,Indonesia,1262.823
+2013,Indonesia,1236.327
+2014,Indonesia,1425.563
+2015,Indonesia,1936.231
+2016,Indonesia,1183.53
+2017,Indonesia,1168.161
+2018,Indonesia,1114.337
+2019,Indonesia,1725.195
+2020,Indonesia,1442.075
+2021,Indonesia,1504.48
+2022,Indonesia,1647.497
+2008,Iran,501.069
+2009,Iran,512.786
+2010,Iran,527.494
+2011,Iran,539.674
+2012,Iran,561.408
+2013,Iran,573.919
+2014,Iran,607.201
+2015,Iran,607.996
+2016,Iran,609.817
+2017,Iran,661.289
+2018,Iran,706.721
+2019,Iran,683.864
+2020,Iran,666.421
+2021,Iran,674.846
+2022,Iran,677.454
+2004,Italy,457.06
+2005,Italy,451.216
+2006,Italy,443.536
+2007,Italy,464.46
+2008,Italy,434.9
+2009,Italy,395.374
+2010,Italy,391.515
+2011,Italy,390.181
+2012,Italy,356.078
+2013,Italy,322.81
+2014,Italy,301.954
+2015,Italy,318.796
+2016,Italy,320.757
+2017,Italy,310.855
+2018,Italy,307.65
+2019,Italy,300.026
+2020,Italy,263.102
+2021,Italy,297.446
+2022,Italy,298.672
+2004,Japan,1271.396
+2005,Japan,1278.601
+2006,Japan,1255.47
+2007,Japan,1291.963
+2008,Japan,1222.123
+2009,Japan,1152.843
+2010,Japan,1203.942
+2011,Japan,1255.794
+2012,Japan,1300.087
+2013,Japan,1308.648
+2014,Japan,1258.506
+2015,Japan,1218.842
+2016,Japan,1199.07
+2017,Japan,1184.882
+2018,Japan,1140.846
+2019,Japan,1105.044
+2020,Japan,1041.45
+2021,Japan,1065.054
+2022,Japan,1058.027
+2014,Kazakhstan,270.083
+2015,Kazakhstan,266.328
+2016,Kazakhstan,264.792
+2017,Kazakhstan,283.172
+2018,Kazakhstan,291.703
+2019,Kazakhstan,259.068
+2020,Kazakhstan,239.149
+2021,Kazakhstan,239.091
+2022,Kazakhstan,255.273
+1998,Malaysia,248.96
+1999,Malaysia,212.634
+2000,Malaysia,214.519
+2001,Malaysia,243.168
+2002,Malaysia,257.293
+2003,Malaysia,262.475
+2004,Malaysia,260.497
+2005,Malaysia,255.459
+2006,Malaysia,278.22
+2007,Malaysia,289.022
+2008,Malaysia,322.588
+2009,Malaysia,353.048
+2010,Malaysia,349.536
+2011,Malaysia,416.171
+2012,Malaysia,421.181
+2013,Malaysia,401.311
+2014,Malaysia,541.922
+2015,Malaysia,413.24
+2016,Malaysia,367.327
+2017,Malaysia,453.532
+2018,Malaysia,432.175
+2019,Malaysia,441.881
+2020,Malaysia,445.364
+2021,Malaysia,452.977
+2022,Malaysia,461.066
+2004,Mexico,518.596
+2005,Mexico,535.211
+2006,Mexico,550.285
+2007,Mexico,516.628
+2008,Mexico,490.214
+2009,Mexico,454.493
+2010,Mexico,460.935
+2011,Mexico,457.64
+2012,Mexico,471.128
+2013,Mexico,460.741
+2014,Mexico,633.081
+2015,Mexico,712.46
+2016,Mexico,804.675
+2017,Mexico,711.126
+2018,Mexico,752.269
+2019,Mexico,773.325
+2020,Mexico,760.773
+2021,Mexico,807.686
+2022,Mexico,862.686
+1989,Netherlands,164.627
+1990,Netherlands,165.403
+1991,Netherlands,174.265
+1992,Netherlands,174.245
+1993,Netherlands,174.074
+1994,Netherlands,174.59
+1995,Netherlands,177.832
+1996,Netherlands,186.582
+1997,Netherlands,179.794
+1998,Netherlands,179.922
+1999,Netherlands,174.648
+2000,Netherlands,175.185
+2001,Netherlands,181.591
+2002,Netherlands,179.66
+2003,Netherlands,190.664
+2004,Netherlands,190.799
+2005,Netherlands,188.145
+2006,Netherlands,181.806
+2007,Netherlands,181.324
+2008,Netherlands,183.402
+2009,Netherlands,177.765
+2010,Netherlands,188.451
+2011,Netherlands,174.329
+2012,Netherlands,172.12
+2013,Netherlands,170.764
+2014,Netherlands,163.219
+2015,Netherlands,169.245
+2016,Netherlands,170.111
+2017,Netherlands,167.323
+2018,Netherlands,163.01
+2019,Netherlands,157.202
+2020,Netherlands,136.767
+2021,Netherlands,140.17
+2022,Netherlands,125.693
+2008,Nigeria,-2.196
+2009,Nigeria,87.648
+2010,Nigeria,174.066
+2011,Nigeria,186.704
+2012,Nigeria,120.363
+2013,Nigeria,121.779
+2014,Nigeria,124.355
+2015,Nigeria,111.109
+2016,Nigeria,115.401
+2017,Nigeria,123.529
+2018,Nigeria,119.979
+2019,Nigeria,140.384
+2020,Nigeria,134.368
+2021,Nigeria,139.335
+2022,Nigeria,134.498
+2008,Pakistan,140.274
+2009,Pakistan,145.219
+2010,Pakistan,172.082
+2011,Pakistan,167.882
+2012,Pakistan,170.248
+2013,Pakistan,159.067
+2014,Pakistan,159.81
+2015,Pakistan,193.625
+2016,Pakistan,220.234
+2017,Pakistan,235.26
+2018,Pakistan,225.923
+2019,Pakistan,227.891
+2020,Pakistan,222.872
+2021,Pakistan,245.663
+2022,Pakistan,222.755
+2004,Peru,134.152
+2005,Peru,121.448
+2006,Peru,104.31
+2007,Peru,105.93
+2008,Peru,104.056
+2009,Peru,93.029
+2010,Peru,88.67
+2011,Peru,99.455
+2012,Peru,93.481
+2013,Peru,62.902
+2014,Peru,64.07
+2015,Peru,82.246
+2016,Peru,72.356
+2017,Peru,58.308
+2018,Peru,53.348
+2019,Peru,51.251
+2020,Peru,31.902
+2021,Peru,38.756
+2022,Peru,40.699
+2004,Philippines,104.997
+2005,Philippines,154.68
+2006,Philippines,163.109
+2007,Philippines,181.606
+2008,Philippines,162.573
+2009,Philippines,134.548
+2010,Philippines,172.637
+2011,Philippines,182.314
+2012,Philippines,153.048
+2013,Philippines,158.872
+2014,Philippines,148.208
+2015,Philippines,152.834
+2016,Philippines,157.369
+2017,Philippines,169.637
+2018,Philippines,170.469
+2019,Philippines,169.653
+2020,Philippines,158.416
+2021,Philippines,167.485
+2022,Philippines,174.096
+2008,Poland,287.913
+2009,Poland,248.021
+2010,Poland,296.561
+2011,Poland,278.601
+2012,Poland,268.243
+2013,Poland,269.395
+2014,Poland,256.397
+2015,Poland,260.743
+2016,Poland,274.659
+2017,Poland,289.335
+2018,Poland,298.164
+2019,Poland,277.588
+2020,Poland,263.564
+2021,Poland,293.902
+2022,Poland,287.777
+2004,Romania,98.321
+2005,Romania,90.715
+2006,Romania,85.94
+2007,Romania,94.505
+2008,Romania,95.683
+2009,Romania,111.431
+2010,Romania,85.429
+2011,Romania,83.546
+2012,Romania,90.229
+2013,Romania,72.906
+2014,Romania,73.47
+2015,Romania,65.545
+2016,Romania,62.55
+2017,Romania,64.551
+2018,Romania,63.899
+2019,Romania,59.272
+2020,Romania,55.823
+2021,Romania,57.956
+2022,Romania,53.124
+2008,Russia,1686.184
+2009,Russia,1753.454
+2010,Russia,2011.366
+2011,Russia,1782.149
+2012,Russia,2039.685
+2013,Russia,1859.798
+2014,Russia,1736.803
+2015,Russia,2040.582
+2016,Russia,2051.961
+2017,Russia,2099.36
+2018,Russia,2158.138
+2019,Russia,1979.891
+2020,Russia,1906.015
+2021,Russia,2009.503
+2022,Russia,1965.207
+2010,Saudi Arabia,523.045
+2011,Saudi Arabia,501.286
+2012,Saudi Arabia,565.071
+2013,Saudi Arabia,550.541
+2014,Saudi Arabia,616.672
+2015,Saudi Arabia,680.356
+2016,Saudi Arabia,698.901
+2017,Saudi Arabia,684.531
+2018,Saudi Arabia,690.383
+2019,Saudi Arabia,710.627
+2020,Saudi Arabia,614.442
+2021,Saudi Arabia,635.291
+2022,Saudi Arabia,666.512
+2008,South Africa,527.482
+2009,South Africa,503.271
+2010,South Africa,473.803
+2011,South Africa,472.888
+2012,South Africa,467.256
+2013,South Africa,463.653
+2014,South Africa,473.349
+2015,South Africa,447.332
+2016,South Africa,456.073
+2017,South Africa,435.294
+2018,South Africa,432.62
+2019,South Africa,464.81
+2020,South Africa,434.628
+2021,South Africa,425.926
+2022,South Africa,405.18
+2001,South Korea,449.641
+2002,South Korea,470.238
+2003,South Korea,479.437
+2004,South Korea,486.216
+2005,South Korea,493.179
+2006,South Korea,498.025
+2007,South Korea,516.352
+2008,South Korea,527.158
+2009,South Korea,532.836
+2010,South Korea,588.716
+2011,South Korea,621.962
+2012,South Korea,624.068
+2013,South Korea,630.1
+2014,South Korea,624.948
+2015,South Korea,629.238
+2016,South Korea,632.877
+2017,South Korea,649.466
+2018,South Korea,664.409
+2019,South Korea,640.011
+2020,South Korea,591.513
+2021,South Korea,609.634
+2022,South Korea,594.387
+2004,Spain,334.354
+2005,Spain,345.367
+2006,Spain,333.601
+2007,Spain,343.312
+2008,Spain,311.747
+2009,Spain,273.63
+2010,Spain,254.062
+2011,Spain,295.985
+2012,Spain,262.239
+2013,Spain,237.062
+2014,Spain,238.21
+2015,Spain,249.348
+2016,Spain,239.523
+2017,Spain,255.303
+2018,Spain,249.668
+2019,Spain,231.262
+2020,Spain,193.952
+2021,Spain,210.31
+2022,Spain,225.618
+2000,Sweden,55.235
+2001,Sweden,56.417
+2002,Sweden,57.82
+2003,Sweden,59.895
+2004,Sweden,63.202
+2005,Sweden,59.614
+2006,Sweden,57.807
+2007,Sweden,57.567
+2008,Sweden,55.538
+2009,Sweden,52.364
+2010,Sweden,57.913
+2011,Sweden,53.428
+2012,Sweden,50.943
+2013,Sweden,49.471
+2014,Sweden,48.233
+2015,Sweden,48.341
+2016,Sweden,48.409
+2017,Sweden,48.27
+2018,Sweden,47.317
+2019,Sweden,46.415
+2020,Sweden,42.195
+2021,Sweden,44.074
+2022,Sweden,43.668
+2008,Tanzania,180.948
+2009,Tanzania,161.591
+2010,Tanzania,242.279
+2011,Tanzania,299.438
+2012,Tanzania,204.777
+2013,Tanzania,143.351
+2014,Tanzania,131.116
+2015,Tanzania,105.114
+2016,Tanzania,89.049
+2017,Tanzania,88.121
+2018,Tanzania,72.387
+2019,Tanzania,63.307
+2020,Tanzania,55.276
+2021,Tanzania,50.648
+2022,Tanzania,45.735
+2008,Thailand,478.814
+2009,Thailand,393.436
+2010,Thailand,367.792
+2011,Thailand,519.409
+2012,Thailand,461.214
+2013,Thailand,385.22
+2014,Thailand,379.166
+2015,Thailand,356.066
+2016,Thailand,347.642
+2017,Thailand,342.845
+2018,Thailand,338.711
+2019,Thailand,327.398
+2020,Thailand,313.853
+2021,Thailand,306.55
+2022,Thailand,307.98
+2004,Turkey,261.421
+2005,Turkey,255.463
+2006,Turkey,250.682
+2007,Turkey,276.175
+2008,Turkey,272.602
+2009,Turkey,290.086
+2010,Turkey,270.308
+2011,Turkey,312.861
+2012,Turkey,326.351
+2013,Turkey,327.486
+2014,Turkey,340.06
+2015,Turkey,366.891
+2016,Turkey,386.886
+2017,Turkey,416.89
+2018,Turkey,381.702
+2019,Turkey,366.626
+2020,Turkey,378.003
+2021,Turkey,418.463
+2022,Turkey,402.311
+2014,Ukraine,264.815
+2015,Ukraine,241.438
+2016,Ukraine,243.035
+2017,Ukraine,231.126
+2018,Ukraine,237.49
+2019,Ukraine,226.991
+2020,Ukraine,211.49
+2021,Ukraine,214.329
+2022,Ukraine,145.142
+2004,United Kingdom,579.987
+2005,United Kingdom,613.705
+2006,United Kingdom,589.968
+2007,United Kingdom,577.295
+2008,United Kingdom,555.837
+2009,United Kingdom,501.791
+2010,United Kingdom,518.709
+2011,United Kingdom,480.352
+2012,United Kingdom,504.416
+2013,United Kingdom,493.449
+2014,United Kingdom,450.675
+2015,United Kingdom,442.195
+2016,United Kingdom,418.408
+2017,United Kingdom,399.686
+2018,United Kingdom,393.51
+2019,United Kingdom,378.681
+2020,United Kingdom,341.696
+2021,United Kingdom,362.887
+2022,United Kingdom,334.585
+1989,United States,5404.929
+1990,United States,5410.202
+1991,United States,5299.991
+1992,United States,5353.906
+1993,United States,5437.705
+1994,United States,5580.025
+1995,United States,5524.228
+1996,United States,5693.196
+1997,United States,5791.189
+1998,United States,5846.14
+1999,United States,5955.642
+2000,United States,6147.761
+2001,United States,5950.588
+2002,United States,5951.311
+2003,United States,6074.277
+2004,United States,6093.979
+2005,United States,6176.527
+2006,United States,6014.732
+2007,United States,6076.254
+2008,United States,5912.461
+2009,United States,5430.801
+2010,United States,5687.592
+2011,United States,5466.796
+2012,United States,5371.383
+2013,United States,5462.715
+2014,United States,5575.057
+2015,United States,5402.494
+2016,United States,5320.76
+2017,United States,5357.28
+2018,United States,5486.095
+2019,United States,5374.306
+2020,United States,4829.357
+2021,United States,5159.809
+2022,United States,5199.053
+2014,Uzbekistan,105.094
+2015,Uzbekistan,101.483
+2016,Uzbekistan,108.078
+2017,Uzbekistan,107.257
+2018,Uzbekistan,100.672
+2019,Uzbekistan,107.044
+2020,Uzbekistan,108.379
+2021,Uzbekistan,115.257
+2022,Uzbekistan,119.593
+1999,Venezuela,157.876
+2000,Venezuela,161.462
+2001,Venezuela,138.564
+2002,Venezuela,175.633
+2003,Venezuela,176.342
+2004,Venezuela,156.546
+2005,Venezuela,157.527
+2006,Venezuela,166.87
+2007,Venezuela,174.38
+2008,Venezuela,169.322
+2009,Venezuela,161.288
+2010,Venezuela,198.455
+2011,Venezuela,180.559
+2012,Venezuela,193.217
+2013,Venezuela,212.365
+2014,Venezuela,185.468
+2015,Venezuela,176.788
+2016,Venezuela,164.482
+2017,Venezuela,152.2
+2018,Venezuela,113.4
+2019,Venezuela,96.677
+2020,Venezuela,69.856
+2021,Venezuela,79.177
+2022,Venezuela,84.029
+2008,Vietnam,219.749
+2009,Vietnam,305.761
+2010,Vietnam,262.083
+2011,Vietnam,257.453
+2012,Vietnam,248.986
+2013,Vietnam,262.943
+2014,Vietnam,537.629
+2015,Vietnam,427.329
+2016,Vietnam,379.609
+2017,Vietnam,483.888
+2018,Vietnam,504.751
+2019,Vietnam,589.843
+2020,Vietnam,613.079
+2021,Vietnam,605.475
+2022,Vietnam,595.342

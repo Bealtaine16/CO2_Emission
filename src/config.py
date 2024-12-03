@@ -1,4 +1,5 @@
 import os
+import ast
 import configparser
 import sys
 from dotenv import load_dotenv
@@ -13,7 +14,7 @@ class Config:
             cls._instance._initialized = False
         return cls._instance
 
-    def __init__(self, file_path=os.path.join(os.getenv("PYTHONPATH", "/default/path"), "config.conf")):
+    def __init__(self, file_path=os.path.join(os.getenv("PYTHONPATH"), "config.conf")):
         if self._initialized:
             return
         self.file_path = file_path
@@ -35,12 +36,22 @@ class Config:
         self.project_name = config.get("NeptuneConfig", "project_name")
         self.api_token = os.getenv("NEPTUNE_API_TOKEN")
 
+        # FilesConfig
+        self.staging_data_file_name = os.path.join(project_root, config.get("FilesConfig", "staging_data_file_name"))
+        self.output_exploration = os.path.join(project_root, config.get("FilesConfig", "output_exploration"))
+        self.intermediate_data_file_name = os.path.join(project_root, config.get("FilesConfig", "intermediate_data_file_name"))
+        self.output_cleaned = os.path.join(project_root, config.get("FilesConfig", "output_cleaned"))
+        self.reporting_data_file_name = os.path.join(project_root, config.get("FilesConfig", "reporting_data_file_name"))
+        self.output_cleaned_arimax = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_arimax"))
+        self.output_cleaned_lightgbm = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_lightgbm"))
+        self.output_cleaned_lstm = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_lstm"))
+
         # GeneralConfig
-        self.default_path = os.getenv("PYTHONPATH", "/default/path")
-        self.file_name = os.path.join(self.default_path, config.get("GeneralConfig", "file_name"))
         self.target_column = config.get("GeneralConfig", "target_column")
         self.year_index = config.get("GeneralConfig", "year_index")
         self.additional_index = config.get("GeneralConfig", "additional_index")
+        self.feature_cols = ast.literal_eval(config.get("GeneralConfig", "feature_cols"))
+        self.target_col = ast.literal_eval(config.get("GeneralConfig", "target_col"))
         self.train_split = config.getfloat("GeneralConfig", "train_split")
 
         # ARIMA

@@ -105,3 +105,33 @@ class ModelCharts:
         # Close the plots to free up memory
         plt.close(fig1)
         plt.close(fig2)
+
+    def generate_line_plot(self, df):
+        num_rows = 9
+        num_cols = 5
+        countries = df['country'].unique()
+        fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 25), squeeze=False)
+        axes = axes.flatten()
+
+        for i, country in enumerate(countries):
+            # Filter results for the current country
+            country_results = df[df['country'] == country]
+            ax = axes[i]
+            
+            # Plot the actual and predicted CO2 for each country
+            ax.plot(country_results['Rok'], country_results['co2_actual'], label='CO2')
+            ax.plot(country_results['Rok'], country_results['co2_predicted'], label='CO2 - predykcja', linestyle='--')
+            
+            ax.set_title(f'{country} - CO2 Emissions')
+            ax.set_xlabel('Year')
+            ax.set_ylabel('CO2')
+            ax.grid(True)
+            
+            ax.legend()
+
+        # Delete any remaining unused axes
+        for j in range(i + 1, len(axes)):
+            fig.delaxes(axes[j])
+
+        plt.tight_layout()
+        plt.show()

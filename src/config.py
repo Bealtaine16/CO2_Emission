@@ -45,6 +45,14 @@ class Config:
         self.output_cleaned_arimax = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_arimax"))
         self.output_cleaned_lightgbm = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_lightgbm"))
         self.output_cleaned_lstm = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_lstm"))
+        self.output_cleaned_hybrid = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_hybrid"))
+        self.models_folder = os.path.join(project_root, config.get("FilesConfig", 'models_folder'))
+        self.predictions_arimax = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax'))
+        self.predictions_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lightgbm'))
+        self.predictions_lstm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lstm'))
+        self.metrics_arimax = os.path.join(project_root, config.get("FilesConfig", 'metrics_arimax'))
+        self.metrics_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'metrics_lightgbm'))
+        self.metrics_lstm = os.path.join(project_root, config.get("FilesConfig", 'metrics_lstm'))
 
         # GeneralConfig
         self.target_column = config.get("GeneralConfig", "target_column")

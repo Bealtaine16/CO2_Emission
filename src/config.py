@@ -42,15 +42,21 @@ class Config:
         self.intermediate_data_file_name = os.path.join(project_root, config.get("FilesConfig", "intermediate_data_file_name"))
         self.output_cleaned = os.path.join(project_root, config.get("FilesConfig", "output_cleaned"))
         self.reporting_data_file_name = os.path.join(project_root, config.get("FilesConfig", "reporting_data_file_name"))
+
         self.output_cleaned_arimax = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_arimax"))
         self.output_cleaned_lightgbm = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_lightgbm"))
         self.output_cleaned_lstm = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_lstm"))
         self.output_cleaned_hybrid = os.path.join(project_root, config.get("FilesConfig", "output_cleaned_hybrid"))
+
         self.models_folder = os.path.join(project_root, config.get("FilesConfig", 'models_folder'))
-        self.predictions_arimax = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax'))
+
+        self.predictions_arimax_standard = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax_standard'))
+        self.predictions_arimax_pca = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax_pca'))
         self.predictions_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lightgbm'))
         self.predictions_lstm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lstm'))
-        self.predictions_hybrid = os.path.join(project_root, config.get("FilesConfig", 'predictions_hybrid'))
+        self.predictions_hybrid_arimax_lstm = os.path.join(project_root, config.get("FilesConfig", 'predictions_hybrid_arimax_lstm'))
+        self.predictions_hybrid_lightgbm_lstm = os.path.join(project_root, config.get("FilesConfig", 'predictions_hybrid_lightgbm_lstm'))
+
         self.metrics_arimax = os.path.join(project_root, config.get("FilesConfig", 'metrics_arimax'))
         self.metrics_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'metrics_lightgbm'))
         self.metrics_lstm = os.path.join(project_root, config.get("FilesConfig", 'metrics_lstm'))

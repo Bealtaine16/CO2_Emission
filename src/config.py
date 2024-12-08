@@ -50,9 +50,11 @@ class Config:
         self.predictions_arimax = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax'))
         self.predictions_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lightgbm'))
         self.predictions_lstm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lstm'))
+        self.predictions_hybrid = os.path.join(project_root, config.get("FilesConfig", 'predictions_hybrid'))
         self.metrics_arimax = os.path.join(project_root, config.get("FilesConfig", 'metrics_arimax'))
         self.metrics_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'metrics_lightgbm'))
         self.metrics_lstm = os.path.join(project_root, config.get("FilesConfig", 'metrics_lstm'))
+        self.metrics_hybrid = os.path.join(project_root, config.get("FilesConfig", 'metrics_hybrid'))
 
         # GeneralConfig
         self.target_column = config.get("GeneralConfig", "target_column")
@@ -68,15 +70,7 @@ class Config:
         self.d = config.getint("ARIMA", "d")
         self.q = config.getint("ARIMA", "q")
 
-        # LightGBM
-        self.learning_rate = config.getfloat("LightGBM", "learning_rate")
-        self.n_estimators = config.getint("LightGBM", "n_estimators")
-        self.max_depth = config.getint("LightGBM", "max_depth")
-
         # LSTM
-        self.window_size = config.getint("LSTM", "window_size")
-        self.pred_horizon = config.getint("LSTM", "pred_horizon")
-        self.output_lstm = config.get("LSTM", "output_lstm")
         self.epochs = config.getint("LSTM", "epochs")
         self.batch_size = config.getint("LSTM", "batch_size")
 

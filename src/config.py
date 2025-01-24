@@ -38,6 +38,7 @@ class Config:
 
         # FilesConfig
         self.staging_data_file_name = os.path.join(project_root, config.get("FilesConfig", "staging_data_file_name"))
+        self.iso_code_file_name = os.path.join(project_root, config.get("FilesConfig", "iso_code_file_name"))
         self.output_exploration = os.path.join(project_root, config.get("FilesConfig", "output_exploration"))
         self.intermediate_data_file_name = os.path.join(project_root, config.get("FilesConfig", "intermediate_data_file_name"))
         self.output_cleaned = os.path.join(project_root, config.get("FilesConfig", "output_cleaned"))

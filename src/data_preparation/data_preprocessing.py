@@ -73,13 +73,12 @@ class DataPreparer:
                 )
 
                 row[additional_index] = country
-                row[year_index] = (
-                    f"{group.index[i + num_lags + pred_horizon - 1][0]}"
-                )
+                row[year_index] = group.index.get_level_values(year_index)[i + num_lags + pred_horizon - 1]
+                row['country_order'] = group.index.get_level_values('country_order').tolist()[0]
 
                 supervised_rows.append(row)
 
-        return pd.DataFrame(supervised_rows).set_index([year_index, additional_index])
+        return pd.DataFrame(supervised_rows).set_index(['country_order', year_index, additional_index])
 
 
 class DataSplitter:

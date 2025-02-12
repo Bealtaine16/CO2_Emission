@@ -32,10 +32,6 @@ class Config:
         if project_root not in sys.path:
             sys.path.append(project_root)
 
-        # NeptuneConfig
-        self.project_name = config.get("NeptuneConfig", "project_name")
-        self.api_token = os.getenv("NEPTUNE_API_TOKEN")
-
         # FilesConfig
         self.staging_data_file_name = os.path.join(project_root, config.get("FilesConfig", "staging_data_file_name"))
         self.iso_code_file_name = os.path.join(project_root, config.get("FilesConfig", "iso_code_file_name"))
@@ -70,12 +66,6 @@ class Config:
         self.feature_cols = ast.literal_eval(config.get("GeneralConfig", "feature_cols"))
         self.target_col = ast.literal_eval(config.get("GeneralConfig", "target_col"))
         self.train_split = config.getfloat("GeneralConfig", "train_split")
-
-        # ARIMA
-        self.output_arima = config.get("ARIMA", "output_arima")
-        self.p = config.getint("ARIMA", "p")
-        self.d = config.getint("ARIMA", "d")
-        self.q = config.getint("ARIMA", "q")
 
         # LSTM
         self.epochs = config.getint("LSTM", "epochs")

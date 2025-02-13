@@ -10,9 +10,11 @@ class PredictionEvaluator:
     @staticmethod
     def custom_r2_score(y_actual, y_predicted):
         ss_total = np.sum((y_actual - np.mean(y_actual)) ** 2)
+        if ss_total == 0:
+            return 1.0 
         ss_residual = np.sum((y_actual - y_predicted) ** 2)
         r2 = 1 - (ss_residual / ss_total)
-        return max(0, r2)
+        return r2
 
     def calculate_metrics(self, data, actual_col, predicted_col, group_col='country'):
 

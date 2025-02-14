@@ -2,6 +2,8 @@ import os
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import math
+import seaborn as sns
 
 from src.config import Config
 
@@ -206,3 +208,116 @@ class ModelCharts:
 
         # Close the plots to free up memory
         plt.close(fig)
+
+
+class GlobalModelCharts:
+    def __init__(self, combined_df, output_dir, variant):
+        self.df = combined_df.copy()
+        self.output_dir = output_dir
+        os.makedirs(self.output_dir, exist_ok=True)
+        self.variant = variant
+        self.country_col = 'country'
+        self.year_col = 'year'
+    
+    def _get_model_names(self):
+        model_names = set()
+        for col in self.df.columns:
+            if col.startswith("co2_predicted_"):
+                model_names.add(col[len("co2_predicted_"):])
+        return sorted(list(model_names))
+    
+    def _get_actual_column(self):
+        actual_cols = [col for col in self.df.columns if col.startswith("co2_actual_")]
+        return actual_cols[0] if actual_cols else None
+
+    def generate_country_individual_charts(self):
+        model_names = self._get_model_names()
+        actual_col = self._get_actual_column()
+        countries = self.df[self.country_col].unique()
+        
+        color_actual_train = "#2E86AB"   # ciemnoniebieski
+        color_actual_test = "#6C757D"    # szary
+        color_pred_train = "#1ABC9C"     # turkusowy
+        color_pred_test = "#E74C3C"      # jasnoczerwony
+        
+        for country in countries:
+            df_country = self.df[self.df[self.country_col] == country].sort_values(by=self.year_col)
+            n_models = len(model_names)
+            n_cols = 3
+            n_rows = math.ceil(n_models / n_cols)
+            fig, axs = plt.subplots(n_rows, n_cols, figsize=(n_cols * 6, n_rows * 4))
+            axs = axs.flatten()
+            
+            for i, model in enumerate(model_names):
+                ax = axs[i]
+                pred_col = f"co2_predicted_{model}"
+                if pred_col not in df_country.columns:
+                    ax.set_visible(False)
+                    continue
+                
+                df_train = df_country[df_country['set'] == 'train']
+                df_test = df_country[df_country['set'] == 'test']
+                
+                if actual_col is not None:
+                    ax.plot(df_train[self.year_col], df_train[actual_col],
+                            label='Actual Train', color=color_actual_train, linestyle='-', linewidth=2.5)
+                    ax.plot(df_test[self.year_col], df_test[actual_col],
+                            label='Actual Test', color=color_actual_test, linestyle='-', linewidth=2.5)
+                
+                ax.plot(df_train[self.year_col], df_train[pred_col],
+                        label='Pred Train', color=color_pred_train, linestyle='--', linewidth=2.5)
+                ax.plot(df_test[self.year_col], df_test[pred_col],
+                        label='Pred Test', color=color_pred_test, linestyle='--', linewidth=2.5)
+                
+                ax.set_title(f'{model.upper()}', fontsize=16, fontweight='bold')
+                ax.set_xlabel("Rok", fontsize=12)
+                ax.set_ylabel(self.variant.upper(), fontsize=12)
+                ax.tick_params(axis='both', labelsize=10)
+                ax.grid(True, linestyle='--', linewidth=0.7)
+                ax.legend(loc='upper left', fontsize='small')
+            
+            for j in range(i + 1, len(axs)):
+                axs[j].axis('off')
+            
+            fig.suptitle(f"{self.variant.upper()} - {country}", fontsize=16, fontweight='bold')
+            plt.tight_layout(rect=[0, 0, 1, 0.93])
+            filename = os.path.join(self.output_dir, f"line_{country}.png")
+            fig.savefig(filename, dpi=300)
+            plt.close(fig)
+    
+    def generate_country_combined_chart(self):
+        model_names = self._get_model_names()
+        actual_col = self._get_actual_column()
+        if actual_col is None:
+            print("Brak kolumn z danymi actual!")
+            return
+        
+        countries = self.df[self.country_col].unique()
+        
+        palette = sns.color_palette("tab10", len(model_names))
+        
+        for country in countries:
+            df_country = self.df[self.df[self.country_col] == country].sort_values(by=self.year_col)
+            df_test = df_country[df_country['set'] == 'test']
+            plt.figure(figsize=(12, 7))
+            
+            plt.plot(df_test[self.year_col], df_test[actual_col],
+                     label='Actual', color='black', linestyle='-', linewidth=3)
+            
+            for idx, model in enumerate(model_names):
+                pred_col = f"co2_predicted_{model}"
+                if pred_col not in df_test.columns:
+                    continue
+                plt.plot(df_test[self.year_col], df_test[pred_col],
+                         label=f'{model.upper()}', linestyle='--', linewidth=2, color=palette[idx])
+            
+            plt.title(f"{self.variant.upper()} - Porównanie wszystkich modeli (dane testowe) - {country}", fontsize=16, fontweight='bold')
+            plt.xlabel("Rok", fontsize=14)
+            plt.ylabel(self.variant.upper(), fontsize=14)
+            plt.tick_params(axis='both', labelsize=12)
+            plt.legend(fontsize=10, loc='best')
+            plt.grid(True, linestyle='--', linewidth=0.7)
+            plt.tight_layout()
+            filename = os.path.join(self.output_dir, f"line_{country}_all.png")
+            plt.savefig(filename, dpi=300)
+            plt.close()

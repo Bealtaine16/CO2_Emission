@@ -47,6 +47,7 @@ class Config:
 
         self.models_folder = os.path.join(project_root, config.get("FilesConfig", 'models_folder'))
 
+        self.predictions = os.path.join(project_root, config.get("FilesConfig", 'predictions'))
         self.predictions_arimax_standard = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax_standard'))
         self.predictions_arimax_pca = os.path.join(project_root, config.get("FilesConfig", 'predictions_arimax_pca'))
         self.predictions_lightgbm = os.path.join(project_root, config.get("FilesConfig", 'predictions_lightgbm'))

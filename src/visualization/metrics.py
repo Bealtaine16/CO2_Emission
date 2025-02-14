@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_absolute_percentage_error, mean_absolute_error, mean_squared_error
@@ -69,3 +70,28 @@ class PredictionEvaluator:
 
         train_metrics.to_csv(f"{model_output_file}/{variant}_train_metrics.csv", index=False)
         test_metrics.to_csv(f"{model_output_file}/{variant}_test_metrics.csv", index=False)
+
+class GlobalResults:
+    
+    def __init__(self, global_csv_path, keys=None):
+        self.global_csv_path = global_csv_path
+        self.keys = keys if keys is not None else ["country", "year", "set"]
+    
+    def append_results(self, new_results_df):
+
+        new_results_df = new_results_df.sort_values(by=self.keys)
+        
+        if os.path.exists(self.global_csv_path):
+            global_df = pd.read_csv(self.global_csv_path)
+            global_df = global_df.set_index(self.keys)
+            new_results_df = new_results_df.set_index(self.keys)
+            
+            for col in new_results_df.columns:
+                global_df[col] = new_results_df[col]
+            
+            global_df = global_df.reset_index()
+        else:
+            global_df = new_results_df.copy()
+        
+        global_df = global_df.sort_values(by=self.keys)
+        global_df.to_csv(self.global_csv_path, index=False)

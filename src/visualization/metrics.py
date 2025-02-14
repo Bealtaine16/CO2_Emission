@@ -42,7 +42,12 @@ class PredictionEvaluator:
                     metric_value = metric_func(actual_values, predicted_values)
                 else:
                     metric_value = np.nan  # Assign NaN if not enough samples
-                group_metrics[metric_name] = metric_value
+
+                # For MAPE, pokazujemy wynik w procentach i zaokrąglamy do dwóch miejsc
+                if metric_name == 'MAPE' and not np.isnan(metric_value):
+                    group_metrics[metric_name] = f"{round(metric_value * 100, 2)}%"
+                else:
+                    group_metrics[metric_name] = round(metric_value, 2)
 
             results_by_group.append(group_metrics)
 

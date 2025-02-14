@@ -21,8 +21,8 @@ class PredictionEvaluator:
 
         # Define metrics
         metrics = {
-            'MAPE': mean_absolute_percentage_error,
             'MAE': mean_absolute_error,
+            'MAPE': mean_absolute_percentage_error,
             'RMSE': lambda y_true, y_pred: np.sqrt(mean_squared_error(y_true, y_pred)),
             'R2': self.custom_r2_score
         }
@@ -55,7 +55,11 @@ class PredictionEvaluator:
         overall_metrics = {group_col: 'Overall'}
 
         for metric_name, metric_func in metrics.items():
-            overall_metrics[metric_name] = metric_func(overall_actual, overall_predicted)
+            overall_value = metric_func(overall_actual, overall_predicted)
+            if metric_name == 'MAPE' and not np.isnan(overall_value):
+                overall_metrics[metric_name] = round(overall_value * 100, 2)
+            else:
+                overall_metrics[metric_name] = round(overall_value, 2)
 
         # Append overall metrics to the results DataFrame
         overall_metrics_df = pd.DataFrame([overall_metrics])

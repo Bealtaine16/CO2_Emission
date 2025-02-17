@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 import seaborn as sns
+from matplotlib.ticker import MaxNLocator
 
 from src.config import Config
 
@@ -271,6 +272,7 @@ class GlobalModelCharts:
                 
                 ax.set_title(f'{model.upper()}', fontsize=16, fontweight='bold')
                 ax.set_xlabel("Rok", fontsize=12)
+                ax.xaxis.set_major_locator(MaxNLocator(integer=True))
                 ax.set_ylabel(self.variant.upper(), fontsize=12)
                 ax.tick_params(axis='both', labelsize=10)
                 ax.grid(True, linestyle='--', linewidth=0.7)
@@ -278,11 +280,20 @@ class GlobalModelCharts:
             
             for j in range(i + 1, len(axs)):
                 axs[j].axis('off')
-            
-            fig.suptitle(f"{self.variant.upper()} - {country}", fontsize=16, fontweight='bold')
-            plt.tight_layout(rect=[0, 0, 1, 0.93])
-            filename = os.path.join(self.output_dir, f"line_{country}.png")
-            fig.savefig(filename, dpi=300)
+
+            fig.suptitle(f"{self.variant.upper()}", fontsize=16, fontweight='bold', y=0.95)
+            fig.subplots_adjust(top=0.90, bottom=0.1, left=0.1, right=0.9, hspace=0.5)
+
+            polish_translation = str.maketrans(
+                "ąćęłńóśźżĄĆĘŁŃÓŚŹŻ",  # characters to be replaced
+                "acelnoszzacelnoszz"    # their replacements
+            )
+
+            # Normalize the country string
+            country_normalized = country.translate(polish_translation).lower().replace(" ", "_")
+
+            filename = os.path.join(self.output_dir, f"{country_normalized}_line.png")
+            fig.savefig(filename, bbox_inches='tight', pad_inches=0.2)
             plt.close(fig)
     
     def generate_country_combined_chart(self):
@@ -311,13 +322,24 @@ class GlobalModelCharts:
                 plt.plot(df_test[self.year_col], df_test[pred_col],
                          label=f'{model.upper()}', linestyle='--', linewidth=2, color=palette[idx])
             
-            plt.title(f"{self.variant.upper()} - Porównanie wszystkich modeli (dane testowe) - {country}", fontsize=16, fontweight='bold')
+            plt.title(f"{self.variant.upper()} - Porównanie wszystkich modeli (dane testowe)", fontsize=16, fontweight='bold')
             plt.xlabel("Rok", fontsize=14)
+            ax = plt.gca()  # Pobranie aktualnych osi
+            ax.xaxis.set_major_locator(MaxNLocator(integer=True))
             plt.ylabel(self.variant.upper(), fontsize=14)
             plt.tick_params(axis='both', labelsize=12)
             plt.legend(fontsize=10, loc='best')
             plt.grid(True, linestyle='--', linewidth=0.7)
             plt.tight_layout()
-            filename = os.path.join(self.output_dir, f"line_{country}_all.png")
-            plt.savefig(filename, dpi=300)
+
+            polish_translation = str.maketrans(
+                "ąćęłńóśźżĄĆĘŁŃÓŚŹŻ",  # characters to be replaced
+                "acelnoszzacelnoszz"    # their replacements
+            )
+
+            # Normalize the country string
+            country_normalized = country.translate(polish_translation).lower().replace(" ", "_")
+
+            filename = os.path.join(self.output_dir, f"{country_normalized}_line_all.png")
+            plt.savefig(filename)
             plt.close()

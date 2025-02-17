@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,6 +12,7 @@ class DataPreparer:
         config = Config()
         self.feature_cols = config.feature_cols
         self.target_col = config.target_col
+        self.output_cleaned = config.output_cleaned
 
     def divide_by_population(self, df, columns_to_exclude=["country", "population"]):
         df_per_capita = df.copy()
@@ -19,6 +22,9 @@ class DataPreparer:
 
         columns_to_divide = [col for col in df_per_capita.columns if col not in columns_to_exclude]
         df_per_capita[columns_to_divide] = df_per_capita[columns_to_divide].div(df_per_capita["population"], axis=0)
+
+        df_population = df_per_capita[["population"]].copy()
+        df_population.to_csv(os.path.join(self.output_cleaned, 'population_data.csv'))
 
         return df_per_capita
 

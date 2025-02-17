@@ -1,47 +1,47 @@
 country,MAE,MAPE,RMSE,R2
-Stany Zjednoczone,0.0,90.62%,0.0,0.79
-Chiny,0.0,3.5%,0.0,-0.64
-Rosja,0.0,7.33%,0.0,0.79
-Brazylia,0.0,6.04%,0.0,0.76
-Indie,0.0,2.62%,0.0,-2.06
-Niemcy,0.0,2.25%,0.0,0.86
-Indonezja,0.0,2.52%,0.0,0.91
-Wielka Brytania,0.0,1.54%,0.0,0.71
-Kanada,0.0,144.9%,0.0,0.77
-Japonia,0.0,1.85%,0.0,0.96
-Ukraina,0.0,3.85%,0.0,0.92
-Meksyk,0.0,2.9%,0.0,0.78
-Francja,0.0,2.61%,0.0,0.85
-Australia,0.0,61.78%,0.0,0.6
-Republika Południowej Afryki,0.0,2.03%,0.0,0.75
-Polska,0.0,1.94%,0.0,0.94
-Włochy,0.0,4.16%,0.0,0.71
-Kolumbia,0.0,56.92%,0.0,0.91
-Tajlandia,0.0,5.4%,0.0,0.69
-Demokratyczna Republika Konga,0.0,31.53%,0.0,0.92
-Argentyna,0.0,3.6%,0.0,0.85
-Iran,0.0,2.31%,0.0,0.6
-Malezja,0.0,160.45%,0.0,0.72
-Kazachstan,0.0,5.17%,0.0,0.87
-Arabia Saudyjska,0.0,17.65%,0.0,0.91
-Turcja,0.0,3.82%,0.0,0.17
-Hiszpania,0.0,2.53%,0.0,0.82
-Korea Południowa,0.0,3.99%,0.0,0.74
-Filipiny,0.0,3.98%,0.0,0.79
-Nigeria,0.0,4.03%,0.0,-1.02
-Wietnam,0.0,4.79%,0.0,-2.02
-Wenezuela,0.0,222.01%,0.0,0.92
-Holandia,0.0,1.58%,0.0,0.95
-Belgia,0.0,3.49%,0.0,0.77
-Czechy,0.0,3.86%,0.0,0.93
-Rumunia,0.0,3.22%,0.0,0.8
-Białoruś,0.0,2.34%,0.0,0.93
-Wybrzeże Kości Słoniowej,0.0,32.37%,0.0,0.91
-Mjanma (Birma),0.0,10.35%,0.0,0.13
-Peru,0.0,3.96%,0.0,0.31
-Pakistan,0.0,4.76%,0.0,-4.82
-Chile,0.0,2.36%,0.0,0.88
-Egipt,0.0,3.1%,0.0,-3.27
-Tanzania,0.0,8.81%,0.0,0.69
-Szwecja,0.0,3.8%,0.0,0.36
-Overall,0.0,26.05,0.0,0.95
+Stany Zjednoczone,0.0,43.68%,0.0,0.92
+Chiny,0.0,1.16%,0.0,0.77
+Rosja,0.0,5.34%,0.0,0.83
+Brazylia,0.0,5.73%,0.0,0.75
+Indie,0.0,0.37%,0.0,0.86
+Niemcy,0.0,3.17%,0.0,0.82
+Indonezja,0.0,1.98%,0.0,0.93
+Wielka Brytania,0.0,3.51%,0.0,-0.21
+Kanada,0.0,78.8%,0.0,0.92
+Japonia,0.0,1.06%,0.0,0.99
+Ukraina,0.0,3.63%,0.0,0.91
+Meksyk,0.0,2.19%,0.0,0.85
+Francja,0.0,1.71%,0.0,0.93
+Australia,0.0,57.44%,0.0,0.61
+Republika Południowej Afryki,0.0,2.3%,0.0,0.66
+Polska,0.0,2.31%,0.0,0.91
+Włochy,0.0,1.42%,0.0,0.96
+Kolumbia,0.0,25.83%,0.0,0.92
+Tajlandia,0.0,4.59%,0.0,0.73
+Demokratyczna Republika Konga,0.0,22.3%,0.0,0.92
+Argentyna,0.0,3.28%,0.0,0.85
+Iran,0.0,1.54%,0.0,0.77
+Malezja,0.0,58.99%,0.0,0.72
+Kazachstan,0.0,6.29%,0.0,0.83
+Arabia Saudyjska,0.0,16.84%,0.0,0.91
+Turcja,0.0,2.38%,0.0,0.65
+Hiszpania,0.0,1.0%,0.0,0.96
+Korea Południowa,0.0,2.19%,0.0,0.9
+Filipiny,0.0,3.24%,0.0,0.83
+Nigeria,0.0,2.4%,0.0,0.23
+Wietnam,0.0,2.08%,0.0,0.3
+Wenezuela,0.0,79.96%,0.0,0.95
+Holandia,0.0,1.4%,0.0,0.95
+Belgia,0.0,3.64%,0.0,0.75
+Czechy,0.0,2.86%,0.0,0.95
+Rumunia,0.0,2.3%,0.0,0.89
+Białoruś,0.0,2.24%,0.0,0.95
+Wybrzeże Kości Słoniowej,0.0,44.95%,0.0,0.93
+Mjanma (Birma),0.0,9.53%,0.0,0.13
+Peru,0.0,3.33%,0.0,0.46
+Pakistan,0.0,2.61%,0.0,-0.87
+Chile,0.0,1.7%,0.0,0.94
+Egipt,0.0,0.77%,0.0,0.69
+Tanzania,0.0,7.71%,0.0,0.7
+Szwecja,0.0,3.5%,0.0,0.48
+Overall,0.0,13.62,0.0,0.96

@@ -1,0 +1,316 @@
+country,MAE,MAPE,RMSE,R2,Model,Column 1
+Arabia Saudyjska,109.92,17.17%,124.42,-4.37,arimax,ARIMAX & 109.92 & 17.17\% & 124.42 & -4.37 \\
+Arabia Saudyjska,140.98,22.09%,149.60,-6.76,arimax_pca,ARIMAX_PCA & 140.98 & 22.09\% & 149.6 & -6.76 \\
+Arabia Saudyjska,110.42,16.76%,123.55,-4.29,lightgbm,LIGHTGBM & 110.42 & 16.76\% & 123.55 & -4.29 \\
+Arabia Saudyjska,74.15,11.64%,82.88,-1.38,lstm,LSTM & 74.15 & 11.64\% & 82.88 & -1.38 \\
+Arabia Saudyjska,146.80,23.09%,152.09,-7.02,arimax_pca + lstm,ARIMAX_PCA + LSTM & 146.8 & 23.09\% & 152.09 & -7.02 \\
+Arabia Saudyjska,63.15,9.91%,71.91,-0.79,arimax + lstm,ARIMAX + LSTM & 63.15 & 9.91\% & 71.91 & -0.79 \\
+Arabia Saudyjska,116.61,18.47%,120.99,-4.08,lightgbm + lstm,LIGHTGBM + LSTM & 116.61 & 18.47\% & 120.99 & -4.08 \\
+Argentyna,60.78,16.04%,81.69,-0.22,arimax,ARIMAX & 60.78 & 16.04\% & 81.69 & -0.22 \\
+Argentyna,50.32,15.09%,65.82,0.21,arimax_pca,ARIMAX_PCA & 50.32 & 15.09\% & 65.82 & 0.21 \\
+Argentyna,110.80,33.22%,122.24,-1.73,lightgbm,LIGHTGBM & 110.8 & 33.22\% & 122.24 & -1.73 \\
+Argentyna,80.75,24.80%,93.80,-0.61,lstm,LSTM & 80.75 & 24.8\% & 93.8 & -0.61 \\
+Argentyna,115.50,36.10%,127.07,-1.95,arimax_pca + lstm,ARIMAX_PCA + LSTM & 115.5 & 36.1\% & 127.07 & -1.95 \\
+Argentyna,72.23,21.96%,84.25,-0.30,arimax + lstm,ARIMAX + LSTM & 72.23 & 21.96\% & 84.25 & -0.3 \\
+Argentyna,104.84,32.59%,114.03,-1.38,lightgbm + lstm,LIGHTGBM + LSTM & 104.84 & 32.59\% & 114.03 & -1.38 \\
+Australia,151.76,30.45%,164.23,-0.95,arimax,ARIMAX & 151.76 & 30.45\% & 164.23 & -0.95 \\
+Australia,210.68,43.07%,226.07,-2.70,arimax_pca,ARIMAX_PCA & 210.68 & 43.07\% & 226.07 & -2.7 \\
+Australia,146.88,29.08%,159.11,-0.83,lightgbm,LIGHTGBM & 146.88 & 29.08\% & 159.11 & -0.83 \\
+Australia,87.33,15.44%,121.25,-0.06,lstm,LSTM & 87.33 & 15.44\% & 121.25 & -0.06 \\
+Australia,132.92,25.30%,146.77,-0.56,arimax_pca + lstm,ARIMAX_PCA + LSTM & 132.92 & 25.3\% & 146.77 & -0.56 \\
+Australia,83.87,15.03%,116.49,0.02,arimax + lstm,ARIMAX + LSTM & 83.87 & 15.03\% & 116.49 & 0.02 \\
+Australia,136.71,26.20%,147.64,-0.58,lightgbm + lstm,LIGHTGBM + LSTM & 136.71 & 26.2\% & 147.64 & -0.58 \\
+Belgia,22.95,22.07%,25.27,-4.00,arimax,ARIMAX & 22.95 & 22.07\% & 25.27 & -4 \\
+Belgia,39.56,39.15%,42.80,-13.34,arimax_pca,ARIMAX_PCA & 39.56 & 39.15\% & 42.8 & -13.34 \\
+Belgia,82.24,79.54%,85.07,-55.66,lightgbm,LIGHTGBM & 82.24 & 79.54\% & 85.07 & -55.66 \\
+Belgia,11.71,11.88%,14.39,-0.62,lstm,LSTM & 11.71 & 11.88\% & 14.39 & -0.62 \\
+Belgia,74.26,71.15%,74.61,-42.58,arimax_pca + lstm,ARIMAX_PCA + LSTM & 74.26 & 71.15\% & 74.61 & -42.58 \\
+Belgia,20.21,19.93%,21.74,-2.70,arimax + lstm,ARIMAX + LSTM & 20.21 & 19.93\% & 21.74 & -2.7 \\
+Belgia,39.72,38.50%,40.79,-12.02,lightgbm + lstm,LIGHTGBM + LSTM & 39.72 & 38.5\% & 40.79 & -12.02 \\
+Białoruś,13.33,21.45%,14.03,-25.42,arimax,ARIMAX & 13.33 & 21.45\% & 14.03 & -25.42 \\
+Białoruś,8.32,13.78%,9.11,-10.13,arimax_pca,ARIMAX_PCA & 8.32 & 13.78\% & 9.11 & -10.13 \\
+Białoruś,12.14,19.89%,12.37,-19.53,lightgbm,LIGHTGBM & 12.14 & 19.89\% & 12.37 & -19.53 \\
+Białoruś,1.88,3.00%,2.32,0.28,lstm,LSTM & 1.88 & 3\% & 2.32 & 0.28 \\
+Białoruś,64.57,105.04%,64.61,-559.26,arimax_pca + lstm,ARIMAX_PCA + LSTM & 64.57 & 105.04\% & 64.61 & -559.26 \\
+Białoruś,3.74,6.20%,4.35,-1.54,arimax + lstm,ARIMAX + LSTM & 3.74 & 6.2\% & 4.35 & -1.54 \\
+Białoruś,11.71,19.14%,11.89,-17.96,lightgbm + lstm,LIGHTGBM + LSTM & 11.71 & 19.14\% & 11.89 & -17.96 \\
+Brazylia,"2,838.33",169.59%,"2,985.99",-196.98,arimax,ARIMAX & 2838.33 & 169.59\% & 2985.99 & -196.98 \\
+Brazylia,"1,666.61",99.95%,"1,740.47",-66.26,arimax_pca,ARIMAX_PCA & 1666.61 & 99.95\% & 1740.47 & -66.26 \\
+Brazylia,253.55,15.41%,291.35,-0.88,lightgbm,LIGHTGBM & 253.55 & 15.41\% & 291.35 & -0.88 \\
+Brazylia,390.89,22.99%,413.10,-2.79,lstm,LSTM & 390.89 & 22.99\% & 413.1 & -2.79 \\
+Brazylia,465.71,27.39%,482.72,-4.17,arimax_pca + lstm,ARIMAX_PCA + LSTM & 465.71 & 27.39\% & 482.72 & -4.17 \\
+Brazylia,741.60,43.93%,758.54,-11.78,arimax + lstm,ARIMAX + LSTM & 741.6 & 43.93\% & 758.54 & -11.78 \\
+Brazylia,375.93,22.30%,394.55,-2.46,lightgbm + lstm,LIGHTGBM + LSTM & 375.93 & 22.3\% & 394.55 & -2.46 \\
+Chile,14.11,14.15%,17.94,-3.34,arimax,ARIMAX & 14.11 & 14.15\% & 17.94 & -3.34 \\
+Chile,9.75,9.75%,14.29,-1.75,arimax_pca,ARIMAX_PCA & 9.75 & 9.75\% & 14.29 & -1.75 \\
+Chile,9.85,9.59%,11.98,-0.93,lightgbm,LIGHTGBM & 9.85 & 9.59\% & 11.98 & -0.93 \\
+Chile,13.87,13.52%,15.45,-2.22,lstm,LSTM & 13.87 & 13.52\% & 15.45 & -2.22 \\
+Chile,54.92,54.07%,55.51,-40.53,arimax_pca + lstm,ARIMAX_PCA + LSTM & 54.92 & 54.07\% & 55.51 & -40.53 \\
+Chile,12.16,11.81%,13.43,-1.43,arimax + lstm,ARIMAX + LSTM & 12.16 & 11.81\% & 13.43 & -1.43 \\
+Chile,6.40,6.43%,8.81,-0.05,lightgbm + lstm,LIGHTGBM + LSTM & 6.4 & 6.43\% & 8.81 & -0.05 \\
+Chiny,"6,878.60",65.94%,"9,338.82",-100.60,arimax,ARIMAX & 6878.6 & 65.94\% & 9338.82 & -100.6 \\
+Chiny,"1,534.39",14.84%,"1,936.68",-3.37,arimax_pca,ARIMAX_PCA & 1534.39 & 14.84\% & 1936.68 & -3.37 \\
+Chiny,"5,674.95",57.44%,"5,788.56",-38.03,lightgbm,LIGHTGBM & 5674.95 & 57.44\% & 5788.56 & -38.03 \\
+Chiny,578.51,5.91%,640.14,0.52,lstm,LSTM & 578.51 & 5.91\% & 640.14 & 0.52 \\
+Chiny,472.96,4.80%,546.02,0.65,arimax_pca + lstm,ARIMAX_PCA + LSTM & 472.96 & 4.8\% & 546.02 & 0.65 \\
+Chiny,"1,101.71",10.95%,"1,204.14",-0.69,arimax + lstm,ARIMAX + LSTM & 1101.71 & 10.95\% & 1204.14 & -0.69 \\
+Chiny,575.30,5.65%,694.39,0.44,lightgbm + lstm,LIGHTGBM + LSTM & 575.3 & 5.65\% & 694.39 & 0.44 \\
+Czechy,18.98,20.52%,20.11,-7.08,arimax,ARIMAX & 18.98 & 20.52\% & 20.11 & -7.08 \\
+Czechy,9.52,10.88%,12.37,-2.06,arimax_pca,ARIMAX_PCA & 9.52 & 10.88\% & 12.37 & -2.06 \\
+Czechy,10.85,12.31%,13.68,-2.74,lightgbm,LIGHTGBM & 10.85 & 12.31\% & 13.68 & -2.74 \\
+Czechy,9.66,10.01%,10.70,-1.29,lstm,LSTM & 9.66 & 10.01\% & 10.7 & -1.29 \\
+Czechy,56.42,60.95%,56.73,-63.34,arimax_pca + lstm,ARIMAX_PCA + LSTM & 56.42 & 60.95\% & 56.73 & -63.34 \\
+Czechy,8.28,8.53%,9.34,-0.75,arimax + lstm,ARIMAX + LSTM & 8.28 & 8.53\% & 9.34 & -0.75 \\
+Czechy,5.88,6.70%,7.73,-0.20,lightgbm + lstm,LIGHTGBM + LSTM & 5.88 & 6.7\% & 7.73 & -0.2 \\
+Demokratyczna Republika Konga,426.06,80.85%,508.34,-4.58,arimax,ARIMAX & 426.06 & 80.85\% & 508.34 & -4.58 \\
+Demokratyczna Republika Konga,326.38,65.84%,375.35,-2.04,arimax_pca,ARIMAX_PCA & 326.38 & 65.84\% & 375.35 & -2.04 \\
+Demokratyczna Republika Konga,132.83,21.13%,162.93,0.43,lightgbm,LIGHTGBM & 132.83 & 21.13\% & 162.93 & 0.43 \\
+Demokratyczna Republika Konga,132.11,18.89%,181.75,0.29,lstm,LSTM & 132.11 & 18.89\% & 181.75 & 0.29 \\
+Demokratyczna Republika Konga,131.08,21.66%,166.98,0.40,arimax_pca + lstm,ARIMAX_PCA + LSTM & 131.08 & 21.66\% & 166.98 & 0.4 \\
+Demokratyczna Republika Konga,131.28,19.16%,171.42,0.37,arimax + lstm,ARIMAX + LSTM & 131.28 & 19.16\% & 171.42 & 0.37 \\
+Demokratyczna Republika Konga,119.39,18.29%,163.24,0.42,lightgbm + lstm,LIGHTGBM + LSTM & 119.39 & 18.29\% & 163.24 & 0.42 \\
+Egipt,136.93,56.45%,154.29,-43.26,arimax,ARIMAX & 136.93 & 56.45\% & 154.29 & -43.26 \\
+Egipt,34.54,14.36%,39.26,-1.87,arimax_pca,ARIMAX_PCA & 34.54 & 14.36\% & 39.26 & -1.87 \\
+Egipt,38.41,15.95%,48.01,-3.29,lightgbm,LIGHTGBM & 38.41 & 15.95\% & 48.01 & -3.29 \\
+Egipt,12.19,5.37%,14.99,0.58,lstm,LSTM & 12.19 & 5.37\% & 14.99 & 0.58 \\
+Egipt,65.32,28.05%,66.57,-7.24,arimax_pca + lstm,ARIMAX_PCA + LSTM & 65.32 & 28.05\% & 66.57 & -7.24 \\
+Egipt,13.22,5.84%,17.13,0.45,arimax + lstm,ARIMAX + LSTM & 13.22 & 5.84\% & 17.13 & 0.45 \\
+Egipt,14.09,6.03%,18.23,0.38,lightgbm + lstm,LIGHTGBM + LSTM & 14.09 & 6.03\% & 18.23 & 0.38 \\
+Filipiny,246.03,149.61%,275.71,-601.86,arimax,ARIMAX & 246.03 & 149.61\% & 275.71 & -601.86 \\
+Filipiny,142.39,84.66%,154.79,-189.03,arimax_pca,ARIMAX_PCA & 142.39 & 84.66\% & 154.79 & -189.03 \\
+Filipiny,125.75,75.75%,138.40,-150.91,lightgbm,LIGHTGBM & 125.75 & 75.75\% & 138.4 & -150.91 \\
+Filipiny,25.37,15.58%,27.45,-4.98,lstm,LSTM & 25.37 & 15.58\% & 27.45 & -4.98 \\
+Filipiny,73.05,44.45%,75.42,-44.11,arimax_pca + lstm,ARIMAX_PCA + LSTM & 73.05 & 44.45\% & 75.42 & -44.11 \\
+Filipiny,31.66,18.85%,37.95,-10.42,arimax + lstm,ARIMAX + LSTM & 31.66 & 18.85\% & 37.95 & -10.42 \\
+Filipiny,46.80,28.52%,53.29,-21.52,lightgbm + lstm,LIGHTGBM + LSTM & 46.8 & 28.52\% & 53.29 & -21.52 \\
+Francja,138.90,46.58%,156.37,-14.41,arimax,ARIMAX & 138.9 & 46.58\% & 156.37 & -14.41 \\
+Francja,91.10,30.38%,100.73,-5.39,arimax_pca,ARIMAX_PCA & 91.1 & 30.38\% & 100.73 & -5.39 \\
+Francja,62.51,21.16%,74.38,-2.49,lightgbm,LIGHTGBM & 62.51 & 21.16\% & 74.38 & -2.49 \\
+Francja,108.98,35.35%,112.36,-6.95,lstm,LSTM & 108.98 & 35.35\% & 112.36 & -6.95 \\
+Francja,139.26,44.67%,141.12,-11.55,arimax_pca + lstm,ARIMAX_PCA + LSTM & 139.26 & 44.67\% & 141.12 & -11.55 \\
+Francja,89.76,29.52%,95.25,-4.72,arimax + lstm,ARIMAX + LSTM & 89.76 & 29.52\% & 95.25 & -4.72 \\
+Francja,68.48,22.45%,72.84,-2.34,lightgbm + lstm,LIGHTGBM + LSTM & 68.48 & 22.45\% & 72.84 & -2.34 \\
+Hiszpania,179.97,75.57%,202.67,-21.29,arimax,ARIMAX & 179.97 & 75.57\% & 202.67 & -21.29 \\
+Hiszpania,143.59,59.34%,154.40,-11.94,arimax_pca,ARIMAX_PCA & 143.59 & 59.34\% & 154.4 & -11.94 \\
+Hiszpania,66.30,26.38%,72.40,-1.84,lightgbm,LIGHTGBM & 66.3 & 26.38\% & 72.4 & -1.84 \\
+Hiszpania,27.48,11.12%,32.39,0.43,lstm,LSTM & 27.48 & 11.12\% & 32.39 & 0.43 \\
+Hiszpania,68.70,27.83%,73.04,-1.90,arimax_pca + lstm,ARIMAX_PCA + LSTM & 68.7 & 27.83\% & 73.04 & -1.9 \\
+Hiszpania,35.42,14.49%,40.07,0.13,arimax + lstm,ARIMAX + LSTM & 35.42 & 14.49\% & 40.07 & 0.13 \\
+Hiszpania,28.11,11.46%,34.05,0.37,lightgbm + lstm,LIGHTGBM + LSTM & 28.11 & 11.46\% & 34.05 & 0.37 \\
+Holandia,87.99,55.94%,110.71,-42.53,arimax,ARIMAX & 87.99 & 55.94\% & 110.71 & -42.53 \\
+Holandia,44.27,28.27%,56.82,-10.46,arimax_pca,ARIMAX_PCA & 44.27 & 28.27\% & 56.82 & -10.46 \\
+Holandia,79.87,49.64%,94.64,-30.81,lightgbm,LIGHTGBM & 79.87 & 49.64\% & 94.64 & -30.81 \\
+Holandia,32.24,18.50%,35.84,-3.56,lstm,LSTM & 32.24 & 18.5\% & 35.84 & -3.56 \\
+Holandia,23.95,15.11%,29.06,-2.00,arimax_pca + lstm,ARIMAX_PCA + LSTM & 23.95 & 15.11\% & 29.06 & -2 \\
+Holandia,30.56,17.96%,35.13,-3.38,arimax + lstm,ARIMAX + LSTM & 30.56 & 17.96\% & 35.13 & -3.38 \\
+Holandia,25.27,15.52%,28.26,-1.84,lightgbm + lstm,LIGHTGBM + LSTM & 25.27 & 15.52\% & 28.26 & -1.84 \\
+Indie,"1,578.51",65.82%,"2,039.91",-14.45,arimax,ARIMAX & 1578.51 & 65.82\% & 2039.91 & -14.45 \\
+Indie,122.38,5.28%,184.65,0.87,arimax_pca,ARIMAX_PCA & 122.38 & 5.28\% & 184.65 & 0.87 \\
+Indie,919.74,42.50%,"1,038.38",-3.00,lightgbm,LIGHTGBM & 919.74 & 42.5\% & 1038.38 & -3 \\
+Indie,147.66,6.32%,216.86,0.83,lstm,LSTM & 147.66 & 6.32\% & 216.86 & 0.83 \\
+Indie,240.51,10.79%,303.22,0.66,arimax_pca + lstm,ARIMAX_PCA + LSTM & 240.51 & 10.79\% & 303.22 & 0.66 \\
+Indie,125.08,5.55%,153.26,0.91,arimax + lstm,ARIMAX + LSTM & 125.08 & 5.55\% & 153.26 & 0.91 \\
+Indie,365.73,16.25%,422.70,0.34,lightgbm + lstm,LIGHTGBM + LSTM & 365.73 & 16.25\% & 422.7 & 0.34 \\
+Indonezja,"4,537.57",352.76%,"5,599.43",-225.91,arimax,ARIMAX & 4537.57 & 352.76\% & 5599.43 & -225.91 \\
+Indonezja,"2,432.43",185.55%,"2,968.22",-62.76,arimax_pca,ARIMAX_PCA & 2432.43 & 185.55\% & 2968.22 & -62.76 \\
+Indonezja,368.62,28.33%,509.64,-0.88,lightgbm,LIGHTGBM & 368.62 & 28.33\% & 509.64 & -0.88 \\
+Indonezja,329.41,24.75%,476.02,-0.64,lstm,LSTM & 329.41 & 24.75\% & 476.02 & -0.64 \\
+Indonezja,329.06,24.90%,474.40,-0.63,arimax_pca + lstm,ARIMAX_PCA + LSTM & 329.06 & 24.9\% & 474.4 & -0.63 \\
+Indonezja,634.66,45.68%,773.70,-3.33,arimax + lstm,ARIMAX + LSTM & 634.66 & 45.68\% & 773.7 & -3.33 \\
+Indonezja,329.11,24.76%,472.16,-0.61,lightgbm + lstm,LIGHTGBM + LSTM & 329.11 & 24.76\% & 472.16 & -0.61 \\
+Iran,66.50,9.53%,80.77,0.37,arimax,ARIMAX & 66.5 & 9.53\% & 80.77 & 0.37 \\
+Iran,32.18,4.93%,35.11,0.88,arimax_pca,ARIMAX_PCA & 32.18 & 4.93\% & 35.11 & 0.88 \\
+Iran,94.95,14.67%,116.76,-0.32,lightgbm,LIGHTGBM & 94.95 & 14.67\% & 116.76 & -0.32 \\
+Iran,137.33,21.15%,141.31,-0.94,lstm,LSTM & 137.33 & 21.15\% & 141.31 & -0.94 \\
+Iran,51.06,7.65%,57.89,0.67,arimax_pca + lstm,ARIMAX_PCA + LSTM & 51.06 & 7.65\% & 57.89 & 0.67 \\
+Iran,116.87,18.25%,118.43,-0.36,arimax + lstm,ARIMAX + LSTM & 116.87 & 18.25\% & 118.43 & -0.36 \\
+Iran,93.28,14.45%,99.60,0.04,lightgbm + lstm,LIGHTGBM + LSTM & 93.28 & 14.45\% & 99.6 & 0.04 \\
+Japonia,80.25,7.04%,101.80,-0.44,arimax,ARIMAX & 80.25 & 7.04\% & 101.8 & -0.44 \\
+Japonia,108.99,9.64%,137.21,-1.62,arimax_pca,ARIMAX_PCA & 108.99 & 9.64\% & 137.21 & -1.62 \\
+Japonia,984.11,82.85%,986.57,-134.64,lightgbm,LIGHTGBM & 984.11 & 82.85\% & 986.57 & -134.64 \\
+Japonia,130.39,11.28%,145.43,-1.95,lstm,LSTM & 130.39 & 11.28\% & 145.43 & -1.95 \\
+Japonia,168.17,14.38%,177.95,-3.41,arimax_pca + lstm,ARIMAX_PCA + LSTM & 168.17 & 14.38\% & 177.95 & -3.41 \\
+Japonia,98.22,8.58%,116.42,-0.89,arimax + lstm,ARIMAX + LSTM & 98.22 & 8.58\% & 116.42 & -0.89 \\
+Japonia,391.96,33.11%,395.81,-20.83,lightgbm + lstm,LIGHTGBM + LSTM & 391.96 & 33.11\% & 395.81 & -20.83 \\
+Kanada,335.25,49.87%,369.60,-57.89,arimax,ARIMAX & 335.25 & 49.87\% & 369.6 & -57.89 \\
+Kanada,225.66,33.59%,245.00,-24.88,arimax_pca,ARIMAX_PCA & 225.66 & 33.59\% & 245 & -24.88 \\
+Kanada,76.66,11.28%,105.43,-3.79,lightgbm,LIGHTGBM & 76.66 & 11.28\% & 105.43 & -3.79 \\
+Kanada,52.33,7.81%,60.47,-0.58,lstm,LSTM & 52.33 & 7.81\% & 60.47 & -0.58 \\
+Kanada,82.45,12.15%,89.26,-2.43,arimax_pca + lstm,ARIMAX_PCA + LSTM & 82.45 & 12.15\% & 89.26 & -2.43 \\
+Kanada,74.05,11.07%,84.65,-2.09,arimax + lstm,ARIMAX + LSTM & 74.05 & 11.07\% & 84.65 & -2.09 \\
+Kanada,53.49,7.91%,62.04,-0.66,lightgbm + lstm,LIGHTGBM + LSTM & 53.49 & 7.91\% & 62.04 & -0.66 \\
+Kazachstan,178.39,69.97%,230.88,-246.01,arimax,ARIMAX & 178.39 & 69.97\% & 230.88 & -246.01 \\
+Kazachstan,40.17,15.94%,55.91,-13.49,arimax_pca,ARIMAX_PCA & 40.17 & 15.94\% & 55.91 & -13.49 \\
+Kazachstan,46.35,17.75%,47.72,-9.55,lightgbm,LIGHTGBM & 46.35 & 17.75\% & 47.72 & -9.55 \\
+Kazachstan,25.08,9.17%,31.18,-3.51,lstm,LSTM & 25.08 & 9.17\% & 31.18 & -3.51 \\
+Kazachstan,20.92,8.20%,26.14,-2.17,arimax_pca + lstm,ARIMAX_PCA + LSTM & 20.92 & 8.2\% & 26.14 & -2.17 \\
+Kazachstan,30.49,11.44%,33.19,-4.10,arimax + lstm,ARIMAX + LSTM & 30.49 & 11.44\% & 33.19 & -4.1 \\
+Kazachstan,14.30,5.40%,15.46,-0.11,lightgbm + lstm,LIGHTGBM + LSTM & 14.3 & 5.4\% & 15.46 & -0.11 \\
+Kolumbia,257.87,217.67%,340.01,-22.72,arimax,ARIMAX & 257.87 & 217.67\% & 340.01 & -22.72 \\
+Kolumbia,86.02,67.56%,110.31,-1.50,arimax_pca,ARIMAX_PCA & 86.02 & 67.56\% & 110.31 & -1.5 \\
+Kolumbia,216.44,212.14%,229.90,-9.85,lightgbm,LIGHTGBM & 216.44 & 212.14\% & 229.9 & -9.85 \\
+Kolumbia,82.14,72.01%,90.76,-0.69,lstm,LSTM & 82.14 & 72.01\% & 90.76 & -0.69 \\
+Kolumbia,93.79,85.68%,102.22,-1.14,arimax_pca + lstm,ARIMAX_PCA + LSTM & 93.79 & 85.68\% & 102.22 & -1.14 \\
+Kolumbia,84.20,69.55%,99.31,-1.02,arimax + lstm,ARIMAX + LSTM & 84.2 & 69.55\% & 99.31 & -1.02 \\
+Kolumbia,102.29,94.97%,109.39,-1.46,lightgbm + lstm,LIGHTGBM + LSTM & 102.29 & 94.97\% & 109.39 & -1.46 \\
+Korea Południowa,88.24,15.05%,120.76,-2.14,arimax,ARIMAX & 88.24 & 15.05\% & 120.76 & -2.14 \\
+Korea Południowa,43.17,7.50%,57.85,0.28,arimax_pca,ARIMAX_PCA & 43.17 & 7.5\% & 57.85 & 0.28 \\
+Korea Południowa,56.36,10.65%,64.06,0.12,lightgbm,LIGHTGBM & 56.36 & 10.65\% & 64.06 & 0.12 \\
+Korea Południowa,52.15,9.45%,56.71,0.31,lstm,LSTM & 52.15 & 9.45\% & 56.71 & 0.31 \\
+Korea Południowa,19.21,3.35%,26.80,0.85,arimax_pca + lstm,ARIMAX_PCA + LSTM & 19.21 & 3.35\% & 26.8 & 0.85 \\
+Korea Południowa,72.30,13.05%,79.53,-0.36,arimax + lstm,ARIMAX + LSTM & 72.3 & 13.05\% & 79.53 & -0.36 \\
+Korea Południowa,43.89,8.05%,46.86,0.53,lightgbm + lstm,LIGHTGBM + LSTM & 43.89 & 8.05\% & 46.86 & 0.53 \\
+Malezja,389.90,109.32%,506.39,-44.83,arimax,ARIMAX & 389.9 & 109.32\% & 506.39 & -44.83 \\
+Malezja,73.00,21.61%,85.32,-0.30,arimax_pca,ARIMAX_PCA & 73 & 21.61\% & 85.32 & -0.3 \\
+Malezja,37.23,11.14%,44.03,0.65,lightgbm,LIGHTGBM & 37.23 & 11.14\% & 44.03 & 0.65 \\
+Malezja,32.59,9.34%,45.66,0.63,lstm,LSTM & 32.59 & 9.34\% & 45.66 & 0.63 \\
+Malezja,35.38,10.71%,48.11,0.59,arimax_pca + lstm,ARIMAX_PCA + LSTM & 35.38 & 10.71\% & 48.11 & 0.59 \\
+Malezja,77.92,21.89%,96.59,-0.67,arimax + lstm,ARIMAX + LSTM & 77.92 & 21.89\% & 96.59 & -0.67 \\
+Malezja,27.99,8.10%,40.11,0.71,lightgbm + lstm,LIGHTGBM + LSTM & 27.99 & 8.1\% & 40.11 & 0.71 \\
+Meksyk,176.05,36.64%,196.90,-24.64,arimax,ARIMAX & 176.05 & 36.64\% & 196.9 & -24.64 \\
+Meksyk,97.04,20.83%,112.84,-7.42,arimax_pca,ARIMAX_PCA & 97.04 & 20.83\% & 112.84 & -7.42 \\
+Meksyk,188.78,38.85%,205.93,-27.05,lightgbm,LIGHTGBM & 188.78 & 38.85\% & 205.93 & -27.05 \\
+Meksyk,40.34,8.63%,48.02,-0.53,lstm,LSTM & 40.34 & 8.63\% & 48.02 & -0.53 \\
+Meksyk,57.53,12.17%,64.25,-1.73,arimax_pca + lstm,ARIMAX_PCA + LSTM & 57.53 & 12.17\% & 64.25 & -1.73 \\
+Meksyk,24.88,4.88%,33.89,0.24,arimax + lstm,ARIMAX + LSTM & 24.88 & 4.88\% & 33.89 & 0.24 \\
+Meksyk,70.83,14.73%,78.77,-3.10,lightgbm + lstm,LIGHTGBM + LSTM & 70.83 & 14.73\% & 78.77 & -3.1 \\
+Mjanma (Birma),108.50,95.62%,152.76,-52.40,arimax,ARIMAX & 108.5 & 95.62\% & 152.76 & -52.4 \\
+Mjanma (Birma),316.39,289.09%,354.85,-287.16,arimax_pca,ARIMAX_PCA & 316.39 & 289.09\% & 354.85 & -287.16 \\
+Mjanma (Birma),13.23,10.19%,19.59,0.12,lightgbm,LIGHTGBM & 13.23 & 10.19\% & 19.59 & 0.12 \\
+Mjanma (Birma),50.81,43.40%,51.15,-4.99,lstm,LSTM & 50.81 & 43.4\% & 51.15 & -4.99 \\
+Mjanma (Birma),73.82,63.04%,74.11,-11.57,arimax_pca + lstm,ARIMAX_PCA + LSTM & 73.82 & 63.04\% & 74.11 & -11.57 \\
+Mjanma (Birma),20.20,17.27%,23.06,-0.22,arimax + lstm,ARIMAX + LSTM & 20.2 & 17.27\% & 23.06 & -0.22 \\
+Mjanma (Birma),34.07,28.44%,35.42,-1.87,lightgbm + lstm,LIGHTGBM + LSTM & 34.07 & 28.44\% & 35.42 & -1.87 \\
+Niemcy,168.42,22.36%,189.07,-5.05,arimax,ARIMAX & 168.42 & 22.36\% & 189.07 & -5.05 \\
+Niemcy,120.98,17.34%,154.87,-3.06,arimax_pca,ARIMAX_PCA & 120.98 & 17.34\% & 154.87 & -3.06 \\
+Niemcy,168.90,22.49%,192.71,-5.29,lightgbm,LIGHTGBM & 168.9 & 22.49\% & 192.71 & -5.29 \\
+Niemcy,245.61,33.22%,253.88,-9.91,lstm,LSTM & 245.61 & 33.22\% & 253.88 & -9.91 \\
+Niemcy,205.58,27.75%,211.90,-6.60,arimax_pca + lstm,ARIMAX_PCA + LSTM & 205.58 & 27.75\% & 211.9 & -6.6 \\
+Niemcy,143.42,19.57%,151.70,-2.89,arimax + lstm,ARIMAX + LSTM & 143.42 & 19.57\% & 151.7 & -2.89 \\
+Niemcy,164.08,22.06%,171.32,-3.97,lightgbm + lstm,LIGHTGBM + LSTM & 164.08 & 22.06\% & 171.32 & -3.97 \\
+Nigeria,137.32,96.98%,149.00,-167.62,arimax,ARIMAX & 137.32 & 96.98\% & 149 & -167.62 \\
+Nigeria,20.28,14.45%,25.14,-3.80,arimax_pca,ARIMAX_PCA & 20.28 & 14.45\% & 25.14 & -3.8 \\
+Nigeria,158.01,111.35%,159.21,-191.52,lightgbm,LIGHTGBM & 158.01 & 111.35\% & 159.21 & -191.52 \\
+Nigeria,32.89,23.70%,36.01,-8.85,lstm,LSTM & 32.89 & 23.7\% & 36.01 & -8.85 \\
+Nigeria,50.97,36.29%,52.42,-19.87,arimax_pca + lstm,ARIMAX_PCA + LSTM & 50.97 & 36.29\% & 52.42 & -19.87 \\
+Nigeria,28.80,20.81%,33.08,-7.31,arimax + lstm,ARIMAX + LSTM & 28.8 & 20.81\% & 33.08 & -7.31 \\
+Nigeria,57.45,40.79%,58.68,-25.15,lightgbm + lstm,LIGHTGBM + LSTM & 57.45 & 40.79\% & 58.68 & -25.15 \\
+Pakistan,120.05,57.96%,156.82,-21.84,arimax,ARIMAX & 120.05 & 57.96\% & 156.82 & -21.84 \\
+Pakistan,15.29,7.55%,18.82,0.67,arimax_pca,ARIMAX_PCA & 15.29 & 7.55\% & 18.82 & 0.67 \\
+Pakistan,31.55,16.62%,38.05,-0.34,lightgbm,LIGHTGBM & 31.55 & 16.62\% & 38.05 & -0.34 \\
+Pakistan,18.68,9.40%,22.64,0.52,lstm,LSTM & 18.68 & 9.4\% & 22.64 & 0.52 \\
+Pakistan,19.66,10.22%,25.08,0.42,arimax_pca + lstm,ARIMAX_PCA + LSTM & 19.66 & 10.22\% & 25.08 & 0.42 \\
+Pakistan,31.72,16.86%,36.41,-0.23,arimax + lstm,ARIMAX + LSTM & 31.72 & 16.86\% & 36.41 & -0.23 \\
+Pakistan,17.05,8.80%,20.47,0.61,lightgbm + lstm,LIGHTGBM + LSTM & 17.05 & 8.8\% & 20.47 & 0.61 \\
+Peru,25.84,34.75%,37.92,-1.68,arimax,ARIMAX & 25.84 & 34.75\% & 37.92 & -1.68 \\
+Peru,137.23,199.54%,152.07,-42.15,arimax_pca,ARIMAX_PCA & 137.23 & 199.54\% & 152.07 & -42.15 \\
+Peru,33.04,47.24%,36.11,-1.43,lightgbm,LIGHTGBM & 33.04 & 47.24\% & 36.11 & -1.43 \\
+Peru,28.48,36.52%,29.67,-0.64,lstm,LSTM & 28.48 & 36.52\% & 29.67 & -0.64 \\
+Peru,53.32,68.76%,53.95,-4.43,arimax_pca + lstm,ARIMAX_PCA + LSTM & 53.32 & 68.76\% & 53.95 & -4.43 \\
+Peru,8.02,10.28%,10.12,0.81,arimax + lstm,ARIMAX + LSTM & 8.02 & 10.28\% & 10.12 & 0.81 \\
+Peru,34.04,44.32%,34.79,-1.26,lightgbm + lstm,LIGHTGBM + LSTM & 34.04 & 44.32\% & 34.79 & -1.26 \\
+Polska,24.53,8.96%,27.81,-2.79,arimax,ARIMAX & 24.53 & 8.96\% & 27.81 & -2.79 \\
+Polska,72.83,26.20%,76.68,-27.79,arimax_pca,ARIMAX_PCA & 72.83 & 26.2\% & 76.68 & -27.79 \\
+Polska,26.85,9.79%,30.16,-3.45,lightgbm,LIGHTGBM & 26.85 & 9.79\% & 30.16 & -3.45 \\
+Polska,33.18,12.06%,37.99,-6.07,lstm,LSTM & 33.18 & 12.06\% & 37.99 & -6.07 \\
+Polska,47.93,17.36%,51.71,-12.09,arimax_pca + lstm,ARIMAX_PCA + LSTM & 47.93 & 17.36\% & 51.71 & -12.09 \\
+Polska,15.72,5.61%,18.67,-0.71,arimax + lstm,ARIMAX + LSTM & 15.72 & 5.61\% & 18.67 & -0.71 \\
+Polska,24.96,9.13%,29.19,-3.17,lightgbm + lstm,LIGHTGBM + LSTM & 24.96 & 9.13\% & 29.19 & -3.17 \\
+Republika Południowej Afryki,173.42,39.56%,189.36,-51.85,arimax,ARIMAX & 173.42 & 39.56\% & 189.36 & -51.85 \\
+Republika Południowej Afryki,162.96,37.10%,175.12,-44.19,arimax_pca,ARIMAX_PCA & 162.96 & 37.1\% & 175.12 & -44.19 \\
+Republika Południowej Afryki,158.40,35.77%,162.79,-38.05,lightgbm,LIGHTGBM & 158.4 & 35.77\% & 162.79 & -38.05 \\
+Republika Południowej Afryki,16.10,3.53%,19.80,0.42,lstm,LSTM & 16.1 & 3.53\% & 19.8 & 0.42 \\
+Republika Południowej Afryki,26.38,6.04%,30.24,-0.35,arimax_pca + lstm,ARIMAX_PCA + LSTM & 26.38 & 6.04\% & 30.24 & -0.35 \\
+Republika Południowej Afryki,24.29,5.27%,28.98,-0.24,arimax + lstm,ARIMAX + LSTM & 24.29 & 5.27\% & 28.98 & -0.24 \\
+Republika Południowej Afryki,55.22,12.52%,57.89,-3.94,lightgbm + lstm,LIGHTGBM + LSTM & 55.22 & 12.52\% & 57.89 & -3.94 \\
+Rosja,224.02,11.01%,258.35,-2.13,arimax,ARIMAX & 224.02 & 11.01\% & 258.35 & -2.13 \\
+Rosja,148.08,7.35%,187.86,-0.66,arimax_pca,ARIMAX_PCA & 148.08 & 7.35\% & 187.86 & -0.66 \\
+Rosja,144.96,7.39%,181.73,-0.55,lightgbm,LIGHTGBM & 144.96 & 7.39\% & 181.73 & -0.55 \\
+Rosja,167.63,8.74%,203.05,-0.93,lstm,LSTM & 167.63 & 8.74\% & 203.05 & -0.93 \\
+Rosja,161.16,8.42%,194.87,-0.78,arimax_pca + lstm,ARIMAX_PCA + LSTM & 161.16 & 8.42\% & 194.87 & -0.78 \\
+Rosja,134.90,7.08%,169.46,-0.35,arimax + lstm,ARIMAX + LSTM & 134.9 & 7.08\% & 169.46 & -0.35 \\
+Rosja,148.63,7.78%,180.60,-0.53,lightgbm + lstm,LIGHTGBM + LSTM & 148.63 & 7.78\% & 180.6 & -0.53 \\
+Rumunia,14.66,18.91%,17.86,-0.46,arimax,ARIMAX & 14.66 & 18.91\% & 17.86 & -0.46 \\
+Rumunia,22.95,31.91%,25.60,-2.00,arimax_pca,ARIMAX_PCA & 22.95 & 31.91\% & 25.6 & -2 \\
+Rumunia,27.48,39.20%,31.14,-3.44,lightgbm,LIGHTGBM & 27.48 & 39.2\% & 31.14 & -3.44 \\
+Rumunia,16.21,23.24%,18.80,-0.62,lstm,LSTM & 16.21 & 23.24\% & 18.8 & -0.62 \\
+Rumunia,39.56,54.40%,40.96,-6.68,arimax_pca + lstm,ARIMAX_PCA + LSTM & 39.56 & 54.4\% & 40.96 & -6.68 \\
+Rumunia,10.49,11.92%,14.84,-0.01,arimax + lstm,ARIMAX + LSTM & 10.49 & 11.92\% & 14.84 & -0.01 \\
+Rumunia,26.09,36.54%,27.87,-2.56,lightgbm + lstm,LIGHTGBM + LSTM & 26.09 & 36.54\% & 27.87 & -2.56 \\
+Stany Zjednoczone,568.18,10.35%,665.35,-2.72,arimax,ARIMAX & 568.18 & 10.35\% & 665.35 & -2.72 \\
+Stany Zjednoczone,511.62,9.57%,701.84,-3.14,arimax_pca,ARIMAX_PCA & 511.62 & 9.57\% & 701.84 & -3.14 \\
+Stany Zjednoczone,"1,177.85",20.74%,"1,268.47",-12.52,lightgbm,LIGHTGBM & 1177.85 & 20.74\% & 1268.47 & -12.52 \\
+Stany Zjednoczone,382.55,7.19%,531.69,-1.38,lstm,LSTM & 382.55 & 7.19\% & 531.69 & -1.38 \\
+Stany Zjednoczone,310.17,5.79%,409.16,-0.41,arimax_pca + lstm,ARIMAX_PCA + LSTM & 310.17 & 5.79\% & 409.16 & -0.41 \\
+Stany Zjednoczone,442.99,8.30%,600.46,-2.03,arimax + lstm,ARIMAX + LSTM & 442.99 & 8.3\% & 600.46 & -2.03 \\
+Stany Zjednoczone,281.04,5.12%,337.02,0.05,lightgbm + lstm,LIGHTGBM + LSTM & 281.04 & 5.12\% & 337.02 & 0.05 \\
+Szwecja,9.02,17.29%,11.69,-5.60,arimax,ARIMAX & 9.02 & 17.29\% & 11.69 & -5.6 \\
+Szwecja,14.08,30.73%,18.86,-16.18,arimax_pca,ARIMAX_PCA & 14.08 & 30.73\% & 18.86 & -16.18 \\
+Szwecja,28.12,58.79%,29.61,-41.38,lightgbm,LIGHTGBM & 28.12 & 58.79\% & 29.61 & -41.38 \\
+Szwecja,21.77,45.16%,22.39,-23.24,lstm,LSTM & 21.77 & 45.16\% & 22.39 & -23.24 \\
+Szwecja,44.85,91.93%,45.03,-96.98,arimax_pca + lstm,ARIMAX_PCA + LSTM & 44.85 & 91.93\% & 45.03 & -96.98 \\
+Szwecja,4.97,9.50%,6.56,-1.08,arimax + lstm,ARIMAX + LSTM & 4.97 & 9.5\% & 6.56 & -1.08 \\
+Szwecja,34.31,70.61%,34.61,-56.90,lightgbm + lstm,LIGHTGBM + LSTM & 34.31 & 70.61\% & 34.61 & -56.9 \\
+Tajlandia,164.54,50.63%,187.95,-258.32,arimax,ARIMAX & 164.54 & 50.63\% & 187.95 & -258.32 \\
+Tajlandia,30.18,9.31%,34.84,-7.91,arimax_pca,ARIMAX_PCA & 30.18 & 9.31\% & 34.84 & -7.91 \\
+Tajlandia,104.39,32.85%,137.40,-137.59,lightgbm,LIGHTGBM & 104.39 & 32.85\% & 137.4 & -137.59 \\
+Tajlandia,32.72,10.22%,35.21,-8.10,lstm,LSTM & 32.72 & 10.22\% & 35.21 & -8.1 \\
+Tajlandia,54.51,16.93%,55.66,-21.74,arimax_pca + lstm,ARIMAX_PCA + LSTM & 54.51 & 16.93\% & 55.66 & -21.74 \\
+Tajlandia,21.78,6.80%,25.28,-3.69,arimax + lstm,ARIMAX + LSTM & 21.78 & 6.8\% & 25.28 & -3.69 \\
+Tajlandia,58.82,18.40%,65.92,-30.90,lightgbm + lstm,LIGHTGBM + LSTM & 58.82 & 18.4\% & 65.92 & -30.9 \\
+Tanzania,441.77,566.24%,513.00,-217.77,arimax,ARIMAX & 441.77 & 566.24\% & 513 & -217.77 \\
+Tanzania,273.75,358.19%,324.95,-86.78,arimax_pca,ARIMAX_PCA & 273.75 & 358.19\% & 324.95 & -86.78 \\
+Tanzania,26.60,28.70%,29.82,0.26,lightgbm,LIGHTGBM & 26.6 & 28.7\% & 29.82 & 0.26 \\
+Tanzania,21.84,23.61%,23.20,0.55,lstm,LSTM & 21.84 & 23.61\% & 23.2 & 0.55 \\
+Tanzania,53.86,59.99%,55.56,-1.57,arimax_pca + lstm,ARIMAX_PCA + LSTM & 53.86 & 59.99\% & 55.56 & -1.57 \\
+Tanzania,56.83,72.56%,65.49,-2.57,arimax + lstm,ARIMAX + LSTM & 56.83 & 72.56\% & 65.49 & -2.57 \\
+Tanzania,41.48,44.88%,43.69,-0.59,lightgbm + lstm,LIGHTGBM + LSTM & 41.48 & 44.88\% & 43.69 & -0.59 \\
+Turcja,772.72,220.14%,866.89,-231.49,arimax,ARIMAX & 772.72 & 220.14\% & 866.89 & -231.49 \\
+Turcja,16.10,4.98%,21.55,0.86,arimax_pca,ARIMAX_PCA & 16.1 & 4.98\% & 21.55 & 0.86 \\
+Turcja,26.84,8.28%,33.05,0.66,lightgbm,LIGHTGBM & 26.84 & 8.28\% & 33.05 & 0.66 \\
+Turcja,21.04,6.25%,26.21,0.79,lstm,LSTM & 21.04 & 6.25\% & 26.21 & 0.79 \\
+Turcja,25.16,7.63%,33.56,0.65,arimax_pca + lstm,ARIMAX_PCA + LSTM & 25.16 & 7.63\% & 33.56 & 0.65 \\
+Turcja,82.36,22.92%,101.01,-2.16,arimax + lstm,ARIMAX + LSTM & 82.36 & 22.92\% & 101.01 & -2.16 \\
+Turcja,18.14,5.38%,23.62,0.83,lightgbm + lstm,LIGHTGBM + LSTM & 18.14 & 5.38\% & 23.62 & 0.83 \\
+Ukraina,21.42,10.86%,29.05,0.19,arimax,ARIMAX & 21.42 & 10.86\% & 29.05 & 0.19 \\
+Ukraina,68.60,34.93%,78.86,-4.99,arimax_pca,ARIMAX_PCA & 68.6 & 34.93\% & 78.86 & -4.99 \\
+Ukraina,95.98,44.93%,99.07,-8.46,lightgbm,LIGHTGBM & 95.98 & 44.93\% & 99.07 & -8.46 \\
+Ukraina,59.76,29.41%,64.25,-2.98,lstm,LSTM & 59.76 & 29.41\% & 64.25 & -2.98 \\
+Ukraina,84.40,40.64%,87.43,-6.37,arimax_pca + lstm,ARIMAX_PCA + LSTM & 84.4 & 40.64\% & 87.43 & -6.37 \\
+Ukraina,28.33,14.83%,36.28,-0.27,arimax + lstm,ARIMAX + LSTM & 28.33 & 14.83\% & 36.28 & -0.27 \\
+Ukraina,70.55,33.82%,73.30,-4.18,lightgbm + lstm,LIGHTGBM + LSTM & 70.55 & 33.82\% & 73.3 & -4.18 \\
+Wenezuela,107.47,79.19%,129.63,-13.87,arimax,ARIMAX & 107.47 & 79.19\% & 129.63 & -13.87 \\
+Wenezuela,30.85,26.98%,45.44,-0.83,arimax_pca,ARIMAX_PCA & 30.85 & 26.98\% & 45.44 & -0.83 \\
+Wenezuela,27.31,19.94%,31.03,0.15,lightgbm,LIGHTGBM & 27.31 & 19.94\% & 31.03 & 0.15 \\
+Wenezuela,21.53,13.83%,26.35,0.39,lstm,LSTM & 21.53 & 13.83\% & 26.35 & 0.39 \\
+Wenezuela,23.36,17.44%,26.62,0.37,arimax_pca + lstm,ARIMAX_PCA + LSTM & 23.36 & 17.44\% & 26.62 & 0.37 \\
+Wenezuela,46.41,30.82%,48.55,-1.09,arimax + lstm,ARIMAX + LSTM & 46.41 & 30.82\% & 48.55 & -1.09 \\
+Wenezuela,25.39,18.73%,28.82,0.27,lightgbm + lstm,LIGHTGBM + LSTM & 25.39 & 18.73\% & 28.82 & 0.27 \\
+Wielka Brytania,238.07,61.35%,281.29,-8.70,arimax,ARIMAX & 238.07 & 61.35\% & 281.29 & -8.7 \\
+Wielka Brytania,139.99,36.13%,165.72,-2.37,arimax_pca,ARIMAX_PCA & 139.99 & 36.13\% & 165.72 & -2.37 \\
+Wielka Brytania,187.61,45.38%,205.62,-4.19,lightgbm,LIGHTGBM & 187.61 & 45.38\% & 205.62 & -4.19 \\
+Wielka Brytania,189.46,45.41%,195.81,-3.70,lstm,LSTM & 189.46 & 45.41\% & 195.81 & -3.7 \\
+Wielka Brytania,157.01,37.48%,161.90,-2.21,arimax_pca + lstm,ARIMAX_PCA + LSTM & 157.01 & 37.48\% & 161.9 & -2.21 \\
+Wielka Brytania,145.34,35.94%,157.71,-2.05,arimax + lstm,ARIMAX + LSTM & 145.34 & 35.94\% & 157.71 & -2.05 \\
+Wielka Brytania,136.32,32.64%,143.69,-1.53,lightgbm + lstm,LIGHTGBM + LSTM & 136.32 & 32.64\% & 143.69 & -1.53 \\
+Wietnam,547.30,146.52%,623.20,-47.84,arimax,ARIMAX & 547.3 & 146.52\% & 623.2 & -47.84 \\
+Wietnam,97.86,25.58%,127.00,-1.03,arimax_pca,ARIMAX_PCA & 97.86 & 25.58\% & 127 & -1.03 \\
+Wietnam,49.19,13.65%,72.09,0.35,lightgbm,LIGHTGBM & 49.19 & 13.65\% & 72.09 & 0.35 \\
+Wietnam,57.57,14.71%,85.34,0.08,lstm,LSTM & 57.57 & 14.71\% & 85.34 & 0.08 \\
+Wietnam,79.45,21.96%,96.40,-0.17,arimax_pca + lstm,ARIMAX_PCA + LSTM & 79.45 & 21.96\% & 96.4 & -0.17 \\
+Wietnam,96.54,25.36%,121.84,-0.87,arimax + lstm,ARIMAX + LSTM & 96.54 & 25.36\% & 121.84 & -0.87 \\
+Wietnam,63.86,17.31%,80.34,0.19,lightgbm + lstm,LIGHTGBM + LSTM & 63.86 & 17.31\% & 80.34 & 0.19 \\
+Włochy,112.84,35.54%,128.03,-3.69,arimax,1
+Włochy,96.39,30.01%,106.34,-2.24,arimax_pca,ARIMAX_PCA & 96.39 & 30.01\% & 106.34 & -2.24 \\
+Włochy,81.07,24.00%,86.09,-1.12,lightgbm,LIGHTGBM & 81.07 & 24\% & 86.09 & -1.12 \\
+Włochy,22.73,6.84%,29.42,0.75,lstm,LSTM & 22.73 & 6.84\% & 29.42 & 0.75 \\
+Włochy,28.51,8.78%,36.15,0.63,arimax_pca + lstm,ARIMAX_PCA + LSTM & 28.51 & 8.78\% & 36.15 & 0.63 \\
+Włochy,25.04,7.05%,30.32,0.74,arimax + lstm,ARIMAX + LSTM & 25.04 & 7.05\% & 30.32 & 0.74 \\
+Włochy,42.06,12.60%,47.98,0.34,lightgbm + lstm,LIGHTGBM + LSTM & 42.06 & 12.6\% & 47.98 & 0.34 \\
+Wybrzeże Kości Słoniowej,243.60,207.03%,289.31,-21.16,arimax,ARIMAX & 243.6 & 207.03\% & 289.31 & -21.16 \\
+Wybrzeże Kości Słoniowej,146.05,115.32%,176.78,-7.27,arimax_pca,ARIMAX_PCA & 146.05 & 115.32\% & 176.78 & -7.27 \\
+Wybrzeże Kości Słoniowej,37.58,34.53%,60.10,0.04,lightgbm,LIGHTGBM & 37.58 & 34.53\% & 60.1 & 0.04 \\
+Wybrzeże Kości Słoniowej,42.03,35.44%,63.56,-0.07,lstm,LSTM & 42.03 & 35.44\% & 63.56 & -0.07 \\
+Wybrzeże Kości Słoniowej,53.04,67.20%,65.86,-0.15,arimax_pca + lstm,ARIMAX_PCA + LSTM & 53.04 & 67.2\% & 65.86 & -0.15 \\
+Wybrzeże Kości Słoniowej,61.33,49.29%,84.85,-0.91,arimax + lstm,ARIMAX + LSTM & 61.33 & 49.29\% & 84.85 & -0.91 \\
+Wybrzeże Kości Słoniowej,52.26,62.53%,64.99,-0.12,lightgbm + lstm,LIGHTGBM + LSTM & 52.26 & 62.53\% & 64.99 & -0.12 \\

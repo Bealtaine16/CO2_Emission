@@ -38,10 +38,10 @@ class DataCharts:
             .index
         )
         num_countries = len(countries)
-        num_cols = 5  # Number of columns for the subplot grid
+        num_cols = 5
         num_rows = (
             num_countries - 1
-        ) // num_cols + 1  # Calculate the number of rows needed
+        ) // num_cols + 1
 
         fig, axs = plt.subplots(num_rows, num_cols, figsize=(20, 25), squeeze=False)
 
@@ -64,19 +64,17 @@ class DataCharts:
                 ax.plot(country_df[self.year_column], country_df[checked_column])
             
             wrapped_title = "\n".join(
-                textwrap.wrap(f"Wartości dla kolumny: {checked_column} - {country}", width=30)  # Adjust width as needed
+                textwrap.wrap(f"Wartości dla kolumny: {checked_column} - {country}", width=30)
             )
             ax.set_title(wrapped_title)
             ax.set_xlabel("Rok")
             ax.grid(True)
 
-            # Plotting missing years as vertical lines
             for year in missing_years:
                 ax.axvline(
                     x=year, color="r", linestyle="--", alpha=0.5
-                )  # Vertical lines for missing years
+                )
 
-            # Adding text annotation for missing years
             if not missing_years.empty:
                 missing_text = f"Brakujące lata: {', '.join(map(str, missing_years))}"
                 ax.text(
@@ -90,7 +88,6 @@ class DataCharts:
                     transform=ax.transAxes,
                 )
 
-            # Adding a marker for the first year with non-zero column
             if not pd.isna(first_year_nonnull_co2):
                 ax.scatter(
                     [first_year_nonnull_co2],

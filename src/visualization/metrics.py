@@ -35,7 +35,7 @@ class PredictionEvaluator:
             group_df = data[data[group_col] == group]
             actual_values = group_df[actual_col]
             predicted_values = group_df[predicted_col]
-            group_metrics = {group_col: group}
+            group_metrics = {group_col: group , "record_count": len(group_df)}
 
             for metric_name, metric_func in metrics.items():
                 if len(actual_values) > 1:  # Ensure there are at least two samples
@@ -57,7 +57,7 @@ class PredictionEvaluator:
         # Calculate overall metrics
         overall_actual = data[actual_col]
         overall_predicted = data[predicted_col]
-        overall_metrics = {group_col: 'Overall'}
+        overall_metrics = {group_col: 'Overall', "record_count": len(data)}
 
         for metric_name, metric_func in metrics.items():
             overall_value = metric_func(overall_actual, overall_predicted)

@@ -1,0 +1,369 @@
+country,record_count,MAE,MAPE,RMSE,R2,Model
+Arabia Saudyjska,13,29.34,4.58%,36.29,0.54,basic
+Arabia Saudyjska,13,208.19,32.38%,220.02,-15.79,arimax
+Arabia Saudyjska,13,81.46,12.79%,87.2,-1.64,arimax_pca
+Arabia Saudyjska,13,45.97,6.9%,57.73,-0.16,lightgbm
+Arabia Saudyjska,13,23.87,3.77%,29.21,0.7,lstm
+Arabia Saudyjska,13,24.81,3.8%,29.66,0.69,arimax_lstm
+Arabia Saudyjska,13,35.62,5.77%,41.77,0.39,arimax_pca_lstm
+Arabia Saudyjska,13,33.94,5.08%,43.71,0.34,lightgbm_lstm
+Argentyna,19,53.62,14.9%,74.53,-0.02,basic
+Argentyna,19,46.37,12.65%,64.36,0.24,arimax
+Argentyna,19,72.31,19.56%,93.22,-0.59,arimax_pca
+Argentyna,19,50.28,14.0%,67.77,0.16,lightgbm
+Argentyna,19,60.24,16.47%,77.5,-0.1,lstm
+Argentyna,19,55.35,15.89%,72.89,0.03,arimax_lstm
+Argentyna,19,56.32,16.07%,74.15,-0.01,arimax_pca_lstm
+Argentyna,19,54.83,15.95%,71.06,0.08,lightgbm_lstm
+Australia,19,86.19,14.23%,134.65,-0.31,basic
+Australia,19,165.12,33.5%,175.17,-1.22,arimax
+Australia,19,241.85,49.82%,269.05,-4.24,arimax_pca
+Australia,19,68.75,10.86%,127.82,-0.18,lightgbm
+Australia,19,74.68,12.71%,116.87,0.01,lstm
+Australia,19,62.75,10.24%,111.53,0.1,arimax_lstm
+Australia,19,70.7,11.56%,118.49,-0.02,arimax_pca_lstm
+Australia,19,69.52,11.57%,117.85,-0.01,lightgbm_lstm
+Belgia,19,4.19,4.04%,5.38,0.77,basic
+Belgia,19,46.44,45.89%,51.03,-19.39,arimax
+Belgia,19,42.9,42.48%,46.52,-15.94,arimax_pca
+Belgia,19,3.95,3.74%,4.58,0.84,lightgbm
+Belgia,19,3.39,3.28%,3.95,0.88,lstm
+Belgia,19,8.66,8.66%,10.11,0.2,arimax_lstm
+Belgia,19,8.0,7.82%,9.2,0.34,arimax_pca_lstm
+Belgia,19,8.89,8.46%,9.7,0.26,lightgbm_lstm
+Białoruś,9,1.9,3.12%,2.32,0.28,basic
+Białoruś,9,9.45,15.12%,10.34,-13.34,arimax
+Białoruś,9,11.71,19.14%,12.18,-18.92,arimax_pca
+Białoruś,9,5.41,8.97%,6.17,-4.11,lightgbm
+Białoruś,9,3.02,4.85%,3.47,-0.61,lstm
+Białoruś,9,1.8,2.93%,2.23,0.33,arimax_lstm
+Białoruś,9,1.75,2.88%,2.33,0.27,arimax_pca_lstm
+Białoruś,9,8.78,14.42%,9.15,-10.25,lightgbm_lstm
+Brazylia,19,125.22,7.01%,152.2,0.49,basic
+Brazylia,19,2267.64,134.29%,2491.3,-136.82,arimax
+Brazylia,19,2101.4,125.55%,2249.07,-111.32,arimax_pca
+Brazylia,19,155.17,8.57%,187.75,0.22,lightgbm
+Brazylia,19,179.81,9.94%,224.32,-0.12,lstm
+Brazylia,19,344.92,20.14%,374.96,-2.12,arimax_lstm
+Brazylia,19,133.49,7.51%,162.29,0.42,arimax_pca_lstm
+Brazylia,19,167.78,9.28%,207.93,0.04,lightgbm_lstm
+Chile,19,4.7,4.67%,5.87,0.54,basic
+Chile,19,16.64,16.38%,20.81,-4.84,arimax
+Chile,19,7.86,7.92%,12.0,-0.94,arimax_pca
+Chile,19,5.63,5.64%,7.15,0.31,lightgbm
+Chile,19,5.14,5.08%,6.08,0.5,lstm
+Chile,19,6.47,6.44%,8.5,0.03,arimax_lstm
+Chile,19,5.1,5.05%,6.15,0.49,arimax_pca_lstm
+Chile,19,5.14,5.19%,6.65,0.4,lightgbm_lstm
+Chiny,15,312.57,3.3%,384.75,0.83,basic
+Chiny,15,4656.05,44.85%,6131.53,-42.8,arimax
+Chiny,15,1500.32,14.63%,1817.47,-2.85,arimax_pca
+Chiny,15,1285.25,13.58%,1457.95,-1.48,lightgbm
+Chiny,15,311.95,3.31%,372.12,0.84,lstm
+Chiny,15,410.17,3.95%,557.12,0.64,arimax_lstm
+Chiny,15,374.19,3.97%,462.87,0.75,arimax_pca_lstm
+Chiny,15,732.14,7.75%,875.15,0.11,lightgbm_lstm
+Czechy,11,3.83,4.31%,4.84,0.53,basic
+Czechy,11,8.33,9.26%,9.38,-0.76,arimax
+Czechy,11,8.48,9.61%,10.52,-1.21,arimax_pca
+Czechy,11,13.93,15.85%,17.67,-5.24,lightgbm
+Czechy,11,4.68,5.07%,5.33,0.43,lstm
+Czechy,11,3.48,3.95%,4.72,0.55,arimax_lstm
+Czechy,11,4.06,4.61%,5.28,0.44,arimax_pca_lstm
+Czechy,11,14.48,16.26%,16.89,-4.7,lightgbm_lstm
+Demokratyczna Republika Konga,15,92.55,14.19%,120.17,0.69,basic
+Demokratyczna Republika Konga,15,161.55,22.09%,199.38,0.14,arimax
+Demokratyczna Republika Konga,15,200.3,38.5%,230.14,-0.14,arimax_pca
+Demokratyczna Republika Konga,15,106.19,16.61%,133.56,0.61,lightgbm
+Demokratyczna Republika Konga,15,137.42,21.36%,182.31,0.28,lstm
+Demokratyczna Republika Konga,15,102.55,16.19%,129.6,0.64,arimax_lstm
+Demokratyczna Republika Konga,15,106.23,16.19%,138.47,0.59,arimax_pca_lstm
+Demokratyczna Republika Konga,15,109.5,16.98%,142.57,0.56,lightgbm_lstm
+Egipt,15,12.09,5.06%,13.97,0.64,basic
+Egipt,15,139.85,57.71%,157.06,-44.86,arimax
+Egipt,15,90.85,37.54%,102.65,-18.59,arimax_pca
+Egipt,15,75.71,32.39%,79.29,-10.69,lightgbm
+Egipt,15,16.01,6.99%,19.56,0.29,lstm
+Egipt,15,52.69,22.48%,54.76,-4.58,arimax_lstm
+Egipt,15,12.22,5.13%,14.1,0.63,arimax_pca_lstm
+Egipt,15,66.08,28.33%,68.21,-7.65,lightgbm_lstm
+Filipiny,19,13.65,8.43%,19.26,-1.94,basic
+Filipiny,19,268.54,163.52%,314.95,-785.72,arimax
+Filipiny,19,72.58,43.26%,74.73,-43.29,arimax_pca
+Filipiny,19,17.92,11.01%,21.56,-2.69,lightgbm
+Filipiny,19,18.89,11.78%,21.3,-2.6,lstm
+Filipiny,19,47.06,27.97%,53.8,-21.96,arimax_lstm
+Filipiny,19,17.51,10.49%,22.85,-3.14,arimax_pca_lstm
+Filipiny,19,17.0,10.47%,20.41,-2.3,lightgbm_lstm
+Francja,19,16.12,5.3%,19.72,0.75,basic
+Francja,19,102.84,34.52%,115.9,-7.46,arimax
+Francja,19,75.84,25.48%,85.38,-3.59,arimax_pca
+Francja,19,96.74,32.54%,109.98,-6.62,lightgbm
+Francja,19,14.08,4.54%,16.69,0.82,lstm
+Francja,19,27.52,9.21%,32.81,0.32,arimax_lstm
+Francja,19,15.62,5.17%,18.93,0.77,arimax_pca_lstm
+Francja,19,77.49,25.92%,86.24,-3.69,lightgbm_lstm
+Hiszpania,19,18.95,7.39%,22.39,0.73,basic
+Hiszpania,19,182.01,76.44%,204.92,-21.79,arimax
+Hiszpania,19,143.98,60.47%,161.58,-13.17,arimax_pca
+Hiszpania,19,60.6,25.99%,74.08,-1.98,lightgbm
+Hiszpania,19,17.93,7.02%,22.45,0.73,lstm
+Hiszpania,19,33.79,13.96%,38.43,0.2,arimax_lstm
+Hiszpania,19,17.0,6.57%,20.25,0.78,arimax_pca_lstm
+Hiszpania,19,49.36,20.99%,58.37,-0.85,lightgbm_lstm
+Holandia,35,5.59,3.44%,7.54,0.8,basic
+Holandia,35,85.26,53.9%,107.62,-40.13,arimax
+Holandia,35,96.6,61.04%,121.44,-51.38,arimax_pca
+Holandia,35,18.66,10.99%,20.69,-0.52,lightgbm
+Holandia,35,8.39,4.88%,9.9,0.65,lstm
+Holandia,35,10.71,6.91%,14.14,0.29,arimax_lstm
+Holandia,35,8.01,4.73%,9.72,0.66,arimax_pca_lstm
+Holandia,35,12.27,7.46%,14.21,0.28,lightgbm_lstm
+Indie,19,111.63,5.41%,129.91,0.94,basic
+Indie,19,2566.8,106.4%,3351.46,-40.7,arimax
+Indie,19,2632.24,109.95%,3352.24,-40.72,arimax_pca
+Indie,19,351.25,16.27%,425.94,0.33,lightgbm
+Indie,19,146.54,7.57%,179.24,0.88,lstm
+Indie,19,233.78,13.54%,265.67,0.74,arimax_lstm
+Indie,19,288.73,14.91%,302.8,0.66,arimax_pca_lstm
+Indie,19,238.29,10.57%,331.9,0.59,lightgbm_lstm
+Indonezja,27,328.47,23.79%,533.96,-1.06,basic
+Indonezja,27,2351.24,180.94%,2799.21,-55.71,arimax
+Indonezja,27,1703.75,128.14%,2063.1,-29.8,arimax_pca
+Indonezja,27,322.51,23.16%,524.86,-0.99,lightgbm
+Indonezja,27,314.1,22.01%,467.31,-0.58,lstm
+Indonezja,27,399.89,28.06%,536.02,-1.08,arimax_lstm
+Indonezja,27,330.62,22.9%,513.82,-0.91,arimax_pca_lstm
+Indonezja,27,312.33,22.3%,493.96,-0.77,lightgbm_lstm
+Iran,15,21.81,3.31%,27.75,0.93,basic
+Iran,15,89.4,12.76%,108.79,-0.15,arimax
+Iran,15,93.91,14.74%,116.39,-0.31,arimax_pca
+Iran,15,80.49,12.14%,96.44,0.1,lightgbm
+Iran,15,35.81,5.37%,41.67,0.83,lstm
+Iran,15,13.99,2.08%,18.36,0.97,arimax_lstm
+Iran,15,45.77,6.99%,49.68,0.76,arimax_pca_lstm
+Iran,15,61.87,9.41%,72.66,0.49,lightgbm_lstm
+Japonia,19,35.83,3.04%,40.81,0.77,basic
+Japonia,19,74.11,6.4%,90.75,-0.15,arimax
+Japonia,19,102.8,8.86%,129.41,-1.33,arimax_pca
+Japonia,19,59.51,5.19%,74.43,0.23,lightgbm
+Japonia,19,56.02,4.58%,67.7,0.36,lstm
+Japonia,19,34.24,2.88%,42.28,0.75,arimax_lstm
+Japonia,19,43.53,3.55%,56.12,0.56,arimax_pca_lstm
+Japonia,19,60.26,5.3%,75.01,0.22,lightgbm_lstm
+Kanada,19,27.84,4.07%,34.38,0.49,basic
+Kanada,19,283.32,42.07%,309.0,-40.16,arimax
+Kanada,19,359.55,53.39%,391.75,-65.16,arimax_pca
+Kanada,19,37.44,5.64%,47.4,0.03,lightgbm
+Kanada,19,41.0,5.92%,48.66,-0.02,lstm
+Kanada,19,25.95,3.78%,31.44,0.57,arimax_lstm
+Kanada,19,26.14,3.81%,31.99,0.56,arimax_pca_lstm
+Kanada,19,38.85,5.84%,47.8,0.01,lightgbm_lstm
+Kazachstan,9,11.96,4.46%,16.06,-0.19,basic
+Kazachstan,9,94.75,36.54%,102.26,-47.46,arimax
+Kazachstan,9,43.83,17.11%,52.99,-12.01,arimax_pca
+Kazachstan,9,17.85,6.89%,21.38,-1.12,lightgbm
+Kazachstan,9,17.82,6.59%,21.33,-1.11,lstm
+Kazachstan,9,15.72,6.01%,17.74,-0.46,arimax_lstm
+Kazachstan,9,11.65,4.32%,15.73,-0.15,arimax_pca_lstm
+Kazachstan,9,19.04,7.41%,23.15,-1.48,lightgbm_lstm
+Kolumbia,21,52.06,35.33%,73.32,-0.1,basic
+Kolumbia,21,389.66,301.62%,447.96,-40.18,arimax
+Kolumbia,21,327.05,251.14%,369.59,-27.03,arimax_pca
+Kolumbia,21,69.88,55.99%,80.46,-0.33,lightgbm
+Kolumbia,21,50.38,34.83%,74.46,-0.14,lstm
+Kolumbia,21,47.03,31.93%,72.35,-0.07,arimax_lstm
+Kolumbia,21,47.27,31.24%,69.95,-0.0,arimax_pca_lstm
+Kolumbia,21,71.41,58.47%,80.3,-0.32,lightgbm_lstm
+Korea Południowa,23,16.39,2.94%,21.24,0.9,basic
+Korea Południowa,23,75.7,12.97%,100.6,-1.18,arimax
+Korea Południowa,23,59.39,9.99%,85.29,-0.57,arimax_pca
+Korea Południowa,23,90.02,16.41%,99.38,-1.13,lightgbm
+Korea Południowa,23,40.4,7.29%,43.79,0.59,lstm
+Korea Południowa,23,27.6,4.87%,31.83,0.78,arimax_lstm
+Korea Południowa,23,38.78,7.02%,42.2,0.62,arimax_pca_lstm
+Korea Południowa,23,56.79,10.35%,62.4,0.16,lightgbm_lstm
+Malezja,25,26.58,7.46%,44.27,0.65,basic
+Malezja,25,151.08,44.76%,191.69,-5.57,arimax
+Malezja,25,54.08,16.36%,68.1,0.17,arimax_pca
+Malezja,25,29.65,7.96%,48.31,0.58,lightgbm
+Malezja,25,33.16,9.43%,45.42,0.63,lstm
+Malezja,25,31.06,8.69%,44.77,0.64,arimax_lstm
+Malezja,25,33.32,9.38%,47.72,0.59,arimax_pca_lstm
+Malezja,25,30.13,8.3%,44.63,0.64,lightgbm_lstm
+Meksyk,19,22.54,4.64%,32.8,0.29,basic
+Meksyk,19,62.04,13.19%,80.86,-3.32,arimax
+Meksyk,19,67.31,14.6%,86.89,-3.99,arimax_pca
+Meksyk,19,105.14,22.21%,114.61,-7.69,lightgbm
+Meksyk,19,21.98,4.47%,30.2,0.4,lstm
+Meksyk,19,49.49,10.56%,56.94,-1.14,arimax_lstm
+Meksyk,19,38.87,7.8%,45.35,-0.36,arimax_pca_lstm
+Meksyk,19,118.91,24.99%,125.81,-9.47,lightgbm_lstm
+Mjanma (Birma),15,7.36,5.7%,9.54,0.79,basic
+Mjanma (Birma),15,176.15,156.42%,206.19,-96.3,arimax
+Mjanma (Birma),15,173.89,168.34%,257.32,-150.53,arimax_pca
+Mjanma (Birma),15,30.77,27.04%,32.67,-1.44,lightgbm
+Mjanma (Birma),15,6.71,5.41%,8.29,0.84,lstm
+Mjanma (Birma),15,28.54,25.15%,34.86,-1.78,arimax_lstm
+Mjanma (Birma),15,16.92,14.47%,17.46,0.3,arimax_pca_lstm
+Mjanma (Birma),15,39.06,33.95%,40.11,-2.68,lightgbm_lstm
+Niemcy,19,29.49,4.06%,36.4,0.78,basic
+Niemcy,19,174.23,23.22%,192.68,-5.28,arimax
+Niemcy,19,57.45,7.44%,68.74,0.2,arimax_pca
+Niemcy,19,66.15,9.59%,92.12,-0.44,lightgbm
+Niemcy,19,62.14,7.94%,69.11,0.19,lstm
+Niemcy,19,25.35,3.43%,30.39,0.84,arimax_lstm
+Niemcy,19,29.43,3.95%,36.12,0.78,arimax_pca_lstm
+Niemcy,19,89.52,12.58%,106.38,-0.92,lightgbm_lstm
+Nigeria,15,13.56,9.69%,22.22,-2.75,basic
+Nigeria,15,73.47,52.19%,79.18,-46.62,arimax
+Nigeria,15,89.67,64.43%,107.06,-86.05,arimax_pca
+Nigeria,15,123.79,87.5%,127.42,-122.31,lightgbm
+Nigeria,15,29.92,21.56%,32.43,-6.99,lstm
+Nigeria,15,131.85,93.35%,133.67,-134.7,arimax_lstm
+Nigeria,15,37.68,25.83%,40.38,-11.38,arimax_pca_lstm
+Nigeria,15,175.71,123.95%,178.72,-241.58,lightgbm_lstm
+Overall,816,49.52,8.1,128.92,0.99,basic
+Overall,816,484.21,66.96,1307.26,0.4,arimax
+Overall,816,337.47,53.02,829.93,0.76,arimax_pca
+Overall,816,113.72,20.41,275.35,0.97,lightgbm
+Overall,816,74.17,10.66,161.47,0.99,lstm
+Overall,816,79.75,16.65,166.14,0.99,arimax_lstm
+Overall,816,65.35,10.33,146.55,0.99,arimax_pca_lstm
+Overall,816,101.95,23.51,209.07,0.98,lightgbm_lstm
+Pakistan,15,15.08,7.37%,17.94,0.7,basic
+Pakistan,15,218.1,102.26%,285.23,-74.55,arimax
+Pakistan,15,61.01,30.24%,83.28,-5.44,arimax_pca
+Pakistan,15,28.89,15.77%,36.29,-0.22,lightgbm
+Pakistan,15,28.8,15.24%,34.14,-0.08,lstm
+Pakistan,15,154.69,78.83%,159.96,-22.76,arimax_lstm
+Pakistan,15,48.87,25.15%,51.47,-1.46,arimax_pca_lstm
+Pakistan,15,129.86,67.76%,132.67,-15.35,lightgbm_lstm
+Peru,19,6.26,8.36%,8.55,0.86,basic
+Peru,19,47.44,69.41%,56.18,-4.89,arimax
+Peru,19,54.26,81.81%,65.6,-7.03,arimax_pca
+Peru,19,27.46,38.51%,30.68,-0.76,lightgbm
+Peru,19,5.83,7.44%,7.91,0.88,lstm
+Peru,19,24.35,33.56%,25.74,-0.24,arimax_lstm
+Peru,19,9.01,11.04%,10.24,0.8,arimax_pca_lstm
+Peru,19,35.96,49.33%,37.83,-1.67,lightgbm_lstm
+Polska,15,17.02,6.06%,20.93,-1.14,basic
+Polska,15,47.01,17.01%,50.92,-11.69,arimax
+Polska,15,30.66,11.21%,34.29,-4.76,arimax_pca
+Polska,15,93.71,33.55%,102.32,-50.26,lightgbm
+Polska,15,24.2,8.45%,28.49,-2.98,lstm
+Polska,15,22.48,8.16%,25.91,-2.29,arimax_lstm
+Polska,15,17.15,5.98%,23.87,-1.79,arimax_pca_lstm
+Polska,15,84.03,30.15%,89.51,-38.23,lightgbm_lstm
+Republika Południowej Afryki,15,14.95,3.31%,18.43,0.5,basic
+Republika Południowej Afryki,15,120.42,27.53%,132.42,-24.84,arimax
+Republika Południowej Afryki,15,108.32,24.76%,118.58,-19.72,arimax_pca
+Republika Południowej Afryki,15,49.31,11.33%,59.53,-4.22,lightgbm
+Republika Południowej Afryki,15,10.43,2.29%,14.49,0.69,lstm
+Republika Południowej Afryki,15,44.85,10.15%,48.0,-2.4,arimax_lstm
+Republika Południowej Afryki,15,22.82,5.04%,27.78,-0.14,arimax_pca_lstm
+Republika Południowej Afryki,15,66.06,15.02%,72.09,-6.66,lightgbm_lstm
+Rosja,15,134.88,6.87%,175.05,-0.44,basic
+Rosja,15,123.75,6.18%,152.76,-0.09,arimax
+Rosja,15,268.57,13.03%,318.44,-3.76,arimax_pca
+Rosja,15,182.39,9.3%,210.81,-1.08,lightgbm
+Rosja,15,223.83,10.95%,264.44,-2.28,lstm
+Rosja,15,154.66,7.69%,178.67,-0.5,arimax_lstm
+Rosja,15,185.66,9.17%,222.85,-1.33,arimax_pca_lstm
+Rosja,15,164.2,8.44%,192.23,-0.73,lightgbm_lstm
+Rumunia,19,7.41,9.43%,9.86,0.56,basic
+Rumunia,19,27.46,40.82%,33.68,-4.19,arimax
+Rumunia,19,18.78,27.82%,22.6,-1.34,arimax_pca
+Rumunia,19,26.79,38.09%,28.98,-2.85,lightgbm
+Rumunia,19,7.5,9.13%,9.92,0.55,lstm
+Rumunia,19,14.11,19.89%,16.14,-0.19,arimax_lstm
+Rumunia,19,8.12,9.72%,10.09,0.53,arimax_pca_lstm
+Rumunia,19,31.56,43.93%,32.82,-3.93,lightgbm_lstm
+Stany Zjednoczone,35,139.28,2.55%,182.7,0.72,basic
+Stany Zjednoczone,35,2039.63,37.82%,2701.36,-60.32,arimax
+Stany Zjednoczone,35,1040.43,19.35%,1374.49,-14.87,arimax_pca
+Stany Zjednoczone,35,458.56,8.59%,630.02,-2.34,lightgbm
+Stany Zjednoczone,35,471.82,8.44%,501.53,-1.11,lstm
+Stany Zjednoczone,35,251.7,4.64%,308.84,0.2,arimax_lstm
+Stany Zjednoczone,35,243.52,4.37%,277.54,0.35,arimax_pca_lstm
+Stany Zjednoczone,35,383.24,7.2%,530.73,-1.37,lightgbm_lstm
+Szwecja,23,1.81,3.62%,2.36,0.73,basic
+Szwecja,23,8.9,17.15%,11.39,-5.27,arimax
+Szwecja,23,8.04,16.01%,9.0,-2.92,arimax_pca
+Szwecja,23,11.28,24.15%,13.32,-7.57,lightgbm
+Szwecja,23,9.0,18.24%,9.25,-3.13,lstm
+Szwecja,23,3.94,8.22%,4.3,0.11,arimax_lstm
+Szwecja,23,2.35,4.61%,3.07,0.55,arimax_pca_lstm
+Szwecja,23,14.35,30.3%,15.67,-10.86,lightgbm_lstm
+Tajlandia,15,8.58,2.62%,11.4,0.05,basic
+Tajlandia,15,279.75,87.02%,316.46,-734.18,arimax
+Tajlandia,15,19.51,6.09%,22.74,-2.8,arimax_pca
+Tajlandia,15,37.08,11.63%,41.74,-11.79,lightgbm
+Tajlandia,15,23.19,7.09%,25.02,-3.6,lstm
+Tajlandia,15,57.88,18.01%,60.82,-26.15,arimax_lstm
+Tajlandia,15,28.2,8.62%,30.51,-5.83,arimax_pca_lstm
+Tajlandia,15,71.13,22.16%,73.81,-38.99,lightgbm_lstm
+Tanzania,15,11.12,10.29%,15.07,0.81,basic
+Tanzania,15,182.8,240.0%,222.64,-40.21,arimax
+Tanzania,15,80.38,116.45%,115.93,-10.17,arimax_pca
+Tanzania,15,30.65,32.23%,33.38,0.07,lightgbm
+Tanzania,15,8.86,8.07%,13.48,0.85,lstm
+Tanzania,15,56.05,68.61%,61.62,-2.16,arimax_lstm
+Tanzania,15,20.2,19.17%,24.34,0.51,arimax_pca_lstm
+Tanzania,15,57.19,64.22%,59.23,-1.92,lightgbm_lstm
+Turcja,19,18.57,5.48%,21.85,0.85,basic
+Turcja,19,275.98,79.1%,306.09,-27.98,arimax
+Turcja,19,190.92,56.46%,201.77,-11.59,arimax_pca
+Turcja,19,125.49,37.69%,130.13,-4.24,lightgbm
+Turcja,19,36.16,10.62%,41.53,0.47,lstm
+Turcja,19,57.66,17.38%,61.63,-0.17,arimax_lstm
+Turcja,19,30.92,9.27%,35.41,0.61,arimax_pca_lstm
+Turcja,19,140.95,42.65%,144.12,-5.43,lightgbm_lstm
+Ukraina,9,20.68,10.79%,29.41,0.17,basic
+Ukraina,9,16.16,7.88%,20.15,0.61,arimax
+Ukraina,9,19.84,9.18%,24.51,0.42,arimax_pca
+Ukraina,9,106.52,51.41%,110.35,-10.73,lightgbm
+Ukraina,9,20.57,9.67%,22.8,0.5,lstm
+Ukraina,9,30.76,15.16%,35.55,-0.22,arimax_lstm
+Ukraina,9,17.31,8.6%,20.8,0.58,arimax_pca_lstm
+Ukraina,9,103.27,49.36%,105.39,-9.7,lightgbm_lstm
+Wenezuela,24,13.92,9.29%,17.43,0.73,basic
+Wenezuela,24,48.6,38.99%,61.31,-2.33,arimax
+Wenezuela,24,134.05,108.1%,160.51,-21.79,arimax_pca
+Wenezuela,24,28.56,21.32%,31.96,0.1,lightgbm
+Wenezuela,24,17.65,11.21%,22.58,0.55,lstm
+Wenezuela,24,17.37,12.76%,20.44,0.63,arimax_lstm
+Wenezuela,24,19.98,12.82%,24.78,0.46,arimax_pca_lstm
+Wenezuela,24,33.84,25.14%,37.71,-0.26,lightgbm_lstm
+Wielka Brytania,19,23.87,5.4%,27.24,0.91,basic
+Wielka Brytania,19,202.42,52.6%,243.92,-6.3,arimax
+Wielka Brytania,19,213.05,54.91%,251.69,-6.77,arimax_pca
+Wielka Brytania,19,74.17,19.73%,97.17,-0.16,lightgbm
+Wielka Brytania,19,72.36,16.32%,75.45,0.3,lstm
+Wielka Brytania,19,49.12,12.38%,57.37,0.6,arimax_lstm
+Wielka Brytania,19,23.85,4.99%,31.22,0.88,arimax_pca_lstm
+Wielka Brytania,19,91.57,23.44%,107.17,-0.41,lightgbm_lstm
+Wietnam,15,50.93,12.5%,83.78,0.12,basic
+Wietnam,15,620.35,162.49%,759.24,-71.5,arimax
+Wietnam,15,424.43,109.46%,525.79,-33.77,arimax_pca
+Wietnam,15,70.57,17.88%,106.7,-0.43,lightgbm
+Wietnam,15,55.71,14.2%,91.57,-0.05,lstm
+Wietnam,15,59.72,14.9%,86.79,0.05,arimax_lstm
+Wietnam,15,54.53,14.26%,90.54,-0.03,arimax_pca_lstm
+Wietnam,15,68.79,19.13%,82.95,0.13,lightgbm_lstm
+Wybrzeże Kości Słoniowej,15,41.87,33.97%,66.73,-0.18,basic
+Wybrzeże Kości Słoniowej,15,240.12,192.7%,293.5,-21.81,arimax
+Wybrzeże Kości Słoniowej,15,157.76,124.03%,192.78,-8.84,arimax_pca
+Wybrzeże Kości Słoniowej,15,44.14,41.07%,68.56,-0.24,lightgbm
+Wybrzeże Kości Słoniowej,15,43.07,34.04%,65.1,-0.12,lstm
+Wybrzeże Kości Słoniowej,15,45.99,38.34%,66.92,-0.19,arimax_lstm
+Wybrzeże Kości Słoniowej,15,44.96,34.72%,67.43,-0.2,arimax_pca_lstm
+Wybrzeże Kości Słoniowej,15,47.83,51.21%,65.18,-0.12,lightgbm_lstm
+Włochy,19,20.73,6.21%,24.58,0.83,basic
+Włochy,19,105.31,33.26%,120.42,-3.15,arimax
+Włochy,19,137.95,43.43%,156.4,-6.0,arimax_pca
+Włochy,19,70.6,22.4%,83.03,-0.97,lightgbm
+Włochy,19,55.9,16.11%,60.25,-0.04,lstm
+Włochy,19,23.13,7.12%,29.08,0.76,arimax_lstm
+Włochy,19,37.0,10.34%,42.69,0.48,arimax_pca_lstm
+Włochy,19,89.88,27.96%,99.07,-1.81,lightgbm_lstm

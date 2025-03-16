@@ -1,0 +1,817 @@
+country_order,year,country_index,co2
+0,1989,Stany Zjednoczone,5402.091
+0,1990,Stany Zjednoczone,5407.962
+0,1991,Stany Zjednoczone,5296.487
+0,1992,Stany Zjednoczone,5358.079
+0,1993,Stany Zjednoczone,5441.001
+0,1994,Stany Zjednoczone,5579.422
+0,1995,Stany Zjednoczone,5525.469
+0,1996,Stany Zjednoczone,5692.734
+0,1997,Stany Zjednoczone,5785.296
+0,1998,Stany Zjednoczone,5848.113
+0,1999,Stany Zjednoczone,5955.408
+0,2000,Stany Zjednoczone,6150.625
+0,2001,Stany Zjednoczone,5953.309
+0,2002,Stany Zjednoczone,5948.879
+0,2003,Stany Zjednoczone,6068.596
+0,2004,Stany Zjednoczone,6106.302
+0,2005,Stany Zjednoczone,6177.962
+0,2006,Stany Zjednoczone,6013.131
+0,2007,Stany Zjednoczone,6071.847
+0,2008,Stany Zjednoczone,5905.519
+0,2009,Stany Zjednoczone,5410.841
+0,2010,Stany Zjednoczone,5665.739
+0,2011,Stany Zjednoczone,5452.748
+0,2012,Stany Zjednoczone,5361.917
+0,2013,Stany Zjednoczone,5441.96
+0,2014,Stany Zjednoczone,5584.693
+0,2015,Stany Zjednoczone,5409.788
+0,2016,Stany Zjednoczone,5328.277
+0,2017,Stany Zjednoczone,5338.259
+0,2018,Stany Zjednoczone,5450.898
+0,2019,Stany Zjednoczone,5320.308
+0,2020,Stany Zjednoczone,4772.611
+0,2021,Stany Zjednoczone,5125.842
+0,2022,Stany Zjednoczone,5181.144
+0,2023,Stany Zjednoczone,5027.1
+1,2008,Chiny,7814.796
+1,2009,Chiny,8211.936
+1,2010,Chiny,8579.337
+1,2011,Chiny,9549.341
+1,2012,Chiny,9795.438
+1,2013,Chiny,9973.596
+1,2014,Chiny,9859.565
+1,2015,Chiny,9828.97
+1,2016,Chiny,9618.938
+1,2017,Chiny,9826.776
+1,2018,Chiny,10156.673
+1,2019,Chiny,10488.223
+1,2020,Chiny,10653.655
+1,2021,Chiny,11169.235
+1,2022,Chiny,11064.459
+2,2009,Rosja,1738.382
+2,2010,Rosja,2027.792
+2,2011,Rosja,1763.578
+2,2012,Rosja,2077.921
+2,2013,Rosja,1879.309
+2,2014,Rosja,1746.89
+2,2015,Rosja,2038.625
+2,2016,Rosja,2046.718
+2,2017,Rosja,2043.329
+2,2018,Rosja,2084.962
+2,2019,Rosja,1923.832
+2,2020,Rosja,1939.328
+2,2021,Rosja,2047.341
+2,2022,Rosja,2204.473
+2,2023,Rosja,2216.713
+3,2005,Brazylia,2279.558
+3,2006,Brazylia,2091.557
+3,2007,Brazylia,1906.509
+3,2008,Brazylia,1759.048
+3,2009,Brazylia,1519.997
+3,2010,Brazylia,1443.259
+3,2011,Brazylia,1462.667
+3,2012,Brazylia,1647.961
+3,2013,Brazylia,1744.983
+3,2014,Brazylia,1789.292
+3,2015,Brazylia,1778.048
+3,2016,Brazylia,1642.293
+3,2017,Brazylia,1522.14
+3,2018,Brazylia,1537.755
+3,2019,Brazylia,1593.3
+3,2020,Brazylia,1684.446
+3,2021,Brazylia,1979.592
+3,2022,Brazylia,1811.552
+3,2023,Brazylia,1788.816
+4,2004,Indie,1204.298
+4,2005,Indie,1238.216
+4,2006,Indie,1330.758
+4,2007,Indie,1484.246
+4,2008,Indie,1639.077
+4,2009,Indie,1694.797
+4,2010,Indie,1794.29
+4,2011,Indie,1862.74
+4,2012,Indie,2085.191
+4,2013,Indie,2213.367
+4,2014,Indie,2242.132
+4,2015,Indie,2367.592
+4,2016,Indie,2476.599
+4,2017,Indie,2505.169
+4,2018,Indie,2697.3
+4,2019,Indie,2665.538
+4,2020,Indie,2460.551
+4,2021,Indie,2687.043
+4,2022,Indie,2823.01
+5,2005,Niemcy,853.164
+5,2006,Niemcy,873.586
+5,2007,Niemcy,834.271
+5,2008,Niemcy,844.444
+5,2009,Niemcy,774.508
+5,2010,Niemcy,815.229
+5,2011,Niemcy,791.245
+5,2012,Niemcy,805.595
+5,2013,Niemcy,824.683
+5,2014,Niemcy,787.677
+5,2015,Niemcy,794.87
+5,2016,Niemcy,794.372
+5,2017,Niemcy,780.026
+5,2018,Niemcy,751.76
+5,2019,Niemcy,700.946
+5,2020,Niemcy,640.43
+5,2021,Niemcy,670.231
+5,2022,Niemcy,662.833
+5,2023,Niemcy,587.501
+6,1997,Indonezja,2701.212
+6,1998,Indonezja,1194.477
+6,1999,Indonezja,1283.48
+6,2000,Indonezja,933.129
+6,2001,Indonezja,904.116
+6,2002,Indonezja,1156.696
+6,2003,Indonezja,921.749
+6,2004,Indonezja,1070.373
+6,2005,Indonezja,999.814
+6,2006,Indonezja,1585.034
+6,2007,Indonezja,991.799
+6,2008,Indonezja,1040.765
+6,2009,Indonezja,1364.806
+6,2010,Indonezja,1257.605
+6,2011,Indonezja,1414.597
+6,2012,Indonezja,1475.463
+6,2013,Indonezja,1433.831
+6,2014,Indonezja,1646.372
+6,2015,Indonezja,2042.726
+6,2016,Indonezja,1267.832
+6,2017,Indonezja,1223.53
+6,2018,Indonezja,1250.367
+6,2019,Indonezja,1550.346
+6,2020,Indonezja,1113.463
+6,2021,Indonezja,1055.7
+6,2022,Indonezja,1193.859
+6,2023,Indonezja,1288.977
+7,2005,Wielka Brytania,614.031
+7,2006,Wielka Brytania,590.124
+7,2007,Wielka Brytania,577.821
+7,2008,Wielka Brytania,556.177
+7,2009,Wielka Brytania,501.749
+7,2010,Wielka Brytania,518.772
+7,2011,Wielka Brytania,480.396
+7,2012,Wielka Brytania,504.513
+7,2013,Wielka Brytania,493.524
+7,2014,Wielka Brytania,450.839
+7,2015,Wielka Brytania,442.375
+7,2016,Wielka Brytania,418.571
+7,2017,Wielka Brytania,400.951
+7,2018,Wielka Brytania,398.573
+7,2019,Wielka Brytania,376.257
+7,2020,Wielka Brytania,335.361
+7,2021,Wielka Brytania,354.359
+7,2022,Wielka Brytania,323.598
+7,2023,Wielka Brytania,314.675
+8,2005,Kanada,803.439
+8,2006,Kanada,765.615
+8,2007,Kanada,769.508
+8,2008,Kanada,713.186
+8,2009,Kanada,653.726
+8,2010,Kanada,640.357
+8,2011,Kanada,700.765
+8,2012,Kanada,673.268
+8,2013,Kanada,689.641
+8,2014,Kanada,730.657
+8,2015,Kanada,708.503
+8,2016,Kanada,691.969
+8,2017,Kanada,713.345
+8,2018,Kanada,680.668
+8,2019,Kanada,681.297
+8,2020,Kanada,615.787
+8,2021,Kanada,626.038
+8,2022,Kanada,657.755
+8,2023,Kanada,654.023
+9,2004,Japonia,1265.336
+9,2005,Japonia,1275.467
+9,2006,Japonia,1260.54
+9,2007,Japonia,1290.413
+9,2008,Japonia,1222.294
+9,2009,Japonia,1150.351
+9,2010,Japonia,1201.852
+9,2011,Japonia,1254.265
+9,2012,Japonia,1297.3
+9,2013,Japonia,1308.229
+9,2014,Japonia,1258.854
+9,2015,Japonia,1218.964
+9,2016,Japonia,1197.251
+9,2017,Japonia,1183.419
+9,2018,Japonia,1141.931
+9,2019,Japonia,1104.079
+9,2020,Japonia,1041.607
+9,2021,Japonia,1064.431
+9,2022,Japonia,1034.632
+10,2014,Ukraina,264.892
+10,2015,Ukraina,241.452
+10,2016,Ukraina,242.833
+10,2017,Ukraina,228.66
+10,2018,Ukraina,235.723
+10,2019,Ukraina,225.488
+10,2020,Ukraina,210.1
+10,2021,Ukraina,212.644
+10,2022,Ukraina,143.127
+11,2005,Meksyk,534.91
+11,2006,Meksyk,550.413
+11,2007,Meksyk,525.24
+11,2008,Meksyk,514.899
+11,2009,Meksyk,495.177
+11,2010,Meksyk,493.302
+11,2011,Meksyk,513.323
+11,2012,Meksyk,534.895
+11,2013,Meksyk,521.087
+11,2014,Meksyk,514.571
+11,2015,Meksyk,499.927
+11,2016,Meksyk,446.647
+11,2017,Meksyk,441.684
+11,2018,Meksyk,430.19
+11,2019,Meksyk,519.401
+11,2020,Meksyk,440.223
+11,2021,Meksyk,437.002
+11,2022,Meksyk,446.459
+11,2023,Meksyk,456.865
+12,2005,Francja,391.601
+12,2006,Francja,383.037
+12,2007,Francja,370.074
+12,2008,Francja,360.98
+12,2009,Francja,342.905
+12,2010,Francja,347.973
+12,2011,Francja,327.192
+12,2012,Francja,332.682
+12,2013,Francja,337.58
+12,2014,Francja,306.303
+12,2015,Francja,317.279
+12,2016,Francja,315.775
+12,2017,Francja,345.109
+12,2018,Francja,303.05
+12,2019,Francja,292.145
+12,2020,Francja,258.027
+12,2021,Francja,281.798
+12,2022,Francja,268.743
+12,2023,Francja,246.976
+13,2005,Australia,458.124
+13,2006,Australia,417.666
+13,2007,Australia,477.433
+13,2008,Australia,669.038
+13,2009,Australia,512.99
+13,2010,Australia,929.393
+13,2011,Australia,671.389
+13,2012,Australia,563.787
+13,2013,Australia,557.515
+13,2014,Australia,475.783
+13,2015,Australia,436.93
+13,2016,Australia,500.018
+13,2017,Australia,497.225
+13,2018,Australia,464.082
+13,2019,Australia,453.647
+13,2020,Australia,484.759
+13,2021,Australia,463.973
+13,2022,Australia,454.15
+13,2023,Australia,453.066
+14,2009,Republika Południowej Afryki,497.365
+14,2010,Republika Południowej Afryki,473.934
+14,2011,Republika Południowej Afryki,473.031
+14,2012,Republika Południowej Afryki,467.443
+14,2013,Republika Południowej Afryki,463.876
+14,2014,Republika Południowej Afryki,473.651
+14,2015,Republika Południowej Afryki,447.676
+14,2016,Republika Południowej Afryki,456.419
+14,2017,Republika Południowej Afryki,436.21
+14,2018,Republika Południowej Afryki,431.978
+14,2019,Republika Południowej Afryki,463.313
+14,2020,Republika Południowej Afryki,433.546
+14,2021,Republika Południowej Afryki,426.134
+14,2022,Republika Południowej Afryki,405.857
+14,2023,Republika Południowej Afryki,402.588
+15,2008,Polska,294.074
+15,2009,Polska,254.26
+15,2010,Polska,300.775
+15,2011,Polska,283.952
+15,2012,Polska,273.611
+15,2013,Polska,274.611
+15,2014,Polska,261.757
+15,2015,Polska,266.098
+15,2016,Polska,279.777
+15,2017,Polska,294.256
+15,2018,Polska,301.791
+15,2019,Polska,287.025
+15,2020,Polska,267.035
+15,2021,Polska,296.764
+15,2022,Polska,282.3
+16,2005,Włochy,450.257
+16,2006,Włochy,442.556
+16,2007,Włochy,463.473
+16,2008,Włochy,433.96
+16,2009,Włochy,394.497
+16,2010,Włochy,390.707
+16,2011,Włochy,389.357
+16,2012,Włochy,355.282
+16,2013,Włochy,322.057
+16,2014,Włochy,301.254
+16,2015,Włochy,318.135
+16,2016,Włochy,320.104
+16,2017,Włochy,308.626
+16,2018,Włochy,339.421
+16,2019,Włochy,311.544
+16,2020,Włochy,269.854
+16,2021,Włochy,304.457
+16,2022,Włochy,310.175
+16,2023,Włochy,283.951
+17,2003,Kolumbia,193.927
+17,2004,Kolumbia,84.452
+17,2005,Kolumbia,57.445
+17,2006,Kolumbia,97.029
+17,2007,Kolumbia,81.395
+17,2008,Kolumbia,63.512
+17,2009,Kolumbia,76.47
+17,2010,Kolumbia,64.727
+17,2011,Kolumbia,168.241
+17,2012,Kolumbia,357.057
+17,2013,Kolumbia,207.598
+17,2014,Kolumbia,173.707
+17,2015,Kolumbia,168.98
+17,2016,Kolumbia,129.35
+17,2017,Kolumbia,223.3
+17,2018,Kolumbia,185.63
+17,2019,Kolumbia,136.15
+17,2020,Kolumbia,99.354
+17,2021,Kolumbia,104.563
+17,2022,Kolumbia,103.71
+17,2023,Kolumbia,108.185
+18,2008,Tajlandia,325.252
+18,2009,Tajlandia,324.976
+18,2010,Tajlandia,346.38
+18,2011,Tajlandia,326.736
+18,2012,Tajlandia,326.702
+18,2013,Tajlandia,321.329
+18,2014,Tajlandia,340.795
+18,2015,Tajlandia,330.789
+18,2016,Tajlandia,331.411
+18,2017,Tajlandia,328.304
+18,2018,Tajlandia,328.114
+18,2019,Tajlandia,319.123
+18,2020,Tajlandia,307.369
+18,2021,Tajlandia,301.862
+18,2022,Tajlandia,306.364
+19,2009,Demokratyczna Republika Konga,743.043
+19,2010,Demokratyczna Republika Konga,873.046
+19,2011,Demokratyczna Republika Konga,1007.134
+19,2012,Demokratyczna Republika Konga,941.245
+19,2013,Demokratyczna Republika Konga,964.14
+19,2014,Demokratyczna Republika Konga,796.185
+19,2015,Demokratyczna Republika Konga,626.536
+19,2016,Demokratyczna Republika Konga,663.196
+19,2017,Demokratyczna Republika Konga,669.579
+19,2018,Demokratyczna Republika Konga,538.164
+19,2019,Demokratyczna Republika Konga,454.4
+19,2020,Demokratyczna Republika Konga,367.466
+19,2021,Demokratyczna Republika Konga,382.939
+19,2022,Demokratyczna Republika Konga,420.281
+19,2023,Demokratyczna Republika Konga,428.619
+20,2004,Argentyna,443.884
+20,2005,Argentyna,463.47
+20,2006,Argentyna,469.515
+20,2007,Argentyna,331.774
+20,2008,Argentyna,275.777
+20,2009,Argentyna,502.986
+20,2010,Argentyna,422.125
+20,2011,Argentyna,415.205
+20,2012,Argentyna,338.238
+20,2013,Argentyna,296.514
+20,2014,Argentyna,347.882
+20,2015,Argentyna,297.82
+20,2016,Argentyna,286.691
+20,2017,Argentyna,261.94
+20,2018,Argentyna,284.019
+20,2019,Argentyna,338.231
+20,2020,Argentyna,284.349
+20,2021,Argentyna,306.171
+20,2022,Argentyna,316.751
+21,2008,Iran,507.556
+21,2009,Iran,520.235
+21,2010,Iran,536.702
+21,2011,Iran,550.163
+21,2012,Iran,572.763
+21,2013,Iran,586.389
+21,2014,Iran,618.668
+21,2015,Iran,618.633
+21,2016,Iran,621.012
+21,2017,Iran,672.523
+21,2018,Iran,739.523
+21,2019,Iran,754.361
+21,2020,Iran,765.076
+21,2021,Iran,794.64
+21,2022,Iran,819.163
+22,1999,Malezja,223.832
+22,2000,Malezja,203.132
+22,2001,Malezja,244.282
+22,2002,Malezja,244.954
+22,2003,Malezja,265.131
+22,2004,Malezja,260.864
+22,2005,Malezja,254.702
+22,2006,Malezja,267.511
+22,2007,Malezja,288.811
+22,2008,Malezja,310.621
+22,2009,Malezja,341.863
+22,2010,Malezja,362.336
+22,2011,Malezja,416.122
+22,2012,Malezja,415.879
+22,2013,Malezja,406.897
+22,2014,Malezja,545.231
+22,2015,Malezja,408.859
+22,2016,Malezja,368.318
+22,2017,Malezja,346.806
+22,2018,Malezja,346.653
+22,2019,Malezja,346.802
+22,2020,Malezja,326.798
+22,2021,Malezja,332.512
+22,2022,Malezja,345.617
+22,2023,Malezja,348.174
+23,2014,Kazachstan,270.115
+23,2015,Kazachstan,266.383
+23,2016,Kazachstan,264.836
+23,2017,Kazachstan,283.09
+23,2018,Kazachstan,291.307
+23,2019,Kazachstan,266.636
+23,2020,Kazachstan,249.028
+23,2021,Kazachstan,247.596
+23,2022,Kazachstan,246.719
+24,2011,Arabia Saudyjska,538.939
+24,2012,Arabia Saudyjska,604.348
+24,2013,Arabia Saudyjska,589.589
+24,2014,Arabia Saudyjska,589.441
+24,2015,Arabia Saudyjska,626.597
+24,2016,Arabia Saudyjska,642.94
+24,2017,Arabia Saudyjska,615.202
+24,2018,Arabia Saudyjska,637.738
+24,2019,Arabia Saudyjska,657.351
+24,2020,Arabia Saudyjska,615.749
+24,2021,Arabia Saudyjska,695.863
+24,2022,Arabia Saudyjska,723.456
+24,2023,Arabia Saudyjska,736.359
+25,2004,Turcja,261.429
+25,2005,Turcja,255.614
+25,2006,Turcja,250.771
+25,2007,Turcja,276.245
+25,2008,Turcja,272.658
+25,2009,Turcja,290.238
+25,2010,Turcja,270.372
+25,2011,Turcja,312.973
+25,2012,Turcja,326.477
+25,2013,Turcja,327.503
+25,2014,Turcja,340.069
+25,2015,Turcja,366.872
+25,2016,Turcja,386.763
+25,2017,Turcja,416.248
+25,2018,Turcja,381.708
+25,2019,Turcja,369.617
+25,2020,Turcja,382.948
+25,2021,Turcja,421.929
+25,2022,Turcja,405.995
+26,2005,Hiszpania,345.374
+26,2006,Hiszpania,333.61
+26,2007,Hiszpania,343.32
+26,2008,Hiszpania,311.754
+26,2009,Hiszpania,273.635
+26,2010,Hiszpania,254.066
+26,2011,Hiszpania,295.99
+26,2012,Hiszpania,262.244
+26,2013,Hiszpania,237.066
+26,2014,Hiszpania,238.214
+26,2015,Hiszpania,249.336
+26,2016,Hiszpania,239.669
+26,2017,Hiszpania,258.473
+26,2018,Hiszpania,253.553
+26,2019,Hiszpania,236.043
+26,2020,Hiszpania,198.913
+26,2021,Hiszpania,217.39
+26,2022,Hiszpania,224.135
+26,2023,Hiszpania,212.145
+27,2001,Korea Południowa,432.143
+27,2002,Korea Południowa,453.006
+27,2003,Korea Południowa,462.796
+27,2004,Korea Południowa,469.989
+27,2005,Korea Południowa,477.725
+27,2006,Korea Południowa,483.091
+27,2007,Korea Południowa,501.868
+27,2008,Korea Południowa,513.25
+27,2009,Korea Południowa,519.382
+27,2010,Korea Południowa,575.579
+27,2011,Korea Południowa,608.39
+27,2012,Korea Południowa,611.548
+27,2013,Korea Południowa,618.111
+27,2014,Korea Południowa,613.377
+27,2015,Korea Południowa,617.983
+27,2016,Korea Południowa,621.883
+27,2017,Korea Południowa,638.558
+27,2018,Korea Południowa,654.419
+27,2019,Korea Południowa,630.599
+27,2020,Korea Południowa,582.155
+27,2021,Korea Południowa,600.692
+27,2022,Korea Południowa,586.824
+27,2023,Korea Południowa,562.28
+28,2005,Filipiny,158.107
+28,2006,Filipiny,159.874
+28,2007,Filipiny,181.189
+28,2008,Filipiny,159.559
+28,2009,Filipiny,131.991
+28,2010,Filipiny,171.344
+28,2011,Filipiny,182.289
+28,2012,Filipiny,161.44
+28,2013,Filipiny,165.888
+28,2014,Filipiny,159.011
+28,2015,Filipiny,162.656
+28,2016,Filipiny,168.779
+28,2017,Filipiny,174.587
+28,2018,Filipiny,172.664
+28,2019,Filipiny,172.826
+28,2020,Filipiny,160.181
+28,2021,Filipiny,168.161
+28,2022,Filipiny,172.356
+28,2023,Filipiny,181.712
+29,2009,Nigeria,123.731
+29,2010,Nigeria,168.894
+29,2011,Nigeria,162.845
+29,2012,Nigeria,148.791
+29,2013,Nigeria,151.344
+29,2014,Nigeria,148.149
+29,2015,Nigeria,132.032
+29,2016,Nigeria,135.901
+29,2017,Nigeria,138.735
+29,2018,Nigeria,149.081
+29,2019,Nigeria,146.258
+29,2020,Nigeria,132.137
+29,2021,Nigeria,142.107
+29,2022,Nigeria,139.178
+29,2023,Nigeria,136.148
+30,2008,Wietnam,219.603
+30,2009,Wietnam,305.603
+30,2010,Wietnam,263.124
+30,2011,Wietnam,258.723
+30,2012,Wietnam,249.947
+30,2013,Wietnam,261.98
+30,2014,Wietnam,532.818
+30,2015,Wietnam,424.678
+30,2016,Wietnam,377.657
+30,2017,Wietnam,360.983
+30,2018,Wietnam,369.262
+30,2019,Wietnam,442.503
+30,2020,Wietnam,460.607
+30,2021,Wietnam,413.404
+30,2022,Wietnam,395.764
+31,2000,Wenezuela,158.88
+31,2001,Wenezuela,139.197
+31,2002,Wenezuela,172.36
+31,2003,Wenezuela,177.385
+31,2004,Wenezuela,156.896
+31,2005,Wenezuela,153.23
+31,2006,Wenezuela,168.441
+31,2007,Wenezuela,172.101
+31,2008,Wenezuela,170.501
+31,2009,Wenezuela,163.648
+31,2010,Wenezuela,198.143
+31,2011,Wenezuela,179.271
+31,2012,Wenezuela,193.299
+31,2013,Wenezuela,211.154
+31,2014,Wenezuela,179.665
+31,2015,Wenezuela,173.581
+31,2016,Wenezuela,158.832
+31,2017,Wenezuela,156.653
+31,2018,Wenezuela,132.29
+31,2019,Wenezuela,114.092
+31,2020,Wenezuela,88.452
+31,2021,Wenezuela,90.501
+31,2022,Wenezuela,92.422
+31,2023,Wenezuela,104.637
+32,1989,Holandia,165.585
+32,1990,Holandia,165.281
+32,1991,Holandia,174.119
+32,1992,Holandia,174.134
+32,1993,Holandia,174.02
+32,1994,Holandia,175.711
+32,1995,Holandia,176.939
+32,1996,Holandia,187.919
+32,1997,Holandia,178.696
+32,1998,Holandia,184.097
+32,1999,Holandia,176.386
+32,2000,Holandia,176.04
+32,2001,Holandia,182.314
+32,2002,Holandia,181.737
+32,2003,Holandia,188.054
+32,2004,Holandia,189.958
+32,2005,Holandia,187.58
+32,2006,Holandia,181.349
+32,2007,Holandia,180.894
+32,2008,Holandia,182.939
+32,2009,Holandia,177.248
+32,2010,Holandia,188.0
+32,2011,Holandia,174.016
+32,2012,Holandia,171.874
+32,2013,Holandia,170.345
+32,2014,Holandia,163.465
+32,2015,Holandia,169.39
+32,2016,Holandia,170.506
+32,2017,Holandia,167.753
+32,2018,Holandia,163.31
+32,2019,Holandia,157.593
+32,2020,Holandia,137.303
+32,2021,Holandia,139.66
+32,2022,Holandia,126.536
+32,2023,Holandia,117.341
+33,2005,Belgia,128.094
+33,2006,Belgia,125.979
+33,2007,Belgia,122.626
+33,2008,Belgia,121.786
+33,2009,Belgia,109.474
+33,2010,Belgia,115.746
+33,2011,Belgia,105.964
+33,2012,Belgia,104.609
+33,2013,Belgia,104.591
+33,2014,Belgia,99.728
+33,2015,Belgia,104.989
+33,2016,Belgia,102.09
+33,2017,Belgia,102.612
+33,2018,Belgia,103.293
+33,2019,Belgia,102.934
+33,2020,Belgia,93.86
+33,2021,Belgia,97.547
+33,2022,Belgia,91.657
+33,2023,Belgia,86.018
+34,2013,Czechy,98.109
+34,2014,Czechy,96.882
+34,2015,Czechy,98.926
+34,2016,Czechy,101.628
+34,2017,Czechy,101.306
+34,2018,Czechy,99.442
+34,2019,Czechy,94.08
+34,2020,Czechy,84.877
+34,2021,Czechy,89.794
+34,2022,Czechy,88.326
+34,2023,Czechy,78.943
+35,2004,Rumunia,98.295
+35,2005,Rumunia,89.878
+35,2006,Rumunia,85.701
+35,2007,Rumunia,93.621
+35,2008,Rumunia,94.456
+35,2009,Rumunia,110.294
+35,2010,Rumunia,83.398
+35,2011,Rumunia,82.744
+35,2012,Rumunia,88.507
+35,2013,Rumunia,71.926
+35,2014,Rumunia,73.203
+35,2015,Rumunia,65.106
+35,2016,Rumunia,61.95
+35,2017,Rumunia,63.705
+35,2018,Rumunia,74.615
+35,2019,Rumunia,63.285
+35,2020,Rumunia,60.401
+35,2021,Rumunia,63.273
+35,2022,Rumunia,58.647
+36,2014,Białoruś,66.483
+36,2015,Białoruś,62.317
+36,2016,Białoruś,61.93
+36,2017,Białoruś,62.496
+36,2018,Białoruś,64.186
+36,2019,Białoruś,62.53
+36,2020,Białoruś,58.225
+36,2021,Białoruś,59.313
+36,2022,Białoruś,57.4
+37,2009,Wybrzeże Kości Słoniowej,33.205
+37,2010,Wybrzeże Kości Słoniowej,27.707
+37,2011,Wybrzeże Kości Słoniowej,31.602
+37,2012,Wybrzeże Kości Słoniowej,76.186
+37,2013,Wybrzeże Kości Słoniowej,68.842
+37,2014,Wybrzeże Kości Słoniowej,160.341
+37,2015,Wybrzeże Kości Słoniowej,73.826
+37,2016,Wybrzeże Kości Słoniowej,72.093
+37,2017,Wybrzeże Kości Słoniowej,259.105
+37,2018,Wybrzeże Kości Słoniowej,150.851
+37,2019,Wybrzeże Kości Słoniowej,113.736
+37,2020,Wybrzeże Kości Słoniowej,120.825
+37,2021,Wybrzeże Kości Słoniowej,143.729
+37,2022,Wybrzeże Kości Słoniowej,154.152
+37,2023,Wybrzeże Kości Słoniowej,160.957
+38,2008,Mjanma (Birma),174.903
+38,2009,Mjanma (Birma),153.237
+38,2010,Mjanma (Birma),139.194
+38,2011,Mjanma (Birma),124.862
+38,2012,Mjanma (Birma),118.332
+38,2013,Mjanma (Birma),113.907
+38,2014,Mjanma (Birma),120.765
+38,2015,Mjanma (Birma),120.566
+38,2016,Mjanma (Birma),120.884
+38,2017,Mjanma (Birma),115.942
+38,2018,Mjanma (Birma),110.709
+38,2019,Mjanma (Birma),103.697
+38,2020,Mjanma (Birma),100.774
+38,2021,Mjanma (Birma),95.286
+38,2022,Mjanma (Birma),94.374
+39,2005,Peru,126.387
+39,2006,Peru,117.16
+39,2007,Peru,116.716
+39,2008,Peru,103.111
+39,2009,Peru,103.379
+39,2010,Peru,103.052
+39,2011,Peru,103.729
+39,2012,Peru,91.289
+39,2013,Peru,78.096
+39,2014,Peru,79.385
+39,2015,Peru,58.058
+39,2016,Peru,64.831
+39,2017,Peru,69.665
+39,2018,Peru,66.642
+39,2019,Peru,64.133
+39,2020,Peru,53.731
+39,2021,Peru,58.35
+39,2022,Peru,59.002
+39,2023,Peru,61.892
+40,2009,Pakistan,145.302
+40,2010,Pakistan,172.357
+40,2011,Pakistan,168.014
+40,2012,Pakistan,170.109
+40,2013,Pakistan,159.373
+40,2014,Pakistan,159.969
+40,2015,Pakistan,177.762
+40,2016,Pakistan,202.435
+40,2017,Pakistan,233.374
+40,2018,Pakistan,220.322
+40,2019,Pakistan,214.876
+40,2020,Pakistan,236.464
+40,2021,Pakistan,253.638
+40,2022,Pakistan,229.783
+40,2023,Pakistan,206.824
+41,2005,Chile,87.576
+41,2006,Chile,85.946
+41,2007,Chile,97.108
+41,2008,Chile,99.438
+41,2009,Chile,94.053
+41,2010,Chile,98.214
+41,2011,Chile,106.872
+41,2012,Chile,108.523
+41,2013,Chile,111.111
+41,2014,Chile,105.83
+41,2015,Chile,110.557
+41,2016,Chile,112.094
+41,2017,Chile,111.3
+41,2018,Chile,110.13
+41,2019,Chile,116.193
+41,2020,Chile,102.752
+41,2021,Chile,103.537
+41,2022,Chile,98.897
+41,2023,Chile,90.249
+42,2008,Egipt,201.783
+42,2009,Egipt,209.189
+42,2010,Egipt,204.599
+42,2011,Egipt,218.765
+42,2012,Egipt,215.781
+42,2013,Egipt,212.367
+42,2014,Egipt,228.801
+42,2015,Egipt,225.006
+42,2016,Egipt,241.422
+42,2017,Egipt,262.232
+42,2018,Egipt,251.429
+42,2019,Egipt,261.148
+42,2020,Egipt,238.148
+42,2021,Egipt,263.803
+42,2022,Egipt,274.142
+43,2009,Tanzania,146.509
+43,2010,Tanzania,175.487
+43,2011,Tanzania,137.584
+43,2012,Tanzania,129.522
+43,2013,Tanzania,117.356
+43,2014,Tanzania,125.697
+43,2015,Tanzania,116.952
+43,2016,Tanzania,113.742
+43,2017,Tanzania,105.693
+43,2018,Tanzania,84.796
+43,2019,Tanzania,72.412
+43,2020,Tanzania,63.349
+43,2021,Tanzania,64.577
+43,2022,Tanzania,61.4
+43,2023,Tanzania,58.637
+44,2001,Szwecja,52.745
+44,2002,Szwecja,52.69
+44,2003,Szwecja,54.774
+44,2004,Szwecja,58.413
+44,2005,Szwecja,56.654
+44,2006,Szwecja,54.578
+44,2007,Szwecja,54.636
+44,2008,Szwecja,52.304
+44,2009,Szwecja,49.076
+44,2010,Szwecja,54.838
+44,2011,Szwecja,50.339
+44,2012,Szwecja,48.087
+44,2013,Szwecja,46.568
+44,2014,Szwecja,45.617
+44,2015,Szwecja,46.065
+44,2016,Szwecja,46.574
+44,2017,Szwecja,46.912
+44,2018,Szwecja,46.676
+44,2019,Szwecja,45.999
+44,2020,Szwecja,42.231
+44,2021,Szwecja,45.044
+44,2022,Szwecja,44.298
+44,2023,Szwecja,43.611
